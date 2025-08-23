@@ -1,0 +1,87 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Slider */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.hero-container:hover .arrow {
+  opacity: 1;
+}
+
+.left-arrow {
+  left: 25px;
+}
+.right-arrow {
+  right: 25px;
+}
+
+/* Thumbnail Bar */
+.thumbnail-bar {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  border-radius: 10px;
+}
+
+.thumb-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.thumb-wrapper.active {
+  border: 3px solid #fff;
+  transform: scale(1.1);
+}
+
+.thumbnail {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .thumbnail {
+    width: 60px;
+    height: 40px;
+  }
+}
