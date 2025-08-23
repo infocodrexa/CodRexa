@@ -1,0 +1,10 @@
+POST http://localhost:5000/api/forms/contact
+Content-Type: application/json
+
+{
+  "name": "Abhishek",
+  "email": "ab3i@test.com",
+  "phone": "9876533210",
+  "message": "Hello bhai!"
+}
+
