@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createOrganization } from "../../services/api";
 import "./OrganizationForm.css";
-import orgIllustration from "../../assets/react.svg"; // add your illustration here
+import orgIllustration from "../../assets/logo.png"; // add your illustration here
 
 const OrganizationForm = () => {
   const [form, setForm] = useState({

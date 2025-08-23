@@ -1,0 +1,352 @@
+/* ========== RESET ========== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 106px; /* 36px (Topbar) + 70px (Navbar) */
+}
+
+/* ========== TOP BAR ========== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: #0a2c56;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 40px;
+  font-size: 14px;
+  z-index: 2000; /* sabse upar */
+}
+
+.topbar-left span {
+  margin-right: 20px;
+}
+.topbar-left {
+  font-size: 20px;
+}
+
+.topbar-right a {
+  color: #fff;
+  margin-left: 12px;
+  font-size: 29px;
+  transition: color 0.3s;
+}
+
+.topbar-right a:hover {
+  color: #ff0000;
+}
+
+/* ===== Responsive Topbar ===== */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  /* Email hide in mobile */
+  .topbar-left {
+    font-size: 17px;
+  }
+  .topbar-left span:first-child {
+    display: none;
+  }
+  .hid{
+    display: none;
+  }
+
+  .topbar-left span {
+    margin-right: 10px;
+  }
+
+  .topbar-right a {
+    font-size: 18px;
+  }
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 36px; /* Topbar ke niche */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1500;
+  height: 65px;
+}
+
+/* Branding */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand-link {
+  text-decoration: none;
+}
+
+.brand-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 60px; /* 100px → chhota kiya */
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.tagline {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+  margin-left: 8px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+/* Desktop Links */
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links-desktop a,
+.dropbtn {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline */
+.nav-links-desktop a::after,
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #e53935;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links-desktop a:hover,
+.dropbtn:hover {
+  color: #e53935;
+}
+
+.nav-links-desktop a:hover::after,
+.dropbtn:hover::after {
+  width: 100%;
+}
+
+/* ========== DROPDOWN (Desktop) ========== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: #f7f7f7;
+  color: #e53935;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ========== MOBILE SIDEBAR ========== */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 3000; /* sidebar sabse upar */
+  display: flex;
+  flex-direction: column;
+  transition: height 0.4s ease;
+}
+
+.mobile-sidebar.open {
+  height: 100vh;
+}
+
+/* Sidebar Header */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Sidebar Links */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  overflow-y: auto;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 14px 0;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s, color 0.3s;
+}
+
+.mobile-menu a:hover {
+  background: #f5f5f5;
+  color: #e53935;
+}
+
+/* Dropdown Accordion in Mobile */
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  padding: 14px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  padding: 8px 0;
+  gap: 6px;
+}
+
+.mobile-dropdown-content a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+.mobile-dropdown-content a:hover {
+  color: #e53935;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 12px;
+  }
+}
+
+/* Mobile logo */
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.mobile-logo-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
