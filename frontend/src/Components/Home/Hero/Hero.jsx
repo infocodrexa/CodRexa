@@ -1,67 +1,102 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 
 const images = [
-  "https://images.unsplash.com/photo-1581090700227-4c4f50a60a07", // Coding screen
-  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d", // Laptop desk
-  "https://images.unsplash.com/photo-1518770660439-4636190af475"  // Tech abstract
+  "https://images.unsplash.com/photo-1506765515384-028b60a970df",
+  "https://images.unsplash.com/photo-1506765515384-028b60a970df",
+  "https://images.unsplash.com/photo-1506765515384-028b60a970df",
 ];
 
-export default function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Hero = () => {
+  const [current, setCurrent] = useState(1); // start from 1 because of cloned slides
+  const sliderRef = useRef(null);
+  const transitionRef = useRef(true);
+
+  const slides = [images[images.length - 1], ...images, images[0]]; // cloned first & last
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000); // 7 seconds swap
+      nextSlide();
+    }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [current]);
+
+  const nextSlide = () => {
+    setCurrent((prev) => prev + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => prev - 1);
+  };
+
+  useEffect(() => {
+    if (current === slides.length - 1) {
+      setTimeout(() => {
+        transitionRef.current = false;
+        setCurrent(1);
+      }, 500);
+    } else if (current === 0) {
+      setTimeout(() => {
+        transitionRef.current = false;
+        setCurrent(slides.length - 2);
+      }, 500);
+    } else {
+      transitionRef.current = true;
+    }
+  }, [current]);
 
   const goToSlide = (index) => {
-    setCurrentIndex(index);
+    setCurrent(index + 1);
   };
 
   return (
     <div className="hero-container">
-      {/* Slider */}
-      <div className="slider">
-        <img
-          src={images[currentIndex]}
-          alt={`slide-${currentIndex}`}
-          className="slide-image"
-        />
-      </div>
+      <div className="slider-wrapper">
+        <div
+          ref={sliderRef}
+          className="slides"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+            transition: transitionRef.current ? "transform 0.6s ease-in-out" : "none",
+          }}
+        >
+          {slides.map((img, index) => (
+            <div className="slide" key={index}>
+              <img src={img} alt={`Slide ${index}`} />
+            </div>
+          ))}
+        </div>
 
-      {/* Navigation Arrows */}
-      <button
-        className="arrow left-arrow"
-        onClick={() =>
-          setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-        }
-      >
-        ❮
-      </button>
-      <button
-        className="arrow right-arrow"
-        onClick={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
-      >
-        ❯
-      </button>
+        {/* Buttons */}
+        <button className="prev" onClick={prevSlide}>❮</button>
+        <button className="next" onClick={nextSlide}>❯</button>
 
-      {/* Thumbnail Bar */}
-      <div className="thumbnail-bar">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`thumb-wrapper ${
-              index === currentIndex ? "active" : ""
-            }`}
-            onClick={() => goToSlide(index)}
-          >
-            <img src={img} alt={`thumb-${index}`} className="thumbnail" />
-          </div>
-        ))}
+        {/* Indicators */}
+        <div className="indicators">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`indicator ${index + 1 === current ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
+
+        {/* Thumbnails */}
+        {/* <div className="thumbnails">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Thumb ${index}`}
+              className={`thumb ${index + 1 === current ? "active-thumb" : ""}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div> */}
       </div>
     </div>
   );
-}
+};
+
+export default Hero;
