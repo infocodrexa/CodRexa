@@ -8,3 +8,48 @@ Content-Type: application/json
   "message": "Hello bhai!"
 }
 
+
+###
+GET http://localhost:5000/api/forms/contact
+Content-Type: application/json
+
+###
+POST http://localhost:5000/api/forms/organization
+Content-Type: application/json
+
+{
+  "name": "Rexa Pvt Ltd",
+  "email": "info@rexa.com",
+  "phone": "9876543210",
+  "company": "Rexa Pvt Ltd",
+  "location": "Patna",
+  "Service": "Web Development",
+  "url": "https://rexa.com",
+  "requirement": "Need a business website"
+}
+
+
+###
+GET http://localhost:5000/api/forms/organization
+Content-Type: application/json
+
+
+###
+POST http://localhost:5000/api/forms/personal
+Content-Type: application/json
+
+{
+  "name": "Abhishek Raj",
+  "email": "abhi@test.com",
+  "phone": "9876543210",
+  "location": "Patna",
+  "requirement": "Need home tutoring"
+}
+
+
+###
+GET http://localhost:5000/api/forms/personal
+Content-Type: application/json
+
+
+

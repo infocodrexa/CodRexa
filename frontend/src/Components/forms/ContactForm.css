@@ -1,0 +1,64 @@
+.contact-card {
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #fff;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-input,
+.animate-textarea {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.animate-input:focus,
+.animate-textarea:focus {
+  transform: scale(1.03);
+  border-color: #0d6efd;
+  box-shadow: 0 0 10px rgba(13,110,253,0.3);
+}
+
+.animate-btn {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.animate-btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13,110,253,0.4);
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: make the left text slightly bigger and spaced nicely */
+h1 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
