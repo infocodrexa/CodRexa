@@ -1,3 +1,35 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+  "name": "Abhishek Raj",
+  "username": "abhishekraj",
+  "email": "abhi@test.com",
+  "password": "123456"
+}
+
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json  
+
+{
+  "email": "abhi@test.com",
+  "password": "123456"
+}
+
+
+###
+GET http://localhost:5000/api/user/profile
+Content-Type: application/json  
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWExODU2NjIzMzRhMDg4MWU0MDE3NiIsImVtYWlsIjoiYWJoaUB0ZXN0LmNvbSIsImlhdCI6MTc1NTk3ODAyNywiZXhwIjoxNzU1OTgxNjI3fQ.YZLOVUahHd8k52r6mBYn4mJgafY3KpdQuFpNDSqehrs"
+}
+
+
+
+###
 POST http://localhost:5000/api/forms/contact
 Content-Type: application/json
 
@@ -18,15 +50,16 @@ POST http://localhost:5000/api/forms/organization
 Content-Type: application/json
 
 {
-  "name": "Rexa Pvt Ltd",
-  "email": "info@rexa.com",
-  "phone": "9876543210",
-  "company": "Rexa Pvt Ltd",
-  "location": "Patna",
-  "Service": "Web Development",
-  "url": "https://rexa.com",
-  "requirement": "Need a business website"
+  "name": "CodRexa Solutions",
+  "email": "contact@codrexa.com",
+  "phone": "9876501234",
+  "company": "CodRexa Pvt Ltd",
+  "location": "Delhi",
+  "Service": "Mobile App Development",
+  "url": "https://codrexa.com",
+  "requirement": "We need a cross-platform mobile app"
 }
+
 
 
 ###

@@ -1,68 +1,107 @@
+/* Main Container */
 .org-form-container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Heading upar, card neeche */
   justify-content: center;
   align-items: center;
   padding: 50px 15px;
   background: linear-gradient(135deg, #f0f4ff, #e2e8f0);
+  position: relative; /* Needed for 'Call Now' */
 }
 
-.org-form-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 900px;
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
+/* Heading Section */
+.org-form-heading {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.org-form-left {
-  flex: 1 1 400px;
-  padding: 40px;
-}
-
-.org-form-right {
-  flex: 1 1 400px;
-  background: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.org-form-right img {
-  max-width: 100%;
-  height: auto;
-}
-
-.small-title {
+.org-form-heading .small-title {
   color: #0d6efd;
   font-weight: bold;
-  margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
 }
 
-.form-title {
+.org-form-heading .form-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #222;
 }
 
-.form-subtitle {
+.org-form-heading .form-subtitle {
   font-size: 0.95rem;
-  margin-bottom: 30px;
   color: #555;
+  line-height: 1.5;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Form Wrapper (Card) */
+.org-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 950px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Form Side */
+.org-form-left {
+  flex: 1 1 450px;
+  padding: 40px;
+}
+
+
+/* Right Video Side */
+.org-form-right {
+  flex: 1 1 450px;
+  background: #fff; /* White background card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.org-form-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Form Styles */
+.org-form .form-group {
+  margin-bottom: 18px;
+}
+
+.org-form .form-group label {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
 }
 
 .org-form .form-control {
   border-radius: 10px;
   transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 0.95rem;
 }
 
 .org-form .form-control:focus {
-  transform: scale(1.03);
+  transform: scale(1.02);
   border-color: #0d6efd;
-  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.25);
 }
 
 .org-form textarea.form-control {
@@ -71,13 +110,68 @@
 }
 
 .org-form button {
-  padding: 12px;
+  padding: 14px;
   border-radius: 10px;
   font-weight: bold;
   transition: all 0.3s ease;
+  background-color: #2d7de6;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #fff;
 }
 
 .org-form button:hover {
   transform: translateY(-2px) scale(1.03);
-  background-color: #0b5ed7;
+  background-color: #0931b3;
+}
+
+/* Call Now Sticky Button */
+.call-now {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: top right;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+
+  /* Animated Gradient */
+  background: linear-gradient(
+    270deg,
+    #ff5722,
+    #e91e63,
+    #3f51b5,
+    #00bcd4,
+    #4caf50,
+    #ffeb3b,
+    #ff5722
+  );
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Hover effect */
+.call-now:hover {
+  transform: translateY(-50%) rotate(90deg) scale(1.05);
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

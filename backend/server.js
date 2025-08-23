@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");   
 const connectDB = require("./config/db");
-const formRoutes = require("./routes/formRoutes"); // 👈 ye add karna zaroori hai
+const formRoutes = require("./routes/formRoutes"); 
+const userRoutes = require("./routes/user.routes"); 
 
 // Load env sabse upar
 dotenv.config({ quiet: true });   
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 
 // API Routes
 app.use("/api/forms", formRoutes);
+app.use("/api/user",userRoutes)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🔥 Server running on port ${PORT}`));

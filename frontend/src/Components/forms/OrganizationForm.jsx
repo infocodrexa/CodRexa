@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createOrganization } from "../../services/api";
 import "./OrganizationForm.css";
-import orgIllustration from "../../assets/logo.png"; // add your illustration here
+import orgVideo from "../../assets/organition.mp4";
 
 const OrganizationForm = () => {
   const [form, setForm] = useState({
@@ -10,7 +10,7 @@ const OrganizationForm = () => {
     phone: "",
     company: "",
     location: "",
-    Service: "",
+    Service: "",   
     url: "",
     requirement: "",
   });
@@ -30,7 +30,7 @@ const OrganizationForm = () => {
         phone: "",
         company: "",
         location: "",
-        Service: "",
+        Service: "",   
         url: "",
         requirement: "",
       });
@@ -41,49 +41,145 @@ const OrganizationForm = () => {
 
   return (
     <div className="org-form-container">
-      <div className="org-form-wrapper shadow-lg">
+      {/* Heading OUTSIDE the card */}
+      <div className="org-form-heading">
+        <h5 className="small-title">ENQUIRY</h5>
+        <h2 className="form-title">Enquiry Form</h2>
+        <p className="form-subtitle">
+          Please fill the form. Our Marketing Executive will contact you soon.
+        </p>
+      </div>
+
+      <div className="org-form-wrapper">
+        {/* Left Form Side */}
         <div className="org-form-left">
-          <h5 className="small-title">ENQUIRY</h5>
-          <h2 className="form-title">Enquiry Form</h2>
-          <p className="form-subtitle">
-            Please fill the form. Our Marketing Executive will contact you soon.
-          </p>
           <form onSubmit={handleSubmit} className="org-form">
-            <div className="row g-3">
-              <div className="col-md-6">
-                <input type="text" className="form-control" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
-              </div>
-              <div className="col-md-6">
-                <input type="email" className="form-control" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-              </div>
-              <div className="col-md-6">
-                <input type="text" className="form-control" name="phone" placeholder="Phone" value={form.phone} onChange={handleChange} required />
-              </div>
-              <div className="col-md-6">
-                <input type="text" className="form-control" name="company" placeholder="Company" value={form.company} onChange={handleChange} required />
-              </div>
-              <div className="col-md-6">
-                <input type="text" className="form-control" name="location" placeholder="Location" value={form.location} onChange={handleChange} required />
-              </div>
-              <div className="col-md-6">
-                <input type="text" className="form-control" name="Service" placeholder="Required Service" value={form.Service} onChange={handleChange} required />
-              </div>
-              <div className="col-12">
-                <input type="url" className="form-control" name="url" placeholder="Website URL" value={form.url} onChange={handleChange} />
-              </div>
-              <div className="col-12">
-                <textarea className="form-control" name="requirement" placeholder="Your Requirements..." value={form.requirement} onChange={handleChange} required />
-              </div>
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
             </div>
+
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Phone</label>
+              <input
+                type="text"
+                className="form-control"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Company</label>
+              <input
+                type="text"
+                className="form-control"
+                name="company"
+                value={form.company}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Location</label>
+              <input
+                type="text"
+                className="form-control"
+                name="location"
+                value={form.location}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Required Service</label>
+              <input
+                type="text"
+                className="form-control"
+                name="Service"   
+                value={form.Service}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Website URL</label>
+              <input
+                type="url"
+                className="form-control"
+                name="url"
+                value={form.url}
+                onChange={handleChange}
+                autoComplete="off"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Requirement</label>
+              <textarea
+                className="form-control"
+                name="requirement"
+                value={form.requirement}
+                onChange={handleChange}
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
             <button type="submit" className="btn btn-primary w-100 mt-3">
-              Submit 🚀
+              ENQUIRY
             </button>
           </form>
         </div>
+
+        {/* Right Video Side */}
         <div className="org-form-right">
-          <img src={orgIllustration} alt="Organization Illustration" />
+          <video
+            src={orgVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="org-form-video"
+          />
         </div>
       </div>
+
+      {/* Call Now Section */}
+      <a href="tel:+919829321136" className="call-now">
+        📞 Call Now @ 9829321136
+      </a>
     </div>
   );
 };

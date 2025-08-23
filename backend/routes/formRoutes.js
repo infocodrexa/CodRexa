@@ -1,5 +1,7 @@
 const express = require("express");
-const validateRequest = require("../middleware/validateRequest");
+const {
+  validateRequest,
+} = require("../middleware/validateRequest");
 
 const {
   createContact,
