@@ -1,6 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import logo from "./assets/logo.png";
+
 
 const Footer = () => {
   return (
@@ -9,7 +11,7 @@ const Footer = () => {
         
         {/* Logo & About */}
         <div className="footer-section about">
-          <img src="/logo.png" alt="CODREXA" className="footer-logo" />
+          <img src={logo} alt="CODREXA" className="footer-logo" />
           <p>
             A R Infotech is a reputed and well-established Website Development &
             Design company in Jaipur, India. We have complete solution of
@@ -29,17 +31,14 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick links</h3>
           <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Outsourcing Services</a></li>
-            <li><a href="#">Technology</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Packages</a></li>
             <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">HTML Sitemap</a></li>
-            <li><a href="#">Career With Us</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Enquiry</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -50,13 +49,10 @@ const Footer = () => {
             <li><a href="#">Static Website Design</a></li>
             <li><a href="#">Dynamic Website Design</a></li>
             <li><a href="#">E-Commerce Website</a></li>
-            <li><a href="#">PPC Management</a></li>
             <li><a href="#">SEO</a></li>
-            <li><a href="#">SMO</a></li>
             <li><a href="#">Local SEO Services</a></li>
             <li><a href="#">Digital Marketing</a></li>
             <li><a href="#">Web Domain & Hosting</a></li>
-            <li><a href="#">Wordpress Website Design</a></li>
             <li><a href="#">Mobile App Development</a></li>
           </ul>
         </div>
@@ -69,7 +65,10 @@ const Footer = () => {
           <p>📱 7300423846</p>
           <p>☎ +91-0141-4920437</p>
         </div>
-
+      </div>
+      {/* Copyright Bar */}
+      <div className="footer-bottom">
+        <p> Copyright © {new Date().getFullYear()} CODREXA. All Rights Reserved.</p>
       </div>
     </footer>
   );
