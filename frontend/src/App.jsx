@@ -8,6 +8,7 @@ import NavBar from "./Navbar";
 import Whyus from "./Components/About/WhyUs/Whyus";
 import TeamWork from "./Components/About/Our Team/TeamWork";
 import Homepage from "./Components/Home/homepage/Homepage.jsx";
+import Dashboard from "./User/Dashboard.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Whyus" element={<Whyus />} />
         <Route path="/team" element={<TeamWork/>} />
         <Route path="/contact" element={ <ContactForm />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer/>
     </>

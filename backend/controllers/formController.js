@@ -8,6 +8,7 @@ const jwt = require("jsonwebtoken");
 // ==================== AUTH CONTROLLERS ==================== //
 
 // Register new user
+// Register new user
 const registerUser = async (req, res) => {
   try {
     const { name, username, email, password } = req.body;
@@ -19,14 +20,17 @@ const registerUser = async (req, res) => {
     // hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    user = new User({ name, email, password: hashedPassword });
+    // 👇 Yaha username bhi include kar
+    user = new User({ name, username, email, password: hashedPassword });
     await user.save();
 
     res.status(201).json({ message: "User registered successfully ✅" });
   } catch (error) {
+    console.error("Register Error:", error.message);
     res.status(500).json({ message: "Server error", error });
   }
 };
+
 
 // Login user
 const loginUser = async (req, res) => {

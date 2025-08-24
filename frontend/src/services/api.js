@@ -2,9 +2,17 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://codrexa.onrender.com/api",
+  baseURL: "http://localhost:5000/api", // backend ka base URL
 });
 
+// ✅ Interceptor: Har request ke header me token auto-add hoga
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 // ---------------- CONTACT ----------------
 export const getContacts = async () => {
@@ -68,3 +76,46 @@ export const createPersonal = async (data) => {
     throw err;
   }
 };
+
+// ---------------- AUTH ----------------
+
+// ✅ Signup (register)
+export const registerUser = async (data) => {
+  try {
+    const res = await API.post("/user/register", data);
+    return res.data; // { token, user, message }
+  } catch (error) {
+    console.error("Signup Error:", error.response?.data);
+    throw error.response?.data || { message: "Signup failed" };
+  }
+};
+
+// ✅ Login
+export const loginUser = async (data) => {
+  try {
+    const res = await API.post("/user/login", data);
+    return res.data; // { token, user, message }
+  } catch (error) {
+    console.error("Login Error:", error.response?.data);
+    throw error.response?.data || { message: "Login failed" };
+  }
+};
+
+// ✅ Protected User Info (changed endpoint to /profile)
+export const getUserInfo = async () => {
+  try {
+    const res = await API.get("/user/profile");
+    return res.data;
+  } catch (error) {
+    console.error("Get User Info Error:", error.response?.data);
+    throw error.response?.data || { message: "Failed to fetch user info" };
+  }
+};
+
+// ✅ Logout
+export const logoutUser = () => {
+  localStorage.removeItem("token");
+};
+
+
+
