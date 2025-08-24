@@ -177,8 +177,8 @@ const OrganizationForm = () => {
       </div>
 
       {/* Call Now Section */}
-      <a href="tel:+919829321136" className="call-now">
-        📞 Call Now @ 9829321136
+      <a href="tel:+917300423846" className="call-now">
+        📞 Call Now @ 7300423846
       </a>
     </div>
   );

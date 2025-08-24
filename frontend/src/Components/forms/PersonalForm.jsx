@@ -133,10 +133,10 @@ const PersonalForm = () => {
 
       {/* Call Now Section */}
         <a
-          href="tel:+911234567890"
+          href="tel:+917300423846"
           className="call-now"
         >
-             Call Now @ 9829321136
+             Call Now @ 7300423846
         </a>
     </div>
   );
