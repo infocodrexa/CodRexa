@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // backend ka base URL
+  baseURL: "https://codrexa.onrender.com/api", // backend ka base URL
 });
 
 // ✅ Interceptor: Har request ke header me token auto-add hoga
