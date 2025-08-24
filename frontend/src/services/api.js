@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // sab requests yahi se prefix ho jayenge
+  baseURL: "https://codrexa.onrender.com/api",
 });
 
 
