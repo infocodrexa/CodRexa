@@ -1,0 +1,180 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Banner - Full width */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  padding-top: 1.3rem;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section */
+.whyus {
+  padding: 80px 0px;
+  background: #fff;
+}
+.heading{
+  padding-top: 4rem;
+}
+
+/* Container: side-by-side on large, stacked on mobile */
+.whyus-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+}
+
+/* Left image */
+.whyus-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.whyus-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+/* Right content */
+.whyus-content {
+  flex: 2;
+  min-width: 280px;
+}
+
+.whyus-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.whyus-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.highlight {
+  color: #0073ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.highlight:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.consult-btn {
+  padding: 12px 24px;
+  background-color: #c8102e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.consult-btn:hover {
+  background-color: #a10d25;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .whyus-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whyus-image img {
+    max-width: 400px;
+  }
+  .heading{
+  padding-top: 1rem;
+}
+
+  .whyus-content {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .banner {
+    height: 100px;
+  }
+
+
+  .whyus {
+    padding: 100px 0px;
+  }
+
+  .whyus-content h2 {
+    font-size: 26px;
+  }
+
+  .whyus-content p {
+    font-size: 14px;
+  }
+
+  .consult-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+.about-section {
+  position: relative;
+  background-image: url("../../../assets/bgimg.png"); /* ✅ correct path */
+  background-attachment: fixed; /* 🔥 keeps it fixed while scrolling */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px; /* section ki height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.9); /* white transparent background */
+  padding: 40px;
+  max-width: 900px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.about-content p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.6;
+}
+

@@ -105,7 +105,7 @@ export default function Navbar() {
             <button className="dropbtn">ABOUT ▾</button>
             {dropdownOpen === "about" && (
               <div className="dropdown-content">
-                <Link to="/about">About Us</Link>
+                <Link to="/Whyus">Why Us</Link>
                 <Link to="/team">Our Team</Link>
                 <Link to="/mission">Mission & Vision</Link>
               </div>
