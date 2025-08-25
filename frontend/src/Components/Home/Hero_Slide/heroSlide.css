@@ -106,7 +106,7 @@
   color: #444;
 }
 
-/* Responsive */
+/* Tablet screens */
 @media (max-width: 992px) {
   .home-slide {
     padding: 40px 50px;
@@ -117,6 +117,7 @@
   }
 }
 
+/* Mobile screens */
 @media (max-width: 768px) {
   .home-slide {
     flex-direction: column;
@@ -130,5 +131,34 @@
     width: 100%;        
     min-height: 200px;
     padding: 30px 18px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 576px) {
+  .hello-text {
+    font-size: 2.5rem;   /* responsive heading */
+  }
+  .sub-text {
+    font-size: 16px;
+  }
+  .main-heading {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .card {
+    width: 100%;
+    min-height: 180px;
+    padding: 25px 15px;
+  }
+  .card h3 {
+    font-size: 22px;
+  }
+  .card p {
+    font-size: 13px;
   }
 }

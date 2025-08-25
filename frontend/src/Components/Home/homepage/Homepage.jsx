@@ -17,7 +17,6 @@ const Homepage = () => {
       <Ecommerce/>
       <IndustriesSection/>
       <Clients/>
-      
    </>
   )
 }
