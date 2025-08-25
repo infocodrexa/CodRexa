@@ -13,22 +13,22 @@ const WhyChooseUs = () => {
 
         {/* Right Side Content */}
         <div className="why-right">
-          <h4 className="why-subtitle">WHY A R INFOTECH IS TRUSTED NAME FOR</h4>
+          <h4 className="why-subtitle">WHY CODREXA IS A TRUSTED NAME FOR</h4>
           <h2 className="why-title">
             Website Designing & Development <br /> Services in Jaipur, India
           </h2>
           <ul className="why-list">
-            <li>More than 15 years’ experience in web development services.</li>
-            <li> Worked on 2000+ projects globally.</li>
-            <li>Served 1000+ clients with satisfaction.</li>
+            <li>Over 1 years of experience in web development services.</li>
+            <li>Delivered 5+ projects successfully for startups & small businesses.</li>
+            <li>Served clients across India with satisfaction.</li>
             <li>Expert in custom website designing at affordable prices.</li>
-            <li>Web services to all types of industries.</li>
-            <li>Helping 800+ small businesses & startups.</li>
+            <li>Web services for multiple industries including e-commerce, education, and business.</li>
+            <li>Helping startups and small businesses grow online.</li>
             <li>Enterprise-level web-based solutions.</li>
-            <li>Ready to join hands for outsourcing projects.</li>
-            <li>Web services to USA, UK, UAE & Saudi Arabia.</li>
-            <li>Known for excellent customer support.</li>
-            <li>Complete e-commerce solution in Jaipur, India.</li>
+            <li>Open to outsourcing projects and collaborations.</li>
+            <li>Providing web services internationally when required.</li>
+            <li>Known for reliable customer support and timely delivery.</li>
+            <li>Complete e-commerce solutions for businesses in Jaipur and beyond.</li>
           </ul>
           <button className="talk-btn">💬 Talk to Consultant</button>
         </div>

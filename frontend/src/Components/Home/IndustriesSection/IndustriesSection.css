@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.industries-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #fffbe9, #fdefff);
+}
+
+.industries-section h4 {
+  color: #004aad;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.industries-section h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.industries-section p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.industry-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.industry-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.industry-card span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .industries-section h2 {
+    font-size: 22px;
+  }
+  .industries-section p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .industries-section h2 {
+    font-size: 20px;
+  }
+  .industries-section p {
+    font-size: 13px;
+  }
+}   

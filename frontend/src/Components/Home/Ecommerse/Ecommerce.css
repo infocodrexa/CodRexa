@@ -1,0 +1,147 @@
+.ecommerce-section {
+  background-image: url("../../../assets/bgimg.png"); /* ✅ Path apne assets ka */
+  background-attachment: fixed;   /* 🔥 Background fixed rahega */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* 🔄 Mobile ke liye padding kam */
+}
+
+.ecommerce-card {
+  background: #fff;
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px; /* 🔄 Padding kam ki mobile ke liye */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ecommerce-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.ecommerce-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ✅ Chat Card */
+.chat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 14px;
+  margin-top: 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap; /* 🔄 Mobile ke liye wrap hoga */
+}
+
+.chat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chat-image {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.chat-content {
+  flex: 1;
+}
+
+.chat-content h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.chat-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.chat-btn {
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.chat-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004099);
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .ecommerce-card {
+    padding: 20px;
+  }
+
+  .ecommerce-card h2 {
+    font-size: 20px;
+  }
+
+  .chat-card {
+    flex-direction: column; /* 🔄 Image & text niche aayenge */
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .chat-image {
+    width: 50px;
+  }
+
+  .chat-content h3 {
+    font-size: 16px;
+  }
+
+  .chat-content p {
+    font-size: 13px;
+  }
+
+  .chat-btn {
+    width: 100%; /* 🔄 Mobile pe button full-width */
+    text-align: center;
+  }
+}
+
+/* 📱 Extra Small (Phones) */
+@media (max-width: 480px) {
+  .ecommerce-card h2 {
+    font-size: 18px;
+  }
+
+  .chat-image {
+    width: 45px;
+  }
+
+  .chat-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
