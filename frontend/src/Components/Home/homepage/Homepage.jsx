@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero'
 import OurServices from '../OurServices/OurServices'
 import WhyChooseUs from '../WhyChooseUs/WhyChooseUs'
 import HomeSlide from '../Hero_Slide/heroSlide'
+import Ecommerce from '../Ecommerse/Ecommerse'
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <HomeSlide/>
       <WhyChooseUs/>
       <OurServices/>
+      <Ecommerce/>
    </>
   )
 }

@@ -8,33 +8,23 @@ export default function OurServices() {
         <div className="services-left">
           <h4 className="sub-title">OUR SERVICE</h4>
           <h2 className="main-title">
-            We Offer Affordable – <br />
+            We Offer Reliable – <br />
             <span>Web Development,</span> <br />
             <span>Mobile App Development &</span> <br />
-            <span>Digital Marketing Solutions in India.</span>
+            <span>Digital Marketing Solutions with Codrexa.</span>
           </h2>
           <p>
-            There isn't any free service. We need to invest in our business and
-            marketing. We design solutions in such a manner where you get the
-            complete package. We customize cost-efficient packages for our
-            client's business needs.
+            At Codrexa, we create solutions tailored for your business. Our goal is to provide a complete package that is cost-efficient, effective, and scalable.
           </p>
           <p>
-            Our affordable website designing, development and maintenance
-            service will give you a long term solution and save your money &
-            time.
+            Our website designing, development, and maintenance services are designed to save your time and money while delivering long-term results.
           </p>
           <p>
-            Our company offers you a complete package. We are the top-most{" "}
-            <b>website development company Jaipur India.</b>
+            We consult and strategize to help your business grow online. Our web designs are engaging, modern, and result-driven.
           </p>
           <p>
-            We also consult you and help you to grow your business online. Our
-            web designs are engaging and most creative.
-          </p>
-          <p>
-            Many companies have grown through our{" "}
-            <a href="#">web development services.</a>
+            Many clients have achieved success and growth through our{" "}
+            <a href="#">web development and digital marketing services.</a>
           </p>
 
           <button className="cta-btn">🎧 Get A Free Quote</button>
@@ -43,37 +33,27 @@ export default function OurServices() {
         {/* Right Service Cards */}
         <div className="services-right">
           <div className="service-card">
-            {/* <img src="/icons/ecommerce.png" alt="E-commerce" /> */}
             <h3>E-Commerce Website Development</h3>
             <p>
-              We are helping small businesses and startups from last 15 years
-              with top quality eCommerce website development and maintenance
-              services.
+              We help startups and small businesses build professional, user-friendly eCommerce websites with seamless performance and maintenance support. Experience: 1 years.
             </p>
           </div>
           <div className="service-card">
-            {/* <img src="/icons/mobile.png" alt="Mobile App" /> */}
             <h3>Mobile App Development</h3>
             <p>
-              We are providing hybrid as well as native mobile app development
-              services at affordable price with support.
+              We provide hybrid and native mobile app development for Android and iOS, focusing on usability, speed, and reliability.
             </p>
           </div>
           <div className="service-card">
-            {/* <img src="/icons/marketing.png" alt="Digital Marketing" /> */}
             <h3>Digital Marketing</h3>
             <p>
-              We have team of professional trained digital marketers. We are
-              leading service provider in Jaipur for Digital Marketing Services.
+              Codrexa’s trained digital marketing team helps businesses improve visibility, engagement, and conversions through customized strategies.
             </p>
           </div>
           <div className="service-card">
-            {/* <img src="/icons/seo.png" alt="SEO" /> */}
             <h3>SEO Services</h3>
             <p>
-              We are providing affordable and quality SEO Services in Jaipur
-              from last 15 years. Please visit our clients ranking to understand
-              our SEO expertise.
+              Our SEO experts optimize websites to rank higher in search engines. We focus on sustainable, long-term growth for our clients.
             </p>
           </div>
         </div>
