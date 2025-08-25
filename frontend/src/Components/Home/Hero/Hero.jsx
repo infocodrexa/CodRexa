@@ -1,6 +1,7 @@
 // Hero.jsx
 import React, { useState, useRef, useEffect } from "react";
 import "./Hero.css";
+import FreeConsultationButton from "../FreeConsultationButton/FreeConsultationButton";
 
 // Slides data
 const slides = [
@@ -124,7 +125,8 @@ const Hero = () => {
               <h4>{slide.subtitle}</h4>
               <h1>{slide.title}</h1>
               <p>{slide.desc}</p>
-              <button className="cta-btn">{slide.btn}</button>
+              {/* <button className="cta-btn">{slide.btn}</button> */}
+              <FreeConsultationButton />
             </div>
             <div className="slide-image">
               <img

@@ -58,16 +58,16 @@ export default function Navbar() {
         </div>
         <div className="topbar-right">
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <FaFacebookF />
+            <FaFacebookF style={{backgroundColor: "#0d6efd", color: "white",width: "2rem",height: "1.5rem"}} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <FaTwitter />
+            <FaTwitter style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}}  />
           </a>
           <a href="https://youtube.com" target="_blank" rel="noreferrer">
-            <FaYoutube />
+            <FaYoutube  style={{backgroundColor: "#f00", color: "white",width: "2rem",height: "1.5rem"}} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <FaLinkedinIn />
+            <FaLinkedinIn style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}} />
           </a>
         </div>
       </div>

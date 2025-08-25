@@ -70,7 +70,7 @@ body {
   opacity: 0.9;
 }
 
-.cta-btn {
+/* .cta-btn {
   padding: 12px 28px;
   font-size: 1rem;
   border: none;
@@ -82,14 +82,99 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+} 
+
+
 .cta-btn:hover {
   background: linear-gradient(135deg, #ff416c, #ff4b2b);
   transform: translateY(-3px) scale(1.03);
 }
 .cta-btn:active {
   transform: translateY(-1px) scale(0.98);
+} */
+
+
+/* 🎨 Gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* 🌟 Main CTA Button */
+.cta-btn {
+  background: linear-gradient(
+    270deg,
+    #ff5722,
+    #e91e63,
+    #3f51b5,
+    #00bcd4,
+    #4caf50,
+    #ffeb3b,
+    #ff5722
+  );
+  background-size: 400% 400%;
+  border: none;
+  border-radius: 12px 50px 12px 50px;
+  color: #fff;
+  width: 280px;
+  max-width: 90%;
+  height: 55px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  animation: gradientShift 8s ease infinite; 
+  transition: all 0.4s ease-in-out;
+} 
+
+/* 🌟 Hover Effect */
+.cta-btn:hover {
+  border-radius: 50px 12px 50px 12px;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
+
+/* 🌟 Active State */
+.cta-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* 🎧 Icon Style */
+.cta-btn .cta-icon {
+  font-size: 1.3rem;
+}
+
+/* 📱 Responsive */
+ @media (max-width: 1024px) {
+  .cta-btn {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .cta-btn {
+    width: auto;
+    min-width: 160px;
+    margin-left: 10px;
+  }
+}
+
+
 
 /* ===== IMAGE SIZE FIX (container-level control) ===== */
 .slide-image {
