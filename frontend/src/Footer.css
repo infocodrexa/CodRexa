@@ -44,6 +44,9 @@
   font-size: 14px;
 }
 
+
+
+
 /* Gallery images */
 .footer-gallery-image {
   width: 100%;
@@ -80,15 +83,60 @@
   transition: color 0.3s ease;
 }
 
+.footer-section ul li a {
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-section ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
 .footer-section ul li a:hover {
   color: #00bfff;
+  transform: translateY(-2px); /* halka sa upar lift */
+  text-shadow: 0 0 6px rgba(0,191,255,0.6); /* modern glow */
+}
+
+.footer-section ul li a:hover::after {
+  width: 100%; /* underline animation */
 }
 
 
-.footer-socials a:hover {
+/* p */
+
+
+.footer-section p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.footer-section p:hover {
   color: #00bfff;
-  transform: scale(1.1);
+  transform: translateY(-2px); /* halka sa upar lift */
+  text-shadow: 0 0 6px rgba(0,191,255,0.6); /* modern glow */
 }
+
+.footer-section p:hover::after {
+  width: 100%; /* underline animation */
+}
+
 
 /* Bottom bar */
 .footer-bottom {
@@ -99,6 +147,29 @@
   font-size: 13px;
   color: #cccccc;
 }
+
+.footer-bottom p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.footer-bottom p:hover {
+  color: #00bfff;
+  transform: translateY(-2px); /* halka sa upar lift */
+  text-shadow: 0 0 6px rgba(0,191,255,0.6); /* modern glow */
+}
+
+.footer-bottom p:hover::after {
+  width: 100%; /* underline animation */
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -126,6 +197,18 @@
     align-items: center;
     font-size: 30px;
     
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff0000;
+  transform: translateY(-5px) rotate(-10deg) scale(1.2);
+  text-shadow: 0 0 8px rgba(255,0,0,0.7), 0 0 12px rgba(255,0,0,0.5);
 }
 
 .footer-bottom{

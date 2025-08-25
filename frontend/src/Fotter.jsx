@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Footer.css";
 import {
   FaFacebookF,
@@ -13,32 +14,33 @@ import AuthModal from "./User/AuthModal"; // ✅ ProfileModal ki jagah AuthModal
 
 const Footer = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <footer className="footer">
       <div className="footer-container">
         {/* Logo & About */}
         <div className="footer-section about">
-          <img src={logo} alt="CODREXA" className="footer-logo" />
+          <img onClick={() => navigate("/")} src={logo} alt="CODREXA" className="footer-logo" />
           <p>
             A R Infotech is a reputed and well-established Website Development &
             Design company in Jaipur, India...
           </p>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61579396951220">
-              <FaFacebookF />
+              <FaFacebookF style={{backgroundColor: "#0d6efd", color: "white",width: "2rem",height: "1.5rem"}} />
             </a>
             <a href="https://x.com/cod92570">
-              <FaTwitter />
+                <FaTwitter style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}}  />
             </a>
             <a href="#">
-              <FaYoutube />
+              <FaYoutube  style={{backgroundColor: "#f00", color: "white",width: "2rem",height: "1.5rem"}} />
             </a>
             <a href="#">
-              <FaLinkedinIn />
+              <FaLinkedinIn style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}} />
             </a>
             <a href="https://www.instagram.com/codrexa?utm_source=qr&igsh=MXFsamFrazNhODZpYQ==">
-              <FaInstagram />
+              <FaInstagram style={{backgroundColor: "#bb1f65ff", color: "white",width: "2rem",height: "1.5rem"}} />
             </a>
           </div>
         </div>
@@ -47,14 +49,14 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Packages</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Enquiry</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a onClick={() => navigate("/")} href="#">Home</a></li>
+            <li><a onClick={() => navigate("/Whyus")} href="#">About</a></li>
+            <li><a onClick={() => navigate("/web-design")} href="#">Services</a></li>
+            <li><a onClick={() => navigate("/basic")} href="#">Packages</a></li>
+            <li><a onClick={() => navigate("/portfolio")} href="#">Portfolio</a></li>
+            <li><a onClick={() => navigate("/blog")} href="#">Blog</a></li>
+            <li><a onClick={() => navigate("/enquiry")} href="#">Enquiry</a></li>
+            <li><a onClick={() => navigate("/contact")} href="#">Contact Us</a></li>
           </ul>
         </div>
 

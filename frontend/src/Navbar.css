@@ -44,9 +44,19 @@ body {
   transition: color 0.3s;
 }
 
+.topbar-right a {
+  display: inline-block;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .topbar-right a:hover {
   color: #ff0000;
+  transform: translateY(-5px) rotate(-10deg) scale(1.2);
+  text-shadow: 0 0 8px rgba(255,0,0,0.7), 0 0 12px rgba(255,0,0,0.5);
 }
+
+
 
 /* ===== Responsive Topbar ===== */
 @media (max-width: 768px) {

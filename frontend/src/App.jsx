@@ -21,7 +21,6 @@ function App() {
           element={
             <>
               <Homepage/>
-             
               <OrganizationForm />
               <PersonalForm />
             </>
@@ -29,6 +28,16 @@ function App() {
         />
         <Route path="/Whyus" element={<Whyus />} />
         <Route path="/team" element={<TeamWork/>} />
+        <Route path="/mission" element={<TeamWork/>} />
+        <Route path="/web-design" element={<Dashboard />} />
+        <Route path="/web-dev" element={<Dashboard />} />
+        <Route path="/seo" element={<Dashboard />} />
+        <Route path="/basic" element={<Dashboard />} />
+        <Route path="/premium" element={<Dashboard />} />
+        <Route path="/enterprise" element={<Dashboard />} />
+        <Route path="/portfolio" element={<Dashboard />} />
+        <Route path="/blog" element={<Dashboard />} />
+        <Route path="/enquiry" element={<Dashboard />} />
         <Route path="/contact" element={ <ContactForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
