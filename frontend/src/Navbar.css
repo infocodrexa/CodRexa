@@ -350,3 +350,139 @@ body {
   height: 30px;
   object-fit: contain;
 }
+
+/* Mega Dropdown */
+.mega-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #fff;
+  padding: 25px 40px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-60%); 
+  width: 100vw;                 
+  max-width: 1300px;          
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+
+.mega-column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-column h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0a2c56;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.mega-column a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.3s;
+}
+
+.mega-column a:hover {
+  color: #e53935;
+}
+/* Sidebar ke andar mobile services dropdown */
+/* Sidebar ke andar mobile services dropdown */
+.mobile-dropdown {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.mobile-dropbtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  padding: 2px;
+  cursor: pointer;
+  color: #0a2c56;
+}
+
+.mobile-mega {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.mobile-mega h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: #0a2c56;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.mobile-mega a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.mobile-mega a:hover {
+  color: #e53935;
+}
+
+/* 🔹 Top-level nav items (Home, About, Services, Portfolio, Blog, Enquiry, Contact) */
+.nav-links-desktop > a,
+.nav-links-desktop > .dropdown > .dropbtn {
+  color: #0a2c56 !important;   /* Blue */
+  font-weight: 600;
+}
+
+/* 🔹 Mobile sidebar ke top items bhi blue */
+.mobile-menu > a,
+.mobile-dropdown-header {
+  color: #0a2c56 !important;   /* Blue */
+  font-weight: 600;
+}
+
+/* 🔹 Inside links (dropdown / mega menu ke andar) black */
+.dropdown-content a,
+.mega-column a,
+.mobile-mega a,
+.mobile-dropdown-content a {
+  color: #333 !important;      /* Black */
+  font-weight: 500;
+}
+
+/* Hover effect sirf andar ke links pe red */
+.dropdown-content a:hover,
+.mega-column a:hover,
+.mobile-mega a:hover,
+.mobile-dropdown-content a:hover {
+  color: #e53935 !important;   /* Red on hover */
+}
+/* Sidebar divider for mobile menu */
+
+/* Divider inside mobile sidebar */
+.mobile-menu .nav-divider {
+  border: none;
+  border-top: 1px solid #9e9898;
+  margin: 12px 0;
+}
