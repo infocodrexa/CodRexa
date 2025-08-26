@@ -1,0 +1,209 @@
+.seo-section {
+  background-color: #eaf2fb;
+  padding: 60px 20px;
+  margin-top: 100px;
+}
+
+.seo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.seo-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.seo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.seo-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.seo-points li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.seo-btn {
+  background: #0077ff;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.seo-btn:hover {
+  background: #005fcc;
+}
+
+.seo-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.seo-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.seo-btn {
+  background: #25d366; /* WhatsApp green */
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  display: inline-block;
+}
+
+.seo-btn:hover {
+  background: #1ebe5c;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seo-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+}
+.seo-service-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.seo-service-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.seo-service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.seo-service-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.seo-service-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 18px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.seo-service-content strong {
+  color: #111;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seo-service-title {
+    font-size: 1.6rem;
+  }
+  .seo-service-subtitle {
+    font-size: 0.95rem;
+  }
+  .seo-service-content p {
+    font-size: 0.95rem;
+  }
+}
+/* ========== SEO Extra Section (new one) ========== */
+.seo-extra-section {
+  padding: 70px 20px;
+  background: #fff;
+}
+
+.seo-extra-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.seo-extra-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.seo-extra-content {
+  flex: 1;
+  text-align: left;
+}
+
+.seo-extra-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.seo-extra-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a4f8a;
+  margin-bottom: 20px;
+}
+
+.seo-extra-content p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.seo-extra-content strong {
+  color: #111;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .seo-extra-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .seo-extra-content {
+    text-align: center;
+  }
+  .seo-extra-image img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

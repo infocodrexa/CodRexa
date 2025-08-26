@@ -178,3 +178,9 @@ html, body {
   line-height: 1.6;
 }
 
+@media (max-width: 576px) {
+ .about-section {
+   width: 100%;
+  min-height: 600px; /* section ki height */
+ }
+}
