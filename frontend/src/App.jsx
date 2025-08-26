@@ -9,6 +9,8 @@ import Whyus from "./Components/About/WhyUs/Whyus";
 import TeamWork from "./Components/About/Our Team/TeamWork";
 import Homepage from "./Components/Home/homepage/Homepage.jsx";
 import Dashboard from "./User/Dashboard.jsx";
+import Basic from "./Components/Package/Basic/Basic.jsx";
+import Primium from "./Components/Package/Primium/Primium.jsx";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             </>
           }
         />
+        <Route path="/premium" element={<Primium/>} />
+        <Route path="/basic" element={<Basic/>} />
         <Route path="/Whyus" element={<Whyus />} />
         <Route path="/team" element={<TeamWork/>} />
         <Route path="/mission" element={<TeamWork/>} />
@@ -39,6 +43,7 @@ function App() {
         <Route path="/blog" element={<Dashboard />} />
         <Route path="/enquiry" element={<Dashboard />} />
         <Route path="/contact" element={ <ContactForm />} />
+        <Route path="/PersonalForm" element={ <PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer/>
