@@ -1,0 +1,77 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Banner - Full width */
+.Ppcbanner {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  padding-top: 6.3rem;
+}
+
+.Ppcbanner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.ppc-container {
+  max-width: 1200px;   /* 👈 yahan width badha di */
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.ppc-container h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.ppc-container h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ppc-container p {
+  margin-bottom: 15px;
+}
+
+.ppc-container strong {
+  font-weight: 600;
+}
+
+.ppc-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ppc-container ul li {
+  margin-bottom: 20px;
+}
+
+.ppc-container ul li strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .Ppcbanner {
+    height: 300px;
+  }
+}

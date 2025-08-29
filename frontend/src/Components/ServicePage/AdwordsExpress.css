@@ -1,0 +1,176 @@
+
+
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Banner - Full width */
+.Adwordbanner {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  padding-top: 6.3rem;
+}
+
+.Adwordbanner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.adwords-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  color: #222;
+}
+
+.adwords-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.adwords-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 25px 0 10px;
+}
+
+.adwords-container p {
+  margin-bottom: 15px;
+}
+
+.adwords-container strong {
+  font-weight: 700;
+}
+
+.adwords-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.adwords-container ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #444;
+}
+.award2-wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+.award2-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.award2-image {
+  flex: 1;
+}
+
+.award2-image img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.award2-content {
+  flex: 1.2;
+}
+
+.award2-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.award2-content p {
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.award2-content strong {
+  font-weight: 600;
+}
+.adword3-wrapper {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+.adword3-wrapper h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 25px 0 15px;
+}
+
+.adword3-wrapper h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0 12px;
+}
+
+.adword3-wrapper ul {
+  margin: 0 0 20px 20px;
+  padding: 0;
+  list-style: disc;
+}
+
+.adword3-wrapper li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.adword3-types {
+  list-style: circle;
+}
+
+.adword3-wrapper p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.adword3-highlight {
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .award2-section {
+    flex-direction: column;
+  }
+  .award2-content {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .Adwordbanner {
+    height: 300px;
+  }
+}
