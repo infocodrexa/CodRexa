@@ -6,7 +6,7 @@ import {
   getOrganizations,
   getPersonals,
 } from "../services/api"; // apne api.js ka path sahi rakhna
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Dashboard.css"; // ✅ apna css file
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("contact");
@@ -19,7 +19,7 @@ const Dashboard = () => {
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
     if (userData) setUser(userData);
-    else navigate("/"); // redirect if not logged in
+    else navigate("/"); 
   }, [navigate]);
 
   useEffect(() => {
@@ -37,39 +37,38 @@ const Dashboard = () => {
     fetchData();
   }, []);
 
-  // ✅ Logout function
   const handleLogout = () => {
-    localStorage.removeItem("user"); // user data clear
-    navigate("/"); // login page pe redirect
+    localStorage.removeItem("user"); 
+    navigate("/"); 
   };
 
-  if (!user) return <p className="text-center mt-5 fs-5">Loading...</p>;
+  if (!user) return <p className="loading">Loading...</p>;
 
   return (
-    <div className="container my-5">
+    <div className="dashboard">
       {/* Header */}
-      <div className="card shadow-lg text-center p-4 mb-4">
-        <h2 className="fw-bold">
-          Welcome, <span className="text-primary">{user.name}</span>
+      <div className="header-card">
+        <h2>
+          Welcome, <span className="username">{user.name}</span>
         </h2>
       </div>
 
       {/* Tabs */}
-      <div className="d-flex justify-content-center mb-4 gap-2 flex-wrap">
+      <div className="tabs">
         <button
-          className={`btn ${activeTab === "contact" ? "btn-primary" : "btn-outline-primary"}`}
+          className={`tab-btn ${activeTab === "contact" ? "active" : ""}`}
           onClick={() => setActiveTab("contact")}
         >
           Contact Info
         </button>
         <button
-          className={`btn ${activeTab === "organization" ? "btn-success" : "btn-outline-success"}`}
+          className={`tab-btn ${activeTab === "organization" ? "active" : ""}`}
           onClick={() => setActiveTab("organization")}
         >
           Organization Info
         </button>
         <button
-          className={`btn ${activeTab === "personal" ? "btn-warning" : "btn-outline-warning"}`}
+          className={`tab-btn ${activeTab === "personal" ? "active" : ""}`}
           onClick={() => setActiveTab("personal")}
         >
           Personal Info
@@ -77,26 +76,21 @@ const Dashboard = () => {
       </div>
 
       {/* Content */}
-      <div className="mb-4">
-        {/* CONTACTS */}
+      <div className="content">
         {activeTab === "contact" && (
           <div>
-            <h4 className="fw-semibold mb-3">📞 Contact Details</h4>
+            <h4 className="section-title">📞 Contact Details</h4>
             {contacts.length > 0 ? (
-              <div className="row">
+              <div className="card-grid">
                 {contacts.map((c) => (
-                  <div key={c._id} className="col-md-6 mb-3">
-                    <div className="card shadow-sm p-3 h-100">
-                      <div className="card-body">
-                        <h5 className="card-title text-primary">{c.name}</h5>
-                        <p><strong>Email:</strong> {c.email}</p>
-                        <p><strong>Phone:</strong> {c.phone}</p>
-                        <p><strong>Message:</strong> {c.message}</p>
-                        <p className="text-muted">
-                          <small>Created At: {new Date(c.createdAt).toLocaleString()}</small>
-                        </p>
-                      </div>
-                    </div>
+                  <div key={c._id} className="data-card">
+                    <h5 className="text-blue">{c.name}</h5>
+                    <p><strong>Email:</strong> {c.email}</p>
+                    <p><strong>Phone:</strong> {c.phone}</p>
+                    <p><strong>Message:</strong> {c.message}</p>
+                    <p className="muted">
+                      <small>Created At: {new Date(c.createdAt).toLocaleString()}</small>
+                    </p>
                   </div>
                 ))}
               </div>
@@ -106,29 +100,24 @@ const Dashboard = () => {
           </div>
         )}
 
-        {/* ORGANIZATIONS */}
         {activeTab === "organization" && (
           <div>
-            <h4 className="fw-semibold mb-3">🏢 Organization Details</h4>
+            <h4 className="section-title">🏢 Organization Details</h4>
             {organizations.length > 0 ? (
-              <div className="row">
+              <div className="card-grid">
                 {organizations.map((o) => (
-                  <div key={o._id} className="col-md-6 mb-3">
-                    <div className="card shadow-sm p-3 h-100">
-                      <div className="card-body">
-                        <h5 className="card-title text-success">{o.name}</h5>
-                        <p><strong>Email:</strong> {o.email}</p>
-                        <p><strong>Phone:</strong> {o.phone}</p>
-                        <p><strong>Company:</strong> {o.company}</p>
-                        <p><strong>Location:</strong> {o.location}</p>
-                        <p><strong>Service:</strong> {o.Service}</p>
-                        <p><strong>Website:</strong> <a href={o.url} target="_blank" rel="noreferrer">{o.url}</a></p>
-                        <p><strong>Requirement:</strong> {o.requirement}</p>
-                        <p className="text-muted">
-                          <small>Created At: {new Date(o.createdAt).toLocaleString()}</small>
-                        </p>
-                      </div>
-                    </div>
+                  <div key={o._id} className="data-card">
+                    <h5 className="text-green">{o.name}</h5>
+                    <p><strong>Email:</strong> {o.email}</p>
+                    <p><strong>Phone:</strong> {o.phone}</p>
+                    <p><strong>Company:</strong> {o.company}</p>
+                    <p><strong>Location:</strong> {o.location}</p>
+                    <p><strong>Service:</strong> {o.Service}</p>
+                    <p><strong>Website:</strong> <a href={o.url} target="_blank" rel="noreferrer">{o.url}</a></p>
+                    <p><strong>Requirement:</strong> {o.requirement}</p>
+                    <p className="muted">
+                      <small>Created At: {new Date(o.createdAt).toLocaleString()}</small>
+                    </p>
                   </div>
                 ))}
               </div>
@@ -138,26 +127,21 @@ const Dashboard = () => {
           </div>
         )}
 
-        {/* PERSONAL */}
         {activeTab === "personal" && (
           <div>
-            <h4 className="fw-semibold mb-3">👤 Personal Info</h4>
+            <h4 className="section-title">👤 Personal Info</h4>
             {personals.length > 0 ? (
-              <div className="row">
+              <div className="card-grid">
                 {personals.map((p) => (
-                  <div key={p._id} className="col-md-6 mb-3">
-                    <div className="card shadow-sm p-3 h-100">
-                      <div className="card-body">
-                        <h5 className="card-title text-warning">{p.name}</h5>
-                        <p><strong>Email:</strong> {p.email}</p>
-                        <p><strong>Phone:</strong> {p.phone}</p>
-                        <p><strong>Location:</strong> {p.location}</p>
-                        <p><strong>Requirement:</strong> {p.requirement}</p>
-                        <p className="text-muted">
-                          <small>Created At: {new Date(p.createdAt).toLocaleString()}</small>
-                        </p>
-                      </div>
-                    </div>
+                  <div key={p._id} className="data-card">
+                    <h5 className="text-yellow">{p.name}</h5>
+                    <p><strong>Email:</strong> {p.email}</p>
+                    <p><strong>Phone:</strong> {p.phone}</p>
+                    <p><strong>Location:</strong> {p.location}</p>
+                    <p><strong>Requirement:</strong> {p.requirement}</p>
+                    <p className="muted">
+                      <small>Created At: {new Date(p.createdAt).toLocaleString()}</small>
+                    </p>
                   </div>
                 ))}
               </div>
@@ -168,9 +152,9 @@ const Dashboard = () => {
         )}
       </div>
 
-      {/* Logout Button */}
-      <div className="text-center">
-        <button className="btn btn-danger px-4" onClick={handleLogout}>
+      {/* Logout */}
+      <div className="logout-wrap">
+        <button className="logout-btn" onClick={handleLogout}>
           <CgCloseR /> Logout
         </button>
       </div>

@@ -1,0 +1,40 @@
+.banner {
+  width: 100%;
+  height: 90vh;
+  margin-top: 2rem;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+
+@media (min-width: 960px) {
+  .banner {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 784px) {
+  .banner {
+    height: auto;
+    margin-top: 5rem;
+  }
+  .banner-img {
+    height: auto;
+    object-fit: contain; /* ✅ mobile me cut na ho */
+  }
+}
+
+@media (min-width: 1653px) {
+  .banner {
+    height: 100vh;
+  }
+}

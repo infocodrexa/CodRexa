@@ -133,9 +133,6 @@
   text-shadow: 0 0 6px rgba(0,191,255,0.6); /* modern glow */
 }
 
-.footer-section p:hover::after {
-  width: 100%; /* underline animation */
-}
 
 
 /* Bottom bar */
@@ -165,9 +162,7 @@
   text-shadow: 0 0 6px rgba(0,191,255,0.6); /* modern glow */
 }
 
-.footer-bottom p:hover::after {
-  width: 100%; /* underline animation */
-}
+
 
 
 

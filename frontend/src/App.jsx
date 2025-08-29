@@ -33,7 +33,7 @@ import DisplayAds from "./Components/ServicePage/DisplayAds";
 import ShoppingAds from "./Components/ServicePage/ShoppingAds";
 import LeadMarketing from "./Components/ServicePage/LeadMarketing";
 import YoutubePromotion from "./Components/ServicePage/YoutubePromotion";
-import Android from "./Components/ServicePage/Android";
+import Android from "./Components/ServicePage/Android.jsx";
 import Ios from "./Components/ServicePage/Ios";
 import AppStoreOptimization from "./Components/ServicePage/AppStoreOptimization";
 import MarketplaceListing from "./Components/ServicePage/MarketplaceListing";
@@ -54,17 +54,17 @@ function App() {
           path="/"
           element={
             <>
-              <Homepage/>
+              <Homepage />
               <OrganizationForm />
               <PersonalForm />
             </>
           }
         />
-        <Route path="/premium" element={<Primium/>} />
-        <Route path="/basic" element={<Basic/>} />
+        <Route path="/premium" element={<Primium />} />
+        <Route path="/basic" element={<Basic />} />
         <Route path="/Whyus" element={<Whyus />} />
-        <Route path="/team" element={<TeamWork/>} />
-        <Route path="/mission" element={<TeamWork/>} />
+        <Route path="/team" element={<TeamWork />} />
+        <Route path="/mission" element={<TeamWork />} />
         <Route path="/web-design" element={<Dashboard />} />
         <Route path="/web-dev" element={<Dashboard />} />
         <Route path="/seo" element={<Dashboard />} />
@@ -74,22 +74,34 @@ function App() {
         <Route path="/portfolio" element={<Dashboard />} />
         <Route path="/blog" element={<Dashboard />} />
         <Route path="/enquiry" element={<Dashboard />} />
-        <Route path="/contact" element={ <ContactForm />} />
-        <Route path="/PersonalForm" element={ <PersonalForm />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/PersonalForm" element={<PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Services Routes */}
         <Route path="/services/seo" element={<Seo />} />
         <Route path="/services/smo" element={<Smo />} />
         <Route path="/services/local-seo" element={<LocalSeo />} />
-        <Route path="/services/content-marketing" element={<ContentMarketing />} />
+        <Route
+          path="/services/content-marketing"
+          element={<ContentMarketing />}
+        />
         <Route path="/services/orm" element={<Orm />} />
         <Route path="/services/link-building" element={<LinkBuilding />} />
-        <Route path="/services/website-optimization" element={<WebsiteOptimization />} />
+        <Route
+          path="/services/website-optimization"
+          element={<WebsiteOptimization />}
+        />
         <Route path="/services/analytics" element={<Analytics />} />
-        <Route path="/services/modern-responsive" element={<ModernResponsive />} />
+        <Route
+          path="/services/modern-responsive"
+          element={<ModernResponsive />}
+        />
         <Route path="/services/ecommerce-dev" element={<EcommerceDev />} />
-        <Route path="/services/wordpress-shopify" element={<WordpressShopify />} />
+        <Route
+          path="/services/wordpress-shopify"
+          element={<WordpressShopify />}
+        />
         <Route path="/services/crm" element={<Crm />} />
         <Route path="/services/web-dev" element={<WebDev />} />
         <Route path="/services/ppc" element={<Ppc />} />
@@ -98,13 +110,25 @@ function App() {
         <Route path="/services/display-ads" element={<DisplayAds />} />
         <Route path="/services/shopping-ads" element={<ShoppingAds />} />
         <Route path="/services/lead-marketing" element={<LeadMarketing />} />
-        <Route path="/services/youtube-promotion" element={<YoutubePromotion />} />
+        <Route
+          path="/services/youtube-promotion"
+          element={<YoutubePromotion />}
+        />
         <Route path="/services/android" element={<Android />} />
         <Route path="/services/ios" element={<Ios />} />
-        <Route path="/services/app-store-optimization" element={<AppStoreOptimization />} />
-        <Route path="/services/marketplace-listing" element={<MarketplaceListing />} />
+        <Route
+          path="/services/app-store-optimization"
+          element={<AppStoreOptimization />}
+        />
+        <Route
+          path="/services/marketplace-listing"
+          element={<MarketplaceListing />}
+        />
         <Route path="/services/amazon-flipkart" element={<AmazonFlipkart />} />
-        <Route path="/services/affiliate-marketing" element={<AffiliateMarketing />} />
+        <Route
+          path="/services/affiliate-marketing"
+          element={<AffiliateMarketing />}
+        />
         <Route path="/services/redesign" element={<Redesign />} />
         <Route path="/services/maintenance" element={<Maintenance />} />
         <Route path="/services/domain-hosting" element={<DomainHosting />} />
