@@ -1,37 +1,62 @@
 import React from "react";
+import "./ModernResponsive.css";
+import myImage from "../../assets/responsivebuild.jpg"; 
+import { FaMobileAlt, FaPalette, FaGlobe, FaTabletAlt, FaRocket } from "react-icons/fa"; // ✅ Icons
+
+const services = [
+  {
+    title: "Responsive Layouts",
+    desc: "Websites that automatically adapt to any screen size for a seamless user experience.",
+    icon: <FaMobileAlt />
+  },
+  {
+    title: "UI/UX Design",
+    desc: "Beautiful and intuitive designs that improve user interaction and engagement.",
+    icon: <FaPalette />
+  },
+  {
+    title: "Cross-Browser Compatibility",
+    desc: "Ensuring your website works flawlessly across all browsers and platforms.",
+    icon: <FaGlobe />
+  },
+  {
+    title: "Mobile-First Development",
+    desc: "Designing with mobile devices as the priority for better accessibility.",
+    icon: <FaTabletAlt />
+  },
+  {
+    title: "Performance Optimization",
+    desc: "Fast-loading, optimized websites for better speed and search engine ranking.",
+    icon: <FaRocket />
+  }
+];
 
 const ModernResponsive = () => {
-  const styles = {
-    container: {
-      padding: "50px",
-      background: "linear-gradient(135deg, #fbc2eb, #a6c1ee)",
-      minHeight: "100vh",
-    },
-    heading: { fontSize: "36px", color: "#2d3436", marginBottom: "20px" },
-    text: { fontSize: "18px", color: "#111", lineHeight: "1.6" },
-    box: {
-      background: "#fff",
-      padding: "20px",
-      borderRadius: "15px",
-      marginTop: "25px",
-      boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-    },
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Modern Responsive Design</h1>
-      <p style={styles.text}>
-        Build modern, mobile-friendly, and responsive websites that adapt to all devices.
-      </p>
-      <div style={styles.box}>
-        <h2>Our Design Services</h2>
-        <ul>
-          <li>Responsive Layouts</li>
-          <li>UI/UX Design</li>
-          <li>Cross-Browser Compatibility</li>
-          <li>Mobile-First Development</li>
-        </ul>
+    <div className="modern-container">
+      <h1 className="modern-heading">Modern Responsive Design</h1>
+      {/* <p className="modern-text">
+        Build modern, mobile-friendly, and responsive websites that adapt to all
+        devices. Our goal is to make sure your brand looks great everywhere.
+      </p> */}
+
+      <div className="modern-wrapper">
+        {/* ✅ Full Width Image */}
+        <img src={myImage} alt="Design showcase" className="modern-image" />
+
+        {/* ✅ Cards Section */}
+        <div className="modern-box">
+          <h2 className="modern-subHeading">Our Design Services</h2>
+          <div className="card-container">
+            {services.map((service, index) => (
+              <div key={index} className="service-card">
+                <div className="icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

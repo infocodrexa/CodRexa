@@ -13,10 +13,10 @@ const HomeSlide = () => {
         <h1 className="hello-text">Hello,</h1>
         <p className="sub-text">You have found leading</p>
         <h2 className="main-heading">
-          Website Designing & Development <br /> Company in Jaipur
+          Website Designing & Development <br /> Company in Samastipur
         </h2>
         <p className="desc">
-          <strong>Codrexa</strong> is a trusted website development company in Jaipur, India. 
+          <strong>Codrexa</strong> is a trusted website development company in Samastipur, Bihar. 
           We create professional websites for startups, small businesses, and enterprises.
         </p>
         <p className="desc">

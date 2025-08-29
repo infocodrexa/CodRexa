@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
         <div className="why-right">
           <h4 className="why-subtitle">WHY CODREXA IS A TRUSTED NAME FOR</h4>
           <h2 className="why-title">
-            Website Designing & Development <br /> Services in Jaipur, India
+            Website Designing & Development <br /> Services in Samastipur, Bihar
           </h2>
           <ul className="why-list">
             <li>Over 1 years of experience in web development services.</li>
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
             <li>Open to outsourcing projects and collaborations.</li>
             <li>Providing web services internationally when required.</li>
             <li>Known for reliable customer support and timely delivery.</li>
-            <li>Complete e-commerce solutions for businesses in Jaipur and beyond.</li>
+            <li>Complete e-commerce solutions for businesses in Samastipur and beyond.</li>
           </ul>
           <button className="talk-btn">💬 Talk to Consultant</button>
         </div>

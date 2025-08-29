@@ -103,7 +103,7 @@ function App() {
           element={<WordpressShopify />}
         />
         <Route path="/services/crm" element={<Crm />} />
-        <Route path="/services/web-dev" element={<WebDev />} />
+        <Route path="/services/web-dev" element={ <Homepage/>} />
         <Route path="/services/ppc" element={<Ppc />} />
         <Route path="/services/fb-twitter-ads" element={<FbTwitterAds />} />
         <Route path="/services/adwords-express" element={<AdwordsExpress />} />
