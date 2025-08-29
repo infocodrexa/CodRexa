@@ -1,0 +1,98 @@
+.modern-container {
+  
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modern-heading {
+  font-size: 36px;
+  color: #2d3436;
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+.modern-text {
+  font-size: 22px;
+  color: #111;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 950px;
+}
+
+.modern-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section{
+  margin-top: 100px;
+}
+
+.modern-image {
+  width: 100vw;
+  height: auto;
+  object-fit: contain; /* ✅ full image no cut */
+  display: block;
+  border-radius: 0;
+}
+
+.modern-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 30px;
+  width: 100%;         /* ✅ pura screen le */
+  max-width: none;     /* ✅ limit hata do */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;         /* ✅ pura width cover kare */
+}
+
+
+.modern-subHeading {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #588dc1;
+  text-align: center;
+}
+.service-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.service-card .icon {
+  font-size: 40px;
+  color: #6c63ff;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
