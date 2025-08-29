@@ -7,8 +7,8 @@ const WhyUs = () => {
   return (
     <section className="whyus">
       {/* Top Banner */}
-      <div className="banner">
-        <img src={img1} alt="Codrexa Banner" className="banner-img" />
+      <div className="bannerr">
+        <img src={img1} alt="Codrexa Banner" className="bannerr-img" />
       </div>
 
       {/* Split Section */}
