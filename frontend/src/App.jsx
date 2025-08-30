@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Hero from "./Components/Home/Hero/Hero";
-import OrganizationForm from "./Components/forms/OrganizationForm";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
 import NavBar from "./Navbar";
@@ -10,39 +8,40 @@ import Homepage from "./Components/Home/homepage/Homepage.jsx";
 import Dashboard from "./User/Dashboard.jsx";
 import Basic from "./Components/Package/Basic/Basic.jsx";
 import Primium from "./Components/Package/Primium/Primium.jsx";
+import NotFound from "./NotFound.jsx"
 
 // Import Service Pages
-import Seo from "./Components/ServicePage/Seo";
-import Smo from "./Components/ServicePage/Smo";
-import LocalSeo from "./Components/ServicePage/LocalSeo";
-import ContentMarketing from "./Components/ServicePage/ContentMarketing";
-import Orm from "./Components/ServicePage/Orm";
-import LinkBuilding from "./Components/ServicePage/LinkBuilding";
-import WebsiteOptimization from "./Components/ServicePage/WebsiteOptimization";
-import ModernResponsive from "./Components/ServicePage/ModernResponsive";
-import EcommerceDev from "./Components/ServicePage/EcommerceDev";
-import WordpressShopify from "./Components/ServicePage/WordpressShopify";
-import Crm from "./Components/ServicePage/Crm";
-import WebDev from "./Components/ServicePage/WebDev";
-import Ppc from "./Components/ServicePage/Ppc";
-import FbTwitterAds from "./Components/ServicePage/FbTwitterAds";
-import AdwordsExpress from "./Components/ServicePage/AdwordsExpress";
-import DisplayAds from "./Components/ServicePage/DisplayAds";
-import ShoppingAds from "./Components/ServicePage/ShoppingAds";
-import LeadMarketing from "./Components/ServicePage/LeadMarketing";
-import YoutubePromotion from "./Components/ServicePage/YoutubePromotion";
-import Android from "./Components/ServicePage/Android.jsx";
-import Ios from "./Components/ServicePage/Ios";
-import AppStoreOptimization from "./Components/ServicePage/AppStoreOptimization";
-import MarketplaceListing from "./Components/ServicePage/MarketplaceListing";
-import AmazonFlipkart from "./Components/ServicePage/AmazonFlipkart";
-import AffiliateMarketing from "./Components/ServicePage/AffiliateMarketing";
-import Redesign from "./Components/ServicePage/Redesign";
-import Maintenance from "./Components/ServicePage/Maintenance";
-import DomainHosting from "./Components/ServicePage/DomainHosting";
-import Ssl from "./Components/ServicePage/Ssl";
-import NotFound from "./NotFound.jsx";
-import ContactForm from "./Components/CONTACT US/CONTACTUS.jsx";
+
+import LocalSeo from "./Components/ServicePage/LocalSeo/LocalSeo";
+import Smo from "./Components/ServicePage/Smo/Smo";
+import Seo from "./Components/ServicePage/Seo/Seo";
+import ContentMarketing from "./Components/ServicePage/ContentMarketing/ContentMarketing";
+import Orm from "./Components/ServicePage/Orm/Orm";
+import LinkBuilding from "./Components/ServicePage/LinkBuilding/LinkBuilding";
+import WebsiteOptimization from "./Components/ServicePage/WebsiteOptimization/WebsiteOptimization";
+import ModernResponsive from "./Components/ServicePage/ModernResponsive/ModernResponsive";
+import EcommerceDev from "./Components/ServicePage/EcommerceDev/EcommerceDev";
+import WordpressShopify from "./Components/ServicePage/WordpressShopify/WordpressShopify";
+import Crm from "./Components/ServicePage/Crm/Crm";
+import WebDev from "./Components/ServicePage/WebDev/WebDev";
+import Ppc from "./Components/ServicePage/Ppc/Ppc";
+import FbTwitterAds from "./Components/ServicePage/FbTwitterAds/FbTwitterAds";
+import AdwordsExpress from "./Components/ServicePage/AdwordsExpress/AdwordsExpress";
+import DisplayAds from "./Components/ServicePage/DisplayAds/DisplayAds";
+import ShoppingAds from "./Components/ServicePage/ShoppingAds/ShoppingAds";
+import LeadMarketing from "./Components/ServicePage/LeadMarketing/LeadMarketing";
+import YoutubePromotion from "./Components/ServicePage/YoutubePromotion/YoutubePromotion";
+import Android from "./Components/ServicePage/Android/Android";
+import Ios from "./Components/ServicePage/Ios/Ios";
+import AppStoreOptimization from "./Components/ServicePage/AppStoreOptimization/AppStoreOptimization";
+import MarketplaceListing from "./Components/ServicePage/MarketplaceListing/MarketplaceListing";
+import AmazonFlipkart from "./Components/ServicePage/AmazonFlipkart/AmazonFlipkart";
+import AffiliateMarketing from "./Components/ServicePage/AffiliateMarketing/AffiliateMarketing";
+import Redesign from "./Components/ServicePage/Redesign/Redesign";
+import Maintenance from "./Components/ServicePage/Maintenance/Maintenance";
+import DomainHosting from "./Components/ServicePage/DomainHosting/DomainHosting";
+import Ssl from "./Components/ServicePage/Ssl/Ssl";
+import CONTACTUS from "./Components/CONTACT US/CONTACTUS.jsx";
 
 function App() {
   return (
@@ -74,7 +73,7 @@ function App() {
         <Route path="/portfolio" element={<Dashboard />} />
         <Route path="/blog" element={<Dashboard />} />
         <Route path="/enquiry" element={<Dashboard />} />
-        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/contact" element={<CONTACTUS/>} />
         <Route path="/PersonalForm" element={<PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
@@ -133,7 +132,7 @@ function App() {
         <Route path="/services/maintenance" element={<Maintenance />} />
         <Route path="/services/domain-hosting" element={<DomainHosting />} />
         <Route path="/services/ssl" element={<Ssl />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
 
       <Footer />
