@@ -43,6 +43,7 @@ import Redesign from "./Components/ServicePage/Redesign";
 import Maintenance from "./Components/ServicePage/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl";
+import { FAQPage } from "./FAQ/FAQPage.jsx";
 
 function App() {
   return (
@@ -55,8 +56,8 @@ function App() {
           element={
             <>
               <Homepage />
-              <OrganizationForm />
-              <PersonalForm />
+              {/* <OrganizationForm /> */}
+              {/* <PersonalForm /> */}
             </>
           }
         />
@@ -133,6 +134,7 @@ function App() {
         <Route path="/services/maintenance" element={<Maintenance />} />
         <Route path="/services/domain-hosting" element={<DomainHosting />} />
         <Route path="/services/ssl" element={<Ssl />} />
+        <Route path="/faq" element={<FAQPage />} />
       </Routes>
 
       <Footer />

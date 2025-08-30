@@ -1,19 +1,15 @@
 
 import React from "react";
 import "./WebsiteOptimization.css";
-import WebsiteImg from "./WEBSITEOptimization.png"; // 👈 image import
+import WebsiteImg from "../../assets/websiteOptmize.png"; 
+import BackgroundImage from "./BackgroundImage";
 
 const WebsiteOptimization = () => {
   return (
     <>
-      {/* Top Image */}
-      <div className="banner" style={{ marginTop: "1px" }}>
-        <img
-          src={WebsiteImg}
-          alt="Website Optimization Banner"
-          className="banner-img img-fluid"
-        />
-      </div>
+    <div>
+      <BackgroundImage src={WebsiteImg} alt="image loading" marginTop="0px" />
+    </div>
 
       <h1 className="optimization-title">
         How to Optimize Your Website for Better Performance
