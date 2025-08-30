@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Hero from "./Components/Home/Hero/Hero";
-import ContactForm from "./Components/forms/ContactForm";
+// import ContactForm from "./Components/forms/ContactForm";
 import OrganizationForm from "./Components/forms/OrganizationForm";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
@@ -43,6 +43,7 @@ import Redesign from "./Components/ServicePage/Redesign";
 import Maintenance from "./Components/ServicePage/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl";
+import CONTACTUS from "./Components/CONTACT US/CONTACTUS.jsx";
 
 function App() {
   return (
@@ -74,7 +75,7 @@ function App() {
         <Route path="/portfolio" element={<Dashboard />} />
         <Route path="/blog" element={<Dashboard />} />
         <Route path="/enquiry" element={<Dashboard />} />
-        <Route path="/contact" element={ <ContactForm />} />
+        <Route path="/contact" element={ <CONTACTUS />} />
         <Route path="/PersonalForm" element={ <PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
