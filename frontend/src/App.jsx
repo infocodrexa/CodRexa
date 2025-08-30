@@ -43,6 +43,7 @@ import Redesign from "./Components/ServicePage/Redesign";
 import Maintenance from "./Components/ServicePage/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl";
+import NotFound from "./NotFound.jsx";
 
 function App() {
   return (
@@ -109,6 +110,7 @@ function App() {
         <Route path="/services/maintenance" element={<Maintenance />} />
         <Route path="/services/domain-hosting" element={<DomainHosting />} />
         <Route path="/services/ssl" element={<Ssl />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
