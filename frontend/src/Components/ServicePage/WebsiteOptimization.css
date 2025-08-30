@@ -1,0 +1,107 @@
+
+.banner {
+  width: 100%;
+  height: 90vh;
+  margin-top: 2rem;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+
+@media (min-width: 960px) {
+  .banner {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 784px) {
+  .banner {
+    height: auto;
+    margin-top: 5rem;
+  }
+  .banner-img {
+    height: auto;
+    object-fit: contain; /* ✅ mobile me cut na ho */
+  }
+}
+
+@media (min-width: 1653px) {
+  .banner {
+    height: 100vh;
+  }
+}
+
+/* Heading */
+.optimization-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Intro text */
+.optimization-intro {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Content Box */
+.optimization-box p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Services */
+.optimization-services {
+  margin-top: 35px;
+  padding: 25px;
+  background: #f5faff;
+  border-left: 5px solid #3a8ef6;
+  border-radius: 5px;
+}
+
+.optimization-services h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.optimization-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.optimization-services li {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .optimization-title {
+    font-size: 28px;
+  }
+
+  .optimization-container {
+    padding: 20px;
+  }
+}

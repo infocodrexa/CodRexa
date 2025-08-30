@@ -1,0 +1,98 @@
+/* Reset */
+html, body {
+  margin-top: 5px;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin-top: 200px;
+}
+@media (min-width: 770px) and (max-width: 2226px) {
+  .banner img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;       /* yahan auto ki jagah 100% */
+    max-height: 80vh;   /* banner ke height se zyada na jaye */
+  }
+}
+
+@media(min-width:960px){
+  .banner{
+    height: 80vh;
+    object-fit: contain;
+  }
+}
+@media(max-width:784px){
+  .banner{
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 2226px) {
+  .banner img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.ppc-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.ppc-container h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.ppc-container h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ppc-container p {
+  margin-bottom: 15px;
+}
+
+.ppc-container strong {
+  font-weight: 600;
+}
+
+.ppc-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ppc-container ul li {
+  margin-bottom: 20px;
+}
+
+.ppc-container ul li strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .Ppcbanner {
+    height: 250px;
+  }
+}
