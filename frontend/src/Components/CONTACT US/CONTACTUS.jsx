@@ -2,13 +2,12 @@ import React from "react";
 import "./CONTACTUS.css";
 import img1 from "../../assets/CONTACT US.png"; // top banner
 import ContactForm from "../forms/ContactForm";
+import BackgroundImage from "../ServicePage/BackgroundImage";
 
 const CONTACTUS = () => {
   return (
     <>
-      <div className="cbannerr">
-        <img src={img1} alt="Codrexa Banner" className="cbannerr-img" />
-      </div>
+      <BackgroundImage src={img1} alt={`image loading please wait`} marginTop="0px" />
       <ContactForm />
     </>
   );

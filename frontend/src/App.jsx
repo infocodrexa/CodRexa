@@ -41,8 +41,8 @@ import Redesign from "./Components/ServicePage/Redesign";
 import Maintenance from "./Components/ServicePage/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl";
-import { FAQPage } from "./FAQ/FAQPage.jsx";
-import ContactForm from "./Components/forms/ContactForm.jsx";
+import NotFound from "./NotFound.jsx";
+import ContactForm from "./Components/CONTACT US/CONTACTUS.jsx";
 
 function App() {
   return (
@@ -133,7 +133,7 @@ function App() {
         <Route path="/services/maintenance" element={<Maintenance />} />
         <Route path="/services/domain-hosting" element={<DomainHosting />} />
         <Route path="/services/ssl" element={<Ssl />} />
-        <Route path="/faq" element={<FAQPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
