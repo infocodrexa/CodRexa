@@ -64,7 +64,7 @@
   border-radius: 10px;
 }
 .seo-btn {
-  background: #25d366; /* WhatsApp green */
+  background: #25d366;
   color: #fff;
   padding: 12px 28px;
   border: none;
@@ -81,7 +81,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .seo-btn {
     width: 100%;
@@ -129,7 +128,6 @@
   font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .seo-service-title {
     font-size: 1.6rem;
@@ -141,7 +139,7 @@
     font-size: 0.95rem;
   }
 }
-/* ========== SEO Extra Section (new one) ========== */
+
 .seo-extra-section {
   padding: 70px 20px;
   background: #fff;
@@ -193,7 +191,6 @@
   font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .seo-extra-container {
     flex-direction: column;
@@ -205,5 +202,224 @@
   .seo-extra-image img {
     max-width: 300px;
     margin: 0 auto;
+  }
+}
+
+/* //man section  */
+
+.seo-wrapper {
+  padding: 60px 20px;
+  background: #fff;
+  margin-left: 20px;
+}
+ @media (min-width:1024px) {
+  .seo-wrapper {
+  margin-left: 30px;
+}
+
+ }
+.seo-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.seo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a2342;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.seo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.seo-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.seo-btn {
+  background: #e60023;
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.seo-btn:hover {
+  background: #c2001c;
+  transform: translateY(-2px);
+}
+
+.seo-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.seo-image {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.seo-image img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+@media (max-width: 992px) {
+  .seo-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .seo-image {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .seo-content {
+    text-align: center;
+  }
+
+  .seo-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+  }
+
+  .seo-image img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.ar-seo-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  margin: 60px 0;
+}
+
+.ar-seo-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.ar-seo-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.ar-seo-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .ar-seo-content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ar-seo-block,
+  .ar-seo-block.reverse {
+    flex-direction: column;
+  }
+
+  .ar-seo-content {
+    padding: 0 16px;
+  }
+
+  .ar-seo-image {
+    margin-top: 20px;
+  }
+
+  .ar-seo-image img {
+    max-width: 320px;
+  }
+}
+
+.ar-seo-content {
+  flex: 1;
+}
+
+.ar-seo-content {
+  flex: 1;
+  padding-right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .ar-seo-content {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ar-seo-content {
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+}
+.ar-seo-block.reverse .ar-seo-image {
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.ar-seo-block.reverse .ar-seo-content {
+  padding-left: 50px;
+}
+
+@media (max-width: 1024px) {
+  .ar-seo-block.reverse .ar-seo-image {
+    padding-right: 20px;
+  }
+  .ar-seo-block.reverse .ar-seo-content {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ar-seo-block.reverse {
+    flex-direction: column;
+  }
+  .ar-seo-block.reverse .ar-seo-image {
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .ar-seo-block.reverse .ar-seo-content {
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 993px) {
+  .ar-seo-block:not(.reverse) .ar-seo-image {
+    padding-left: 30px;
   }
 }

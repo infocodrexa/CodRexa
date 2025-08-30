@@ -2,6 +2,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Hero.css";
 import FreeConsultationButton from "../FreeConsultationButton/FreeConsultationButton";
+import HEROMOBILE from "../../../assets/HEROMOBILE.webp"; 
+import HERODIGITALMARKET from "../../../assets/HERODIGITALMARKET.webp"; 
+import HEROWEBDEVELOPMENT from "../../../assets/HEROWEBDEVELOPMENT.webp"; 
 
 // Slides data
 const slides = [
@@ -10,7 +13,7 @@ const slides = [
     subtitle: "Fast, Responsive & Secure",
     desc: "CodRexa builds blazing-fast, responsive websites with cutting-edge technologies for businesses of all sizes.",
     btn: "🚀 Build My Website",
-    img: "https://www.arinfotech.co.in/images/app-service-slide01.webp",
+    img: HEROMOBILE,
     bg: "linear-gradient(135deg, #3a2d7dff, #08346eff, #468780ff)",
   },
   {
@@ -18,7 +21,7 @@ const slides = [
     subtitle: "Rank Higher, Get Found",
     desc: "Boost your online presence with our SEO strategies, keyword optimization, and content marketing.",
     btn: "📈 Improve My SEO",
-    img: "https://www.arinfotech.co.in/images/digital-marketing-slide1.webp",
+    img: HERODIGITALMARKET,
     isWheel: true,
     bg: "linear-gradient(135deg, #3a2d7dff, #08346eff, #468780ff)",
   },
@@ -27,7 +30,7 @@ const slides = [
     subtitle: "Hassle-Free Maintenance",
     desc: "From updates to security and backups, CodRexa ensures your website runs smoothly 24/7.",
     btn: "🛠 Manage My Website",
-    img: "https://www.arinfotech.co.in/images/web-development-slide02.webp",
+    img: HEROWEBDEVELOPMENT,
     bg: "linear-gradient(135deg, #4c3d94ff, #113f7bff, #348881ff)",
   },
 ];

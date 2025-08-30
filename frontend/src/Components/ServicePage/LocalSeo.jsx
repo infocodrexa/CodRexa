@@ -1,26 +1,12 @@
 import Local from "../../assets/LOCALL.png";
 import React from "react";
 import "./LocalSeo.css";
-
-const Banner = () => {
-  return (
-    <div className="banner">
-      <img
-        src={Local}
-        alt="Local SEO Banner"
-        className="banner-img img-fluid"
-      />
-    </div>
-  );
-};
+import BackgroundImage from "./BackgroundImage";
 
 const Content = () => {
   return (
     <>
       <div className="content">
-        {/* <p className="breadcrumb">
-          Home / Services / <span>Local SEO Services In Samastipur</span>
-        </p> */}
 
         <h1>
           Local Google Business Listing and Map Optimization Services in
@@ -127,7 +113,7 @@ const Content = () => {
 const LocalSeo = () => {
   return (
     <div>
-      <Banner />
+      <BackgroundImage  src={Local} alt="image loading" />
       <Content />
     </div>
   );

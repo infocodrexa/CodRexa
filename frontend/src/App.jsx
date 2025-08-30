@@ -20,7 +20,6 @@ import ContentMarketing from "./Components/ServicePage/ContentMarketing";
 import Orm from "./Components/ServicePage/Orm";
 import LinkBuilding from "./Components/ServicePage/LinkBuilding";
 import WebsiteOptimization from "./Components/ServicePage/WebsiteOptimization";
-import Analytics from "./Components/ServicePage/Analytics";
 import ModernResponsive from "./Components/ServicePage/ModernResponsive";
 import EcommerceDev from "./Components/ServicePage/EcommerceDev";
 import WordpressShopify from "./Components/ServicePage/WordpressShopify";
@@ -93,7 +92,7 @@ function App() {
           path="/services/website-optimization"
           element={<WebsiteOptimization />}
         />
-        <Route path="/services/analytics" element={<Analytics />} />
+        {/* <Route path="/services/analytics" element={<Analytics />} /> */}
         <Route
           path="/services/modern-responsive"
           element={<ModernResponsive />}
