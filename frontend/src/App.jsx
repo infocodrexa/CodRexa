@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Hero from "./Components/Home/Hero/Hero";
-import ContactForm from "./Components/forms/ContactForm";
 import OrganizationForm from "./Components/forms/OrganizationForm";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
@@ -43,6 +42,7 @@ import Maintenance from "./Components/ServicePage/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl";
 import { FAQPage } from "./FAQ/FAQPage.jsx";
+import ContactForm from "./Components/forms/ContactForm.jsx";
 
 function App() {
   return (

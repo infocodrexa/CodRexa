@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Banner - Full width */
+.cbannerr {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  padding-top: 2.3rem;
+}
+
+.cbannerr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .cbannerr {
+    height: 200px;
+    padding-top: 2.3rem;
+  }
+}

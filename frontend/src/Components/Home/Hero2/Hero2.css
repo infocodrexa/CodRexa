@@ -1,0 +1,152 @@
+/* Wrapper */
+/* import image from "../../../assets/global-client.png"; */
+.ad-hero {
+  position: relative;
+  background: url("../../../assets/hero2.jpg")
+    no-repeat center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.ad-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 0, 80, 0.6);
+  z-index: 1;
+}
+
+/* Content container */
+.ad-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Content */
+.ad-content {
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.ad-title {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.ad-features {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Buttons */
+.ad-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeUp 2s ease-in-out;
+}
+
+.ad-btn {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  display: inline-block;
+  text-align: center;
+}
+
+.ad-btn-primary {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.ad-btn-primary:hover {
+  background: #0284c7;
+  border-color: #0284c7;
+}
+
+.ad-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Bottom icon */
+.ad-bottom-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.ad-bottom-icon img {
+  height: 50px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .ad-title {
+    font-size: 2.8rem;
+  }
+  .ad-features {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ad-title {
+    font-size: 3.2rem;
+  }
+  .ad-features {
+    font-size: 1.3rem;
+  }
+}

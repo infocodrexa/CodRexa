@@ -1,0 +1,97 @@
+/* Section wrapper */
+.ad2-features {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Container */
+.ad2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Row for grid */
+.ad2-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 in desktop */
+  gap: 30px;
+}
+
+/* Feature card */
+.ad2-feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.ad2-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.ad2-icon {
+  height: 80px;
+  width: 80px;
+  background: #0ea5e9;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.ad2-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Description */
+.ad2-desc {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .ad2-row {
+    grid-template-columns: repeat(2, 1fr); /* Tablet me 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .ad2-row {
+    grid-template-columns: 1fr; /* Mobile me 1 column */
+  }
+  .ad2-title {
+    font-size: 1.1rem;
+  }
+  .ad2-desc {
+    font-size: 0.95rem;
+  }
+}
