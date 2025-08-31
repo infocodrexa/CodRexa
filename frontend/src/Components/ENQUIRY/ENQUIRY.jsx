@@ -1,16 +1,15 @@
 import React from "react";
-import "./CONTACTUS.css";
-import img1 from "../../assets/CONTACT US.png"; // top banner
-import ContactForm from "../forms/ContactForm";
 import BackgroundImage from "../ServicePage/Background/BackgroundImage";
+import img1 from "../../assets/ENQUIRY.png"; // top banner
+import OrganizationForm from "../forms/OrganizationForm";
 
-const CONTACTUS = () => {
+const ENQUIRY = () => {
   return (
     <>
       <BackgroundImage src={img1} alt="Codrexa Banner" type="1500x500" />
-      <ContactForm />
+      <OrganizationForm />
     </>
   );
 };
 
-export default CONTACTUS;
+export default ENQUIRY;

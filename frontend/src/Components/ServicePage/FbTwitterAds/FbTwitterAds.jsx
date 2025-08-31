@@ -18,6 +18,7 @@ import fbImage from "../../../assets/fbad5.png";
 import instaImg from "../../../assets/fbad6.png"; 
 import ytImage from "../../../assets/fbad7.png"; 
 import img1 from "../../../assets/fbad1.png"; 
+import BackgroundImage from "../Background/BackgroundImage";
 // Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -55,9 +56,10 @@ const SocialMediaMarketing = () => {
     <>
       {/* ===== First Section ===== */}
       <section className="smm-section">
-        <div className="banner">
-          <img src={img1} alt="Codrexa Banner" className="banner-img" />
-        </div>
+        {/* <div className="SocialMediaMarketingbanner">
+          <img src={img1} alt="Codrexa Banner" className="SocialMediaMarketingbanner-img" />
+        </div> */}
+        <BackgroundImage src={img1} alt="Codrexa Banner" type="1500x500" />
         <div className="smm-container">
           {/* Left Content */}
           <motion.div
@@ -189,7 +191,7 @@ const SocialMediaMarketing = () => {
                   }`}
                   style={{
                     backgroundColor:
-                      platform.name === "Snapchat" ? "#FFFC00" : "#fff",
+                      platform.name === "Snapchat" ? "#fff" : "#fff",
                     color: platform.text || "#333",
                   }}
                   initial={{ opacity: 0, scale: 0.8 }}

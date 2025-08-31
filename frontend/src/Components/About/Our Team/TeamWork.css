@@ -1,42 +1,32 @@
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
 /* Banner - Full width */
-.banner2 {
+.TeamWork__banner {
   position: relative;
   width: 100%;
   height: 360px;
   overflow: hidden;
-  padding-top: 2.5rem;
+  padding-top: 1.6rem;
 }
 
-.banner-img2 {
+.TeamWork__banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.teamwork-page {
-  padding: 60px 0px;
+.TeamWork__page {
+  padding: 10px 0px;
   text-align: center;
   background: #f9f9f9;
   min-height: 100vh;
 }
 
-.teamwork-header h1 {
+.TeamWork__header h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
   color: #222;
 }
 
-.teamwork-header p {
+.TeamWork__header p {
   max-width: 750px;
   margin: 0 auto 50px auto;
   font-size: 1.1rem;
@@ -44,14 +34,14 @@ html, body {
   line-height: 1.6;
 }
 
-.process-container {
+.TeamWork__process-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.process-step {
+.TeamWork__process-step {
   background: #fff;
   border-radius: 12px;
   padding: 25px;
@@ -60,23 +50,23 @@ html, body {
   transition: transform 0.3s ease;
 }
 
-.process-step:hover {
+.TeamWork__process-step:hover {
   transform: translateY(-8px);
 }
 
-.process-step .icon {
+.TeamWork__icon {
   font-size: 2.5rem;
   color: #007bff;
   margin-bottom: 15px;
 }
 
-.process-step h3 {
+.TeamWork__process-step h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
   color: #333;
 }
 
-.process-step p {
+.TeamWork__process-step p {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;

@@ -3,13 +3,11 @@ import "./AdwordsExpress.css";
 import adword from "../../../assets/dword.png";
 import adword1 from "../../../assets/adword1.jpg";
 import adword2 from "../../../assets/adword2.jpg";
+import BackgroundImage from "../Background/BackgroundImage";
 const AdwordsExpress = () => {
   return (
     <>
-       <div className="Adwordbanner">
-        <img src={adword} alt="Codrexa Banner" className="Adwordbanner-img" />
-      </div>
-   
+     <BackgroundImage src={adword} alt="Codrexa Banner" type="1500x500" />
     <div className="adwords-container">
       <h1>Google Adwords Services - Search Ads, Shopping Ads, And Display Ads</h1>
       <p>

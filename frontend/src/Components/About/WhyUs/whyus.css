@@ -1,39 +1,32 @@
 /* Reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
 
 /* Banner - Full width */
-.bannerr {
+.WhyUs__banner {
   position: relative;
   width: 100%;
   height: 360px;
   overflow: hidden;
-  padding-top: 1.3rem;
+  /* padding-top: 1.3rem; */
 }
 
-.bannerr-img {
+.WhyUs__banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Section */
-.whyus {
-  padding: 80px 0px;
+.WhyUs__section {
+  padding: 30px 0px;
   background: #fff;
 }
-.heading{
+
+.WhyUs__heading {
   padding-top: 4rem;
 }
 
 /* Container: side-by-side on large, stacked on mobile */
-.whyus-container {
+.WhyUs__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,50 +38,50 @@ html, body {
 }
 
 /* Left image */
-.whyus-image {
+.WhyUs__image {
   flex: 1;
   min-width: 280px;
   display: flex;
   justify-content: center;
 }
 
-.whyus-image img {
+.WhyUs__image img {
   width: 100%;
   max-width: 450px;
   border-radius: 10px;
 }
 
 /* Right content */
-.whyus-content {
+.WhyUs__content {
   flex: 2;
   min-width: 280px;
 }
 
-.whyus-content h2 {
+.WhyUs__content h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #222;
 }
 
-.whyus-content p {
+.WhyUs__content p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 18px;
   color: #444;
 }
 
-.highlight {
+.WhyUs__highlight {
   color: #0073ff;
   font-weight: bold;
   text-decoration: none;
 }
 
-.highlight:hover {
+.WhyUs__highlight:hover {
   text-decoration: underline;
 }
 
 /* Button */
-.consult-btn {
+.WhyUs__consult-btn {
   padding: 12px 24px;
   background-color: #c8102e;
   color: #fff;
@@ -100,7 +93,7 @@ html, body {
   transition: background 0.3s;
 }
 
-.consult-btn:hover {
+.WhyUs__consult-btn:hover {
   background-color: #a10d25;
 }
 
@@ -108,71 +101,73 @@ html, body {
 
 /* Tablet */
 @media (max-width: 992px) {
-  .whyus-container {
+  .WhyUs__container {
     flex-direction: column;
     text-align: center;
   }
 
-  .whyus-image img {
-    max-width: 400px;
+  .WhyUs__image img {
+    max-width: 100px;
   }
-  .heading{
-  padding-top: 1rem;
-}
 
-  .whyus-content {
+  .WhyUs__heading {
+    padding-top: 1rem;
+  }
+
+  .WhyUs__content {
     margin-top: 20px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
-  .bannerr {
+  .WhyUs__banner {
     height: 100px;
     padding-top: 0;
   }
 
-
-  .whyus {
-    padding: 100px 0px;
+  .WhyUs__section {
+    padding: 30px 0px;
   }
 
-  .whyus-content h2 {
+  .WhyUs__content h2 {
     font-size: 26px;
   }
 
-  .whyus-content p {
+  .WhyUs__content p {
     font-size: 14px;
   }
 
-  .consult-btn {
+  .WhyUs__consult-btn {
     width: 100%;
     padding: 14px;
   }
 }
-.about-section {
+
+/* About Section */
+.WhyUs__about-section {
   position: relative;
   background-image: url("../../../assets/bgimg.png"); /* ✅ correct path */
-  background-attachment: fixed; /* 🔥 keeps it fixed while scrolling */
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 400px; /* section ki height */
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.overlay {
-  background: rgba(255, 255, 255, 0.9); /* white transparent background */
+.WhyUs__overlay {
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   max-width: 900px;
   text-align: center;
   border-radius: 8px;
 }
 
-.about-content p {
+.WhyUs__about-content p {
   font-size: 20px;
   font-weight: 600;
   color: #111;
@@ -180,8 +175,8 @@ html, body {
 }
 
 @media (max-width: 576px) {
- .about-section {
+ .WhyUs__about-section {
    width: 100%;
-  min-height: 600px; /* section ki height */
+   min-height: 600px;
  }
 }

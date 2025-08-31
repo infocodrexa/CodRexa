@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         {/* Logo & About */}
-        <div className="footer-section about">
+        <div className="footer-section ">
           <img onClick={() => navigate("/")} src={logo} alt="CODREXA" className="footer-logo" />
           <p>
             A R Infotech is a reputed and well-established Website Development &

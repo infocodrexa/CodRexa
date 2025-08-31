@@ -1,20 +1,9 @@
-/* Reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Banner - Full width */
+/* ===== Banner - Full width ===== */
 .Ppcbanner {
   position: relative;
   width: 100%;
   height: 570px;
   overflow: hidden;
-  padding-top: 6.3rem;
 }
 
 .Ppcbanner-img {
@@ -23,10 +12,9 @@ html, body {
   object-fit: cover;
 }
 
-
-
+/* ===== Container ===== */
 .ppc-container {
-  max-width: 1200px;   /* 👈 yahan width badha di */
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -70,8 +58,75 @@ html, body {
   font-size: 16px;
 }
 
+/* ===== Responsive Breakpoints ===== */
+
+/* Extra small devices (phones < 480px) */
+@media (max-width: 480px) {
+   .Ppcbanner {
+    height: 120px; /* jaise height tu chaahe */
+  }
+  .Ppcbanner-img {
+    height: 100%; 
+    /* object-fit: cover;  */
+  }
+  .ppc-container {
+    padding: 15px;
+  }
+  .ppc-container h1 {
+    font-size: 20px;
+  }
+  .ppc-container h2 {
+    font-size: 18px;
+  }
+  .ppc-container p {
+    font-size: 14px;
+  }
+}
+
+/* Small phones (max-width: 576px) */
 @media (max-width: 576px) {
   .Ppcbanner {
-    height: 300px;
+    /* height: 20px; */
+    display: none;
+  }
+  .ppc-container {
+    padding: 15px;
+  }
+  .ppc-container h1 {
+    font-size: 22px;
+  }
+  .ppc-container h2 {
+    font-size: 18px;
+  }
+}
+
+/* Tablets portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  .Ppcbanner {
+    height: 380px;
+  }
+  .ppc-container {
+    max-width: 90%;
+    padding: 18px;
+  }
+  .ppc-container h1 {
+    font-size: 24px;
+  }
+}
+
+/* Tablets landscape & small laptops (max-width: 992px) */
+@media (max-width: 992px) {
+  .Ppcbanner {
+    height: 450px;
+  }
+  .ppc-container {
+    max-width: 95%;
+  }
+}
+
+/* Medium laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .ppc-container {
+    max-width: 1000px;
   }
 }
