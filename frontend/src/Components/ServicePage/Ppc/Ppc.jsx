@@ -1,13 +1,15 @@
 import React from "react";
 import "./Ppc.css";
 import Ppc1 from "../../../assets/Ppc1.png";
+import BackgroundImage from "../Background/BackgroundImage";
 
 const Ppc = () => {
   return (
     <>
-      <div className="Ppcbanner">
+      {/* <div className="Ppcbanner">
         <img src={Ppc1} alt="Codrexa Banner" className="Ppcbanner-img" />
-      </div>
+      </div> */}
+      <BackgroundImage src={Ppc1} alt="Codrexa Banner" type="1500x500" />
       <div className="ppc-container">
         <h1>Paid Marketing Service - PPC Management Agency</h1>
         <p>

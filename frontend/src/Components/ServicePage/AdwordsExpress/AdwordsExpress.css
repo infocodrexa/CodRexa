@@ -1,32 +1,5 @@
 
 
-/* Reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Banner - Full width */
-.Adwordbanner {
-  position: relative;
-  width: 100%;
-  height: 570px;
-  overflow: hidden;
-  padding-top: 6.3rem;
-}
-
-.Adwordbanner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-
 .adwords-container {
   max-width: 1200px;
   margin: 40px auto;

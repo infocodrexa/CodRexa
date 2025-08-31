@@ -103,7 +103,7 @@ export default function Navbar() {
               <div className="dropdown-content">
                 <Link to="/Whyus" onClick={closeSidebar}>Why Us</Link>
                 <Link to="/team" onClick={closeSidebar}>Our Team</Link>
-                <Link to="/mission" onClick={closeSidebar}>Mission & Vision</Link>
+                <Link to="/mission" onClick={closeSidebar}>About CodRex</Link>
               </div>
             )}
           </div>
@@ -226,7 +226,7 @@ export default function Navbar() {
               <div className="mobile-mega">
                 <Link to="/Whyus" onClick={closeSidebar}>Why Us</Link>
                 <Link to="/team" onClick={closeSidebar}>Our Team</Link>
-                <Link to="/mission" onClick={closeSidebar}>Mission & Vision</Link>
+                <Link to="/mission" onClick={closeSidebar}>About CodRex</Link>
               </div>
             )}
           </div>

@@ -42,6 +42,9 @@ import Maintenance from "./Components/ServicePage/Maintenance/Maintenance";
 import DomainHosting from "./Components/ServicePage/DomainHosting/DomainHosting";
 import Ssl from "./Components/ServicePage/Ssl/Ssl";
 import CONTACTUS from "./Components/CONTACT US/CONTACTUS.jsx";
+import AboutSection from "./Components/Home/Hero2/AboutSection.jsx";
+import { BusinessPricingSection } from "./Components/Package/BusinessPricing/BusinessPricing.jsx";
+import ENQUIRY from "./Components/ENQUIRY/ENQUIRY.jsx";
 
 function App() {
   return (
@@ -63,16 +66,16 @@ function App() {
         <Route path="/basic" element={<Basic />} />
         <Route path="/Whyus" element={<Whyus />} />
         <Route path="/team" element={<TeamWork />} />
-        <Route path="/mission" element={<TeamWork />} />
+        <Route path="/mission" element={<AboutSection/>} />
         <Route path="/web-design" element={<Dashboard />} />
         <Route path="/web-dev" element={<Dashboard />} />
         <Route path="/seo" element={<Dashboard />} />
         <Route path="/basic" element={<Dashboard />} />
         <Route path="/premium" element={<Dashboard />} />
-        <Route path="/enterprise" element={<Dashboard />} />
+        <Route path="/enterprise" element={<BusinessPricingSection/>} />
         <Route path="/portfolio" element={<Dashboard />} />
         <Route path="/blog" element={<Dashboard />} />
-        <Route path="/enquiry" element={<Dashboard />} />
+        <Route path="/enquiry" element={<ENQUIRY/>} />
         <Route path="/contact" element={<CONTACTUS/>} />
         <Route path="/PersonalForm" element={<PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
