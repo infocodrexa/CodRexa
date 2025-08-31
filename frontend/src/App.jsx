@@ -91,7 +91,6 @@ function App() {
           path="/services/website-optimization"
           element={<WebsiteOptimization />}
         />
-        {/* <Route path="/services/analytics" element={<Analytics />} /> */}
         <Route
           path="/services/modern-responsive"
           element={<ModernResponsive />}

@@ -7,8 +7,8 @@ const Orm = () => {
     <>
     
            
-      <div class="flashdiv wow fadeInUp ">
-      <img src={OrmBanner} alt="Local SEO Banner" className="banner-img img-fluid" />
+      <div className="poo">
+      <img  className="img-fluid mt-5" src={OrmBanner} alt="Local SEO Banner" />
     </div>
 
       {/* Content Section */}
@@ -16,7 +16,7 @@ const Orm = () => {
         <h1>Online Reputation Management</h1>
         <p>
           Online reputation management contributes to being an integral part of
-          brand reputation management strategy. At AR Infotech, we provide
+          brand reputation management strategy. At CodRexa, we provide
           supreme quality of Online Reputation Management Services in India
           which is useful in enhancing the brand image of your business in no
           time. With our reputation management services, it can be ensured that
@@ -30,11 +30,11 @@ const Orm = () => {
           reputation within no time. Instances are known when negative slander
           feedback has enhanced the online reputation of the business. At AR
           Infotech, we stand out of the ordinary in offering Online Reputation
-          management services in Jaipur which helps in repairing the reputation
+          management services in Samastipur which helps in repairing the reputation
           damage of your business.
         </p>
         <p>
-          At AR Infotech, our team of Online Reputation management has gained
+          At CodRexa, our team of Online Reputation management has gained
           experience in handling the reputation of your business with precision.
           The online reputation of your business is as crucial as the real world
           reputation. We will be able to bestow protection to the reputation
@@ -96,7 +96,7 @@ const Orm = () => {
           </li>
         </ul>
 
-        <p>
+        <p >
           The arena of management of online reputation is vast and we have the
           latest technologies and trained reputation experts in order to procure
           the desired results about the reputation of your brand. Give a call to
