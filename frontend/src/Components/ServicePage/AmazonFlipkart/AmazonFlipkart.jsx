@@ -1,9 +1,9 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 import { motion } from "framer-motion";
 import BackgroundImage from "../Background/BackgroundImage";
 import marketplaceImg from "../../../assets/Marketing.png";
+import "./AmazonFlipkart.css"; // 👈 custom CSS import
 
 // ===== Breadcrumb =====
 const breadcrumbData = [
@@ -16,29 +16,29 @@ function Breadcrumb() {
   return (
     <motion.nav
       aria-label="breadcrumb"
-      className="bg-light py-3 shadow-sm"
+      className="breadcrumb__nav"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}>
-      <div className="container">
-        <ol className="breadcrumb mb-0">
+      transition={{ duration: 0.8 }}
+    >
+      <div className="breadcrumb__container">
+        <ol className="breadcrumb__list">
           {breadcrumbData.map((item, index) => (
             <li
               key={item.id}
-              className={`breadcrumb-item ${
+              className={`breadcrumb__item ${
                 index === breadcrumbData.length - 1
-                  ? "active fw-bold text-primary"
+                  ? "breadcrumb__item--active"
                   : ""
               }`}
-              aria-current={index === breadcrumbData.length - 1 ? "page" : ""}>
+              aria-current={index === breadcrumbData.length - 1 ? "page" : ""}
+            >
               {item.href ? (
-                <a
-                  href={item.href}
-                  className="text-decoration-none text-dark fw-semibold hover-link">
+                <a href={item.href} className="breadcrumb__link">
                   {item.label}
                 </a>
               ) : (
-                item.label
+                <span className="breadcrumb__current">{item.label}</span>
               )}
             </li>
           ))}
@@ -88,53 +88,56 @@ const contentData = {
 // ===== Main Content =====
 function MainContent() {
   return (
-    <div className="container my-5">
-      {/* Title with gradient + zoom animation */}
+    <div className="content__container">
       <motion.h1
-        className="fw-bold mb-3 text-center text-gradient"
+        className="content__title"
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.7 }}>
+        transition={{ duration: 0.7 }}
+      >
         {contentData.title}
       </motion.h1>
 
       <motion.p
-        className="text-muted text-center fs-5"
+        className="content__intro"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}>
+        transition={{ delay: 0.3, duration: 1 }}
+      >
         {contentData.introduction}
       </motion.p>
 
       {contentData.sections.map((section, idx) => (
         <motion.div
           key={section.id}
-          className="mb-5 p-4 rounded shadow-lg hover-card"
+          className="content__card"
           initial={{ y: 60, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: idx * 0.2 }}
-          whileHover={{ scale: 1.03 }}>
-          <h2 className="h4 fw-bold mb-3 text-primary">{section.title}</h2>
+          whileHover={{ scale: 1.03 }}
+        >
+          <h2 className="content__subtitle">{section.title}</h2>
 
           {section.paragraphs &&
             section.paragraphs.map((p, i) => (
               <p
                 key={i}
-                className="text-muted fs-6"
+                className="content__text"
                 dangerouslySetInnerHTML={{ __html: p }}
               />
             ))}
 
           {section.list && (
-            <ul className="list-unstyled mt-3">
+            <ul className="content__list">
               {section.list.map((item, i) => (
                 <motion.li
                   key={i}
-                  className="mb-2 d-flex align-items-start fs-6 text-muted"
+                  className="content__list-item"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}>
-                  <i className="bi bi-check-circle-fill text-success me-2 fs-5"></i>
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <span className="content__icon">✔</span>
                   <span dangerouslySetInnerHTML={{ __html: item }} />
                 </motion.li>
               ))}
@@ -146,14 +149,15 @@ function MainContent() {
   );
 }
 
-// ===== Final Component (Merging All) =====
-export default function AmazonFlipkart() {
+// ===== Final Component =====
+export default function AmazonFlipkart__Page() {
   return (
     <>
       <BackgroundImage
         src={marketplaceImg}
         alt="Marketplace Banner"
-        marginTop="30px"
+        type="1500x500"
+        marginTop="40px"
       />
       <Breadcrumb />
       <MainContent />

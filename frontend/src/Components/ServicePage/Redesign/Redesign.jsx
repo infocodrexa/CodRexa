@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css"; // Animation library
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BackgroundImage from "../Background/BackgroundImage";
 import RedisignImg from "../../../assets/RedisignImg.png";
+import "./Redesign.css"; // ✅ custom styles import
 
 export default function Redesign() {
   useEffect(() => {
@@ -84,88 +83,84 @@ export default function Redesign() {
     },
   ];
 
-  // ✅ Change this image with your own
   const benefitIcon = "https://cdn-icons-png.flaticon.com/512/845/845646.png";
 
   return (
-    <div>
+    <div className="redesign">
       {/* ✅ Hero Banner */}
-      <BackgroundImage src={RedisignImg} alt={`image is loading`} />
+      <BackgroundImage src={RedisignImg} alt="Website Redesign Banner" type="1200x300" marginTop="40px"/>
 
       {/* ✅ Breadcrumb */}
-      <nav
-        aria-label="breadcrumb"
-        className="bg-light py-2 shadow-sm"
-        data-aos="fade-down">
-        <ol className="breadcrumb container">
+      <nav aria-label="breadcrumb" className="breadcrumb-nav" data-aos="fade-down">
+        <ol className="breadcrumb-nav__list">
           {breadcrumbData.map((item, index) => (
             <li
               key={item.id}
-              className={`breadcrumb-item ${
-                index === breadcrumbData.length - 1
-                  ? "active fw-bold text-primary"
-                  : ""
-              }`}>
-              {item.href ? <a href={item.href}>{item.label}</a> : item.label}
+              className={`breadcrumb-nav__item ${
+                index === breadcrumbData.length - 1 ? "breadcrumb-nav__item--active" : ""
+              }`}
+            >
+              {item.href ? (
+                <a href={item.href} className="breadcrumb-nav__link">
+                  {item.label}
+                </a>
+              ) : (
+                item.label
+              )}
             </li>
           ))}
         </ol>
       </nav>
 
       {/* ✅ Main Content */}
-      <div className="container my-5">
-        <h1 className="fw-bold text-dark mb-4" data-aos="fade-up">
+      <div className="redesign__content">
+        <h1 className="redesign__title" data-aos="fade-up">
           Website Maintenance Services in Jaipur | Website Redesign India
         </h1>
-        <p className="text-muted" data-aos="fade-up">
+        <p className="redesign__intro" data-aos="fade-up">
           Your website needs more care than your car! Our{" "}
           <strong>website maintenance services</strong> are made to meet your
           requirements. Connect with us to work with the experts.
         </p>
 
         {/* Services Section */}
-        <h2 className="fw-bold mt-5 mb-3" data-aos="zoom-in">
+        <h2 className="redesign__section-title" data-aos="zoom-in">
           Services
         </h2>
-        <div className="row justify-content-center">
+        <div className="redesign__services">
           {services.map((service, index) => (
             <div
-              className="col-md-4 mb-4 d-flex"
               key={service.id}
+              className="redesign__service-card"
               data-aos="fade-up"
-              data-aos-delay={index * 100}>
-              <div
-                className="card h-100 shadow border-0 hover-shadow flex-fill"
-                style={{ minWidth: "95%" }}>
-                <div className="card-body">
-                  <h5 className="fw-bold text-primary">{service.title}</h5>
-                  <p className="text-muted">{service.description}</p>
-                </div>
-              </div>
+              data-aos-delay={index * 100}
+            >
+              <h5 className="redesign__service-title">{service.title}</h5>
+              <p className="redesign__service-desc">{service.description}</p>
             </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <h2 className="fw-bold mt-5 mb-3" data-aos="zoom-in">
+        <h2 className="redesign__section-title" data-aos="zoom-in">
           Benefits
         </h2>
-        <p className="text-muted" data-aos="fade-up">
+        <p className="redesign__intro" data-aos="fade-up">
           We help you to capture and measure right data metrics to get
           meaningful insights out of it.
         </p>
-        <ul className="list-unstyled">
+        <ul className="redesign__benefits">
           {benefits.map((benefit, index) => (
             <li
               key={benefit.id}
-              className="mb-3 d-flex align-items-start"
+              className="redesign__benefit-item"
               data-aos="fade-right"
-              data-aos-delay={index * 100}>
+              data-aos-delay={index * 100}
+            >
               <img
-                src={benefitIcon} // ✅ your custom icon here
+                src={benefitIcon}
                 alt="check"
-                className="me-2 mt-1"
-                width="24"
+                className="redesign__benefit-icon"
               />
               <span>
                 {benefit.text} <strong>{benefit.highlight}</strong>

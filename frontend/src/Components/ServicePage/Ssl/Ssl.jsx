@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// ✅ React Icons import
+// ✅ React Icons
 import {
   FaGlobe,
   FaEnvelope,
@@ -16,6 +15,8 @@ import {
 } from "react-icons/fa";
 import BackgroundImage from "../Background/BackgroundImage";
 import Hosting from "../../../assets/ssl.png";
+
+import "./Ssl.css"; // ✅ custom CSS
 
 export default function Ssl() {
   useEffect(() => {
@@ -30,16 +31,16 @@ export default function Ssl() {
 
   // ✅ Icon mapping
   const iconMap = {
-    "Linux and Windows": <FaServer className="text-primary me-2" />,
-    "Single Domain": <FaGlobe className="text-success me-2" />,
-    "2 Email Accounts": <FaEnvelope className="text-danger me-2" />,
-    "5 Email Accounts": <FaEnvelope className="text-danger me-2" />,
-    "Free SSL": <FaLock className="text-warning me-2" />,
-    "Regular Backups": <FaCloud className="text-info me-2" />,
-    "99.99% Uptime": <FaBolt className="text-warning me-2" />,
-    "MySQL / SQL Server": <FaDatabase className="text-secondary me-2" />,
-    "One Year Hosting": <FaServer className="text-primary me-2" />,
-    "Indian Data Center": <FaGlobe className="text-success me-2" />,
+    "Linux and Windows": <FaServer className="ssl__icon" />,
+    "Single Domain": <FaGlobe className="ssl__icon" />,
+    "2 Email Accounts": <FaEnvelope className="ssl__icon" />,
+    "5 Email Accounts": <FaEnvelope className="ssl__icon" />,
+    "Free SSL": <FaLock className="ssl__icon" />,
+    "Regular Backups": <FaCloud className="ssl__icon" />,
+    "99.99% Uptime": <FaBolt className="ssl__icon" />,
+    "MySQL / SQL Server": <FaDatabase className="ssl__icon" />,
+    "One Year Hosting": <FaServer className="ssl__icon" />,
+    "Indian Data Center": <FaGlobe className="ssl__icon" />,
   };
 
   const hostingPlans = [
@@ -47,7 +48,7 @@ export default function Ssl() {
       id: "starter",
       name: "Starter Plan",
       price: "₹ 2990 / Year",
-      bg: "gradient-blue",
+      bg: "ssl__card-header--blue",
       features: [
         "Linux and Windows",
         "Single Domain",
@@ -62,7 +63,7 @@ export default function Ssl() {
       id: "standard",
       name: "Standard Plan",
       price: "₹ 3990 / Year",
-      bg: "gradient-red",
+      bg: "ssl__card-header--red",
       features: [
         "Linux and Windows",
         "Single Domain",
@@ -78,29 +79,27 @@ export default function Ssl() {
   ];
 
   return (
-    <div>
+    <div className="ssl">
       {/* ✅ Hero Banner */}
-      <BackgroundImage
-        src={Hosting}
-        alt={`hosting image loading`}
-        marginTop="60px"
-      />
+      <BackgroundImage src={Hosting} alt="hosting" type="1200x300" marginTop="40px" />
 
       {/* ✅ Breadcrumbs */}
       <nav
         aria-label="breadcrumb"
-        className="bg-light py-2 shadow-sm animate__animated animate__fadeIn">
-        <ol className="breadcrumb container">
+        className="ssl__breadcrumbs animate__animated animate__fadeIn"
+      >
+        <ol className="ssl__breadcrumb-list">
           {breadcrumbs.map((item, index) => (
             <li
               key={item.id}
-              className={`breadcrumb-item ${
+              className={`ssl__breadcrumb-item ${
                 index === breadcrumbs.length - 1
-                  ? "active fw-bold text-primary"
+                  ? "ssl__breadcrumb-item--active"
                   : ""
-              }`}>
+              }`}
+            >
               {item.href ? (
-                <a href={item.href} className="text-decoration-none text-dark">
+                <a href={item.href} className="ssl__breadcrumb-link">
                   {item.label}
                 </a>
               ) : (
@@ -112,88 +111,50 @@ export default function Ssl() {
       </nav>
 
       {/* ✅ Hosting Plans */}
-      <div className="container my-5">
+      <div className="ssl__container">
         <h1
-          className="fw-bold text-center mb-4 animate__animated animate__fadeInUp"
-          data-aos="zoom-in">
+          className="ssl__title animate__animated animate__fadeInUp"
+          data-aos="zoom-in"
+        >
           Web Hosting Services
         </h1>
-        <div className="row justify-content-center">
+
+        <div className="ssl__plans">
           {hostingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className="col-md-5 col-lg-4 mb-4"
+              className="ssl__card"
               data-aos="fade-up"
-              data-aos-delay={index * 200}>
-              <div className="custom-card h-100 d-flex flex-column">
-                {/* Header */}
-                <div className={`${plan.bg} text-white text-center py-4`}>
-                  <h3 className="fw-bold">{plan.name}</h3>
-                  <h4 className="fw-bold">{plan.price}</h4>
-                </div>
+              data-aos-delay={index * 200}
+            >
+              {/* Header */}
+              <div className={`ssl__card-header ${plan.bg}`}>
+                <h3 className="ssl__card-name">{plan.name}</h3>
+                <h4 className="ssl__card-price">{plan.price}</h4>
+              </div>
 
-                {/* Body */}
-                <div className="card-body flex-grow-1 text-center">
-                  <ul className="list-unstyled">
-                    {plan.features.map((feature, i) => (
-                      <li
-                        key={i}
-                        className="py-2 border-bottom d-flex align-items-center justify-content-center">
-                        {iconMap[feature]} {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              {/* Body */}
+              <div className="ssl__card-body">
+                <ul className="ssl__features">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="ssl__feature">
+                      {iconMap[feature]} {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                {/* Footer */}
-                <div className="card-footer text-center bg-white border-0">
-                  <a
-                    href="/feedback"
-                    className="btn btn-primary px-4 py-2 fw-bold shadow-sm">
-                    Order Now
-                  </a>
-                  <p className="mt-3 fw-bold text-dark">
-                    📞 Call us : +91- 7300423846
-                  </p>
-                </div>
+              {/* Footer */}
+              <div className="ssl__card-footer">
+                <a href="/feedback" className="ssl__btn">
+                  Order Now
+                </a>
+                <p className="ssl__contact">📞 Call us : +91- 7300423846</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* ✅ CSS Inside same file */}
-      <style jsx>{`
-        .custom-card {
-          border-radius: 16px;
-          overflow: hidden;
-          box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-          min-height: 500px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .custom-card:hover {
-          transform: translateY(-8px) scale(1.03);
-          box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        .gradient-blue {
-          background: linear-gradient(135deg, #007bff, #00c6ff);
-        }
-        .gradient-red {
-          background: linear-gradient(135deg, #ff416c, #ff4b2b);
-        }
-        .custom-card ul li {
-          font-size: 15px;
-          color: #333;
-        }
-        .custom-card .btn {
-          border-radius: 30px;
-          transition: all 0.3s ease;
-        }
-        .custom-card .btn:hover {
-          background: #222;
-          color: #fff;
-        }
-      `}</style>
     </div>
   );
 }

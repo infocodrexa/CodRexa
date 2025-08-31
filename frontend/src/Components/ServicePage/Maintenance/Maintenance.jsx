@@ -1,21 +1,15 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css"; 
+import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BackgroundImage from "../Background/BackgroundImage";
 import RedisignImg from "../../../assets/RedisignImg.png";
+import "./Maintenance.css"; 
 
 export default function Maintenance() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
-
-  const breadcrumbData = [
-    { id: "home", label: "Home", href: "/" },
-    { id: "services", label: "Services", href: "/" },
-    { id: "current", label: "Website Maintenance" },
-  ];
 
   const services = [
     {
@@ -84,88 +78,69 @@ export default function Maintenance() {
     },
   ];
 
-  // ✅ Change this image with your own
   const benefitIcon = "https://cdn-icons-png.flaticon.com/512/845/845646.png";
 
   return (
-    <div>
+    <div className="maintenance">
       {/* ✅ Hero Banner */}
-      <BackgroundImage src={RedisignImg} alt={`image is loading`} />
-
-      {/* ✅ Breadcrumb */}
-      <nav
-        aria-label="breadcrumb"
-        className="bg-light py-2 shadow-sm"
-        data-aos="fade-down">
-        <ol className="breadcrumb container">
-          {breadcrumbData.map((item, index) => (
-            <li
-              key={item.id}
-              className={`breadcrumb-item ${
-                index === breadcrumbData.length - 1
-                  ? "active fw-bold text-primary"
-                  : ""
-              }`}>
-              {item.href ? <a href={item.href}>{item.label}</a> : item.label}
-            </li>
-          ))}
-        </ol>
-      </nav>
+      <BackgroundImage
+        src={RedisignImg}
+        alt="image is loading"
+        type="1200x300"
+        marginTop="40px"
+      />
 
       {/* ✅ Main Content */}
-      <div className="container my-5">
-        <h1 className="fw-bold text-dark mb-4" data-aos="fade-up">
+      <div className="maintenance__container">
+        <h1 className="maintenance__title" data-aos="fade-up">
           Website Maintenance Services in Jaipur | Website Redesign India
         </h1>
-        <p className="text-muted" data-aos="fade-up">
+        <p className="maintenance__subtitle" data-aos="fade-up">
           Your website needs more care than your car! Our{" "}
           <strong>website maintenance services</strong> are made to meet your
           requirements. Connect with us to work with the experts.
         </p>
 
         {/* Services Section */}
-        <h2 className="fw-bold mt-5 mb-3" data-aos="zoom-in">
+        <h2 className="maintenance__section-title" data-aos="zoom-in">
           Services
         </h2>
-        <div className="row justify-content-center">
+        <div className="maintenance__services">
           {services.map((service, index) => (
             <div
-              className="col-md-4 mb-4 d-flex"
+              className="maintenance__service-card"
               key={service.id}
               data-aos="fade-up"
-              data-aos-delay={index * 100}>
-              <div
-                className="card h-100 shadow border-0 hover-shadow flex-fill"
-                style={{ minWidth: "95%" }}>
-                <div className="card-body">
-                  <h5 className="fw-bold text-primary">{service.title}</h5>
-                  <p className="text-muted">{service.description}</p>
-                </div>
+              data-aos-delay={index * 100}
+            >
+              <div className="maintenance__service-content">
+                <h5 className="maintenance__service-title">{service.title}</h5>
+                <p className="maintenance__service-text">{service.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Benefits Section */}
-        <h2 className="fw-bold mt-5 mb-3" data-aos="zoom-in">
+        <h2 className="maintenance__section-title" data-aos="zoom-in">
           Benefits
         </h2>
-        <p className="text-muted" data-aos="fade-up">
+        <p className="maintenance__subtitle" data-aos="fade-up">
           We help you to capture and measure right data metrics to get
           meaningful insights out of it.
         </p>
-        <ul className="list-unstyled">
+        <ul className="maintenance__benefits">
           {benefits.map((benefit, index) => (
             <li
               key={benefit.id}
-              className="mb-3 d-flex align-items-start"
+              className="maintenance__benefit-item"
               data-aos="fade-right"
-              data-aos-delay={index * 100}>
+              data-aos-delay={index * 100}
+            >
               <img
-                src={benefitIcon} // ✅ your custom icon here
+                src={benefitIcon}
                 alt="check"
-                className="me-2 mt-1"
-                width="24"
+                className="maintenance__benefit-icon"
               />
               <span>
                 {benefit.text} <strong>{benefit.highlight}</strong>

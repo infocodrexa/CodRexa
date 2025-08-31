@@ -27,7 +27,7 @@ export default function OurServices() {
             <a href="#">web development and digital marketing services.</a>
           </p>
 
-          <button className="cta-btn">🎧 Get A Free Quote</button>
+          <button className="cta-btns">🎧 Get A Free Quote</button>
         </div>
 
         {/* Right Service Cards */}

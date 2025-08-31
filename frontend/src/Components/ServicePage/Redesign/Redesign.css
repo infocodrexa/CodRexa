@@ -1,0 +1,128 @@
+.redesign {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.breadcrumb-nav {
+  background: #f8f9fa;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.breadcrumb-nav__list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-nav__item {
+  font-size: 1rem;
+  color: #666;
+}
+
+.breadcrumb-nav__link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.breadcrumb-nav__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-nav__item--active {
+  font-weight: 700;
+  color: #000;
+}
+
+.redesign__content {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.redesign__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+.redesign__intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.redesign__section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #0d6efd;
+  position: relative;
+}
+
+.redesign__section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #0d6efd;
+  bottom: -6px;
+  left: 0;
+}
+
+.redesign__services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.redesign__service-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.redesign__service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.redesign__service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.redesign__service-desc {
+  font-size: 1rem;
+  color: #555;
+}
+
+.redesign__benefits {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.redesign__benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.redesign__benefit-icon {
+  margin-right: 0.5rem;
+  width: 22px;
+  height: 22px;
+}

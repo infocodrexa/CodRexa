@@ -1,0 +1,184 @@
+/* 🌟 Wrapper */
+.ssl {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  text-align: center; /* 🔥 पूरा wrapper का text center */
+}
+
+/* 🌟 Breadcrumbs */
+.ssl__breadcrumbs {
+  background: #f8f9fa;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.ssl__breadcrumb-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 🔥 center me */
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.ssl__breadcrumb-item {
+  font-size: 15px;
+  color: #555;
+}
+
+.ssl__breadcrumb-item--active {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.ssl__breadcrumb-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.ssl__breadcrumb-link:hover {
+  color: #0d6efd;
+}
+
+/* 🌟 Container */
+.ssl__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* 🌟 Title */
+.ssl__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1a237e;
+  text-align: center;
+}
+
+/* 🌟 Plans Grid */
+.ssl__plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* 🌟 Card */
+.ssl__card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* 🔥 Card text center */
+}
+
+.ssl__card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Card Header */
+.ssl__card-header {
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.ssl__card-header--blue {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+}
+
+.ssl__card-header--red {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.ssl__card-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ssl__card-price {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 🌟 Card Body */
+.ssl__card-body {
+  padding: 20px;
+  flex-grow: 1;
+  text-align: center; /* 🔥 yaha bhi center */
+}
+
+.ssl__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ssl__feature {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 🔥 features center me */
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #333;
+}
+
+.ssl__feature:last-child {
+  border-bottom: none;
+}
+
+.ssl__icon {
+  color: #0d6efd;
+  font-size: 16px;
+}
+
+/* 🌟 Card Footer */
+.ssl__card-footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.ssl__btn {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ssl__btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.ssl__contact {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* 🌟 Responsive */
+@media (max-width: 768px) {
+  .ssl__title {
+    font-size: 24px;
+  }
+
+  .ssl__plans {
+    gap: 20px;
+  }
+}

@@ -18,20 +18,13 @@ import aspImage from "../../../assets/aspImg.png";
 
 // ✅ Components
 import ContactForm from "../../forms/ContactForm";
-import BackgroundImage from "../Background/BackgroundImage";
 
 // ✅ Styles
+import "./AppStoreOptimization.css"; 
+import BackgroundImage from "../Background/BackgroundImage";
 
 // ✅ Reusable HeroSection
-const HeroSection = ({
-  title,
-  description,
-  buttonText,
-  buttonLink,
-  image,
-  reverse = false,
-  bgColor,
-}) => {
+const HeroSection = ({ title, description, buttonText, buttonLink, image, reverse = false, bgColor }) => {
   const styles = {
     heroSection: {
       display: "flex",
@@ -44,19 +37,8 @@ const HeroSection = ({
     },
     heroReverse: { flexDirection: "row-reverse" },
     heroContent: { flex: 1, minWidth: "300px" },
-    heroTitle: {
-      fontSize: "clamp(2rem, 5vw, 3rem)",
-      fontWeight: 700,
-      marginBottom: "20px",
-      color: "#0a0a0a",
-    },
-    heroDescription: {
-      fontSize: "1.1rem",
-      lineHeight: 1.6,
-      marginBottom: "25px",
-      color: "#333",
-      whiteSpace: "pre-line",
-    },
+    heroTitle: { fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 700, marginBottom: "20px", color: "#0a0a0a" },
+    heroDescription: { fontSize: "1.1rem", lineHeight: 1.6, marginBottom: "25px", color: "#333", whiteSpace: "pre-line" },
     heroButton: {
       display: "inline-block",
       padding: "14px 28px",
@@ -68,29 +50,23 @@ const HeroSection = ({
       transition: "all 0.3s ease",
     },
     heroImage: { flex: 1, minWidth: "280px", textAlign: "center" },
-    heroImgTag: {
-      width: "100%",
-      maxWidth: "680px",
-      height: "auto",
-      objectFit: "contain",
-    },
+    heroImgTag: { width: "100%", maxWidth: "680px", height: "auto", objectFit: "contain" },
   };
 
   return (
-    <section
-      style={{ ...styles.heroSection, ...(reverse ? styles.heroReverse : {}) }}>
-      <div style={styles.heroContent}>
-        <h1 style={styles.heroTitle}>{title}</h1>
-        <p style={styles.heroDescription}>{description}</p>
+    <section className={`heroSection__component ${reverse ? "heroSection__component--reverse" : ""}`} style={{ backgroundColor: bgColor }}>
+      <div className="heroSection__content" style={styles.heroContent}>
+        <h1 className="heroSection__title" style={styles.heroTitle}>{title}</h1>
+        <p className="heroSection__description" style={styles.heroDescription}>{description}</p>
         {buttonText && (
-          <a href={buttonLink} style={styles.heroButton}>
+          <a href={buttonLink} className="heroSection__button" style={styles.heroButton}>
             {buttonText}
           </a>
         )}
       </div>
       {image && (
-        <div style={styles.heroImage}>
-          <img src={image} alt={title} style={styles.heroImgTag} />
+        <div className="heroSection__image" style={styles.heroImage}>
+          <img src={image} alt={title} className="heroSection__imgTag" style={styles.heroImgTag} />
         </div>
       )}
     </section>
@@ -110,7 +86,7 @@ const services = [
 
 const MobileAppServices = () => {
   const groups = [];
-  let pattern = [2, 2, 2]; // ✅ ab 7 items ke liye best hai
+  let pattern = [2, 2, 2];
   let index = 0;
 
   while (index < services.length) {
@@ -170,24 +146,25 @@ const MobileAppServices = () => {
   };
 
   return (
-    <section style={styles.section}>
-      <div style={styles.left}>
+    <section className="servicesSection__component" style={styles.section}>
+      <div className="servicesSection__left" style={styles.left}>
         {groups.map((group, i) => (
-          <div key={i} style={styles.row}>
+          <div key={i} className="servicesSection__row" style={styles.row}>
             {group.map((service, index) => (
               <div
                 key={index}
-                style={styles.card}
+                className="servicesSection__card"
                 onMouseEnter={(e) => {
                   Object.assign(e.currentTarget.style, styles.cardHover);
                 }}
                 onMouseLeave={(e) => {
                   Object.assign(e.currentTarget.style, styles.card);
-                }}>
+                }}
+              >
                 <img
                   src={service.img}
                   alt={service.text}
-                  style={styles.cardImg}
+                  className="servicesSection__cardImg"
                   onMouseEnter={(e) => {
                     Object.assign(e.currentTarget.style, styles.cardImgHover);
                   }}
@@ -195,17 +172,17 @@ const MobileAppServices = () => {
                     Object.assign(e.currentTarget.style, styles.cardImg);
                   }}
                 />
-                <p style={styles.cardText}>{service.text}</p>
+                <p className="servicesSection__cardText">{service.text}</p>
               </div>
             ))}
           </div>
         ))}
       </div>
-      <div style={styles.right}>
+      <div className="servicesSection__right" style={styles.right}>
         <img
           src={mobileappdevelopment}
           alt="Mobile Mockup"
-          style={styles.phoneImg}
+          className="servicesSection__phoneImg"
         />
       </div>
     </section>
@@ -215,62 +192,26 @@ const MobileAppServices = () => {
 // ✅ AppCategoriesSection
 const AppCategoriesSection = () => {
   const appCategories = [
-    {
-      id: "grocery",
-      name: "Grocery Delivery Apps",
-      description: "Food and grocery apps are growing rapidly...",
-      image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/groceries.svg",
-      alt: "Groceries mobile app development",
-    },
-    {
-      id: "ecommerce",
-      name: "Ecommerce Mobile App",
-      description: "In the digital age, online shopping is essential...",
-      image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/smartphone.svg",
-      alt: "Ecommerce Mobile App development",
-    },
-    {
-      id: "education",
-      name: "Education App",
-      description: "Online education is becoming very popular in India...",
-      image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/video-tutorials.svg",
-      alt: "Education App development",
-    },
-    {
-      id: "health-fitness",
-      name: "Health & Fitness App",
-      description: "Health and fitness apps are widely adopted...",
-      image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/healthcare.svg",
-      alt: "Health & Fitness App development",
-    },
+    { id: "grocery", name: "Grocery Delivery Apps", description: "Food and grocery apps are growing rapidly...", image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/groceries.svg", alt: "Groceries mobile app development" },
+    { id: "ecommerce", name: "Ecommerce Mobile App", description: "In the digital age, online shopping is essential...", image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/smartphone.svg", alt: "Ecommerce Mobile App development" },
+    { id: "education", name: "Education App", description: "Online education is becoming very popular in India...", image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/video-tutorials.svg", alt: "Education App development" },
+    { id: "health-fitness", name: "Health & Fitness App", description: "Health and fitness apps are widely adopted...", image: "https://c.animaapp.com/meu8nvriPqZtaF/assets/healthcare.svg", alt: "Health & Fitness App development" },
   ];
 
   return (
-    <div className="container py-5">
-      <div className="text-center mb-5">
-        <h2 className="fw-bold mb-3">
-          Fastest Growing App Category Last Few Years
-        </h2>
-        <p className="mb-4">
-          Check out the most popular mobile application categories from recent
-          years.
-        </p>
+    <div className="appCategories__container">
+      <div className="appCategories__header">
+        <h2 className="appCategories__title">Fastest Growing App Category Last Few Years</h2>
+        <p className="appCategories__subtitle">Check out the most popular mobile application categories from recent years.</p>
       </div>
-      <div className="row g-4">
+      <div className="appCategories__grid">
         {appCategories.map((category) => (
-          <div key={category.id} className="col-12 col-md-6 col-lg-3">
-            <div className="card h-100 shadow-sm">
-              <img
-                src={category.image}
-                className="card-img-top p-3"
-                alt={category.alt}
-                style={{ height: "150px", objectFit: "contain" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title text-danger fw-bold">
-                  {category.name}
-                </h5>
-                <p className="card-text">{category.description}</p>
+          <div key={category.id} className="appCategories__col">
+            <div className="appCategories__card">
+              <img src={category.image} className="appCategories__img" alt={category.alt} />
+              <div className="appCategories__body">
+                <h5 className="appCategories__cardTitle">{category.name}</h5>
+                <p className="appCategories__cardText">{category.description}</p>
               </div>
             </div>
           </div>
@@ -282,34 +223,14 @@ const AppCategoriesSection = () => {
 
 // ✅ ContactSection
 const ContactSection = () => (
-  <div
-    className="py-5"
-    style={{
-      backgroundImage:
-        "url('https://www.arinfotech.co.in/images/what-do-bg.jpg')",
-      backgroundAttachment: "fixed",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}>
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-12 col-md-8 text-center text-md-start">
-          <h3 className="text-white fw-bold mb-0">
-            Contact for Creative & Result Oriented <br /> Android and iOS Mobile
-            App
-          </h3>
+  <div className="contactSection__container" style={{ backgroundImage: "url('https://www.arinfotech.co.in/images/what-do-bg.jpg')" }}>
+    <div className="contactSection__inner">
+      <div className="contactSection__row">
+        <div className="contactSection__col">
+          <h3 className="contactSection__title">Contact for Creative & Result Oriented <br /> Android and iOS Mobile App</h3>
         </div>
-        <div className="col-12 col-md-4 text-center text-md-end">
-          <a
-            href="https://api.whatsapp.com/send?phone=917300423846"
-            className="btn fw-bold px-4 py-2"
-            style={{
-              backgroundColor: "#fff",
-              color: "#0d6efd",
-              border: "none",
-              borderTopLeftRadius: "30px",
-              borderBottomRightRadius: "30px",
-            }}>
+        <div className="contactSection__btnWrapper">
+          <a href="https://api.whatsapp.com/send?phone=917300423846" className="contactSection__button">
             Let's Chat Us
           </a>
         </div>
@@ -320,28 +241,25 @@ const ContactSection = () => (
 
 // ✅ WhyChooseSection
 const WhyChooseSection = () => (
-  <div className="py-5">
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-12 col-md-6 text-center">
-          <img src={aspImage} alt="Why Choose" className="img-fluid" />
+  <div className="whyChooseSection__container">
+    <div className="whyChooseSection__inner">
+      <div className="whyChooseSection__row">
+        <div className="whyChooseSection__col whyChooseSection__col--img">
+          <img src={aspImage} alt="Why Choose" className="whyChooseSection__img" />
         </div>
-        <div className="col-12 col-md-6">
-          <h2 className="text-dark fw-bold mb-3">
-            Why Choose Codrexa for Mobile App Development
-          </h2>
-          <p>We have an experienced team using updated technology.</p>
-          <p>We Develop User Friendly and Classy UI/UX Apps.</p>
-          <p>Projects delivered on time.</p>
-          <p>We develop secure apps for both platforms.</p>
+        <div className="whyChooseSection__col whyChooseSection__col--content">
+          <h2 className="whyChooseSection__title">Why Choose Codrexa for Mobile App Development</h2>
+          <ul className="whyChooseSection__list">
+            <li>We have an experienced team using updated technology.</li>
+            <li>We Develop User Friendly and Classy UI/UX Apps.</li>
+            <li>Projects delivered on time.</li>
+            <li>We develop secure apps for both platforms.</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 );
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const faqData = [
   {
@@ -558,59 +476,62 @@ const faqData = [
 
 // ✅ FAQ + Ambitions
 const AmbitionsAndFAQ = () => (
-  <div className="container my-5">
+  <div className="ambitionsFaq__container">
     {/* Ambitions Section */}
-    <hr className="opacity-25" />
-    <div className="mb-5">
-      <h4 className="text-dark fw-bold mb-3">Our Ambitions</h4>
-      <p className="text-muted">
+    <hr className="ambitionsFaq__separator" />
+    <div className="ambitionsFaq__ambitions">
+      <h4 className="ambitionsFaq__title">Our Ambitions</h4>
+      <p className="ambitionsFaq__text">
         Our apps create an experience, interactivity, and loyalty. We believe
         any business can potentially unlock the art of communication by
         providing an intuitive user interface and amazing customer experience.
         In fact, we innovate applications for global audiences who want to
-        create their own experience. If your application has a goal, we fulfill
-        it and build an application around that goal which is expected.
+        create their own experience. If your application has a goal, we
+        fulfill it and build an application around that goal which is
+        expected.
       </p>
     </div>
 
     {/* FAQ Section */}
-    <h3 className="text-dark fw-bold mb-4">
-      Frequently Asked Questions About Mobile Application Design and Development
+    <h3 className="ambitionsFaq__faqTitle">
+      Frequently Asked Questions About Mobile Application Design and
+      Development
     </h3>
-    <div className="accordion" id="faqAccordion">
+    <div className="ambitionsFaq__accordion" id="faqAccordion">
       {faqData.map((faq, index) => (
-        <div className="accordion-item mb-3" key={faq.id}>
-          <h2 className="accordion-header" id={`heading-${faq.id}`}>
+        <div className="ambitionsFaq__accordionItem" key={faq.id}>
+          <h2 className="ambitionsFaq__accordionHeader" id={`heading-${faq.id}`}>
             <button
-              className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+              className={`ambitionsFaq__accordionButton ${index !== 0 ? "collapsed" : ""}`}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target={`#collapse-${faq.id}`}
               aria-expanded={index === 0 ? "true" : "false"}
-              aria-controls={`collapse-${faq.id}`}>
+              aria-controls={`collapse-${faq.id}`}
+            >
               {faq.question}
             </button>
           </h2>
           <div
             id={`collapse-${faq.id}`}
-            className={`accordion-collapse collapse ${
-              index === 0 ? "show" : ""
-            }`}
+            className={`ambitionsFaq__accordionCollapse collapse ${index === 0 ? "show" : ""}`}
             aria-labelledby={`heading-${faq.id}`}
-            data-bs-parent="#faqAccordion">
-            <div className="accordion-body">
+            data-bs-parent="#faqAccordion"
+          >
+            <div className="ambitionsFaq__accordionBody">
               {faq.answer.map((paragraph, idx) => (
                 <div key={idx}>
                   {paragraph.type === "text" && (
-                    <p className="text-muted">{paragraph.content}</p>
+                    <p className="ambitionsFaq__text">{paragraph.content}</p>
                   )}
                   {paragraph.type === "list" && (
-                    <ul className="ms-3">
+                    <ul className="ambitionsFaq__list">
                       {paragraph.items?.map((item, i) => (
-                        <li key={i} className="mb-2">
+                        <li key={i} className="ambitionsFaq__listItem">
                           <span className={item.boldClassName}>
                             {item.title}
-                          </span>{" "}
+                          </span>
+                          {" "}
                           {item.content}
                         </li>
                       ))}
@@ -628,37 +549,13 @@ const AmbitionsAndFAQ = () => (
 
 // ✅ Main Android Page
 const AppStoreOptimization = () => {
-  const heroData1 = {
-    title: "Best Mobile App Development Company in Samastipur",
-    description: "In today's digital world...",
-    buttonText: "Get Started",
-    buttonLink: "/contact",
-    image: Mobile,
-    reverse: false,
-    bgColor: "#f9f9f9",
-  };
-  const heroData2 = {
-    title: "Result-Oriented Mobile App Development Solutions",
-    description: "At Codrexa, we empower businesses...",
-    buttonText: "Learn More",
-    buttonLink: "/services",
-    image: appimg,
-    reverse: true,
-    bgColor: "#eef6ff",
-  };
-  const heroData3 = {
-    title: "Get More Business Opportunities",
-    description: "Codrexa helps businesses unlock growth...",
-    buttonText: "Explore Services",
-    buttonLink: "/android-app",
-    image: appimg2,
-    reverse: false,
-    bgColor: "#fff5f5",
-  };
+  const heroData1 = { title: "Best Mobile App Development Company in Samastipur", description: "In today's digital world...", buttonText: "Get Started", buttonLink: "/contact", image: Mobile, reverse: false, bgColor: "#f9f9f9" };
+  const heroData2 = { title: "Result-Oriented Mobile App Development Solutions", description: "At Codrexa, we empower businesses...", buttonText: "Learn More", buttonLink: "/services", image: appimg, reverse: true, bgColor: "#eef6ff" };
+  const heroData3 = { title: "Get More Business Opportunities", description: "Codrexa helps businesses unlock growth...", buttonText: "Explore Services", buttonLink: "/android-app", image: appimg2, reverse: false, bgColor: "#fff5f5" };
 
   return (
     <div>
-      <BackgroundImage src={img1} alt="Banner" marginTop="60px" />
+      <BackgroundImage src={img1} alt="Banner" type="1500x500" marginTop="40px"/>
       <HeroSection {...heroData1} />
       <ContactForm />
       <HeroSection {...heroData2} />

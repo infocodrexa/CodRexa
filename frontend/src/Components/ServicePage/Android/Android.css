@@ -1,0 +1,484 @@
+/* src/pages/Android.css */
+
+/* 🔥 Common Classes */
+.imgResponsive___ {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----------------------------------
+    KEYFRAMES
+---------------------------------- */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------
+    HERO SECTION
+---------------------------------- */
+.heroSection__component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.heroSection__component--reverse {
+  flex-direction: row-reverse;
+}
+
+.heroSection__content {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.heroSection__component--reverse .heroSection__content {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.heroSection__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0a0a0a;
+}
+
+.heroSection__description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #333;
+  white-space: pre-line;
+}
+
+.heroSection__button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #e63946;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.heroSection__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroSection__image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  animation: popIn 1s ease-out forwards;
+}
+
+.heroSection__imgTag {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ----------------------------------
+    SERVICES SECTION
+---------------------------------- */
+.servicesSection__component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  flex-wrap: wrap;
+  background: #fdf7f7;
+}
+
+.servicesSection__left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.servicesSection__row {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.servicesSection__card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.servicesSection__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.servicesSection__cardImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.servicesSection__cardImg:hover {
+  transform: scale(1.2);
+}
+
+.servicesSection__cardText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.servicesSection__right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.servicesSection__phoneImg {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: popIn 1s ease-out forwards;
+}
+
+/* ----------------------------------
+    APP CATEGORIES
+---------------------------------- */
+.appCategories__container {
+  padding: 5rem 1rem;
+}
+
+.appCategories__header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.appCategories__title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.appCategories__subtitle {
+  margin-bottom: 1rem;
+}
+
+.appCategories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.appCategories__col {
+  /* Using h-100 and shadow-sm properties in CSS */
+}
+
+.appCategories__card {
+  height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  animation: popIn 0.7s ease-out forwards;
+}
+
+.appCategories__card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.appCategories__img {
+  width: 100%;
+  padding: 1rem;
+  height: 150px;
+  object-fit: contain;
+}
+
+.appCategories__body {
+  padding: 1rem;
+}
+
+.appCategories__cardTitle {
+  color: #dc3545;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.appCategories__cardText {
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------
+    CONTACT SECTION
+---------------------------------- */
+.contactSection__container {
+  padding: 5rem 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.contactSection__inner {
+  padding: 0 1rem;
+}
+
+.contactSection__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contactSection__col {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.contactSection__title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.contactSection__btnWrapper {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.contactSection__button {
+  background-color: #fff;
+  color: #0d6efd;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactSection__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------
+    WHY CHOOSE SECTION
+---------------------------------- */
+.whyChooseSection__container {
+  padding: 3rem 0 0;
+}
+
+.whyChooseSection__inner {
+  padding: 0 1rem;
+}
+
+.whyChooseSection__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.whyChooseSection__col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.whyChooseSection__col--img {
+  text-align: center;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.whyChooseSection__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.whyChooseSection__col--content {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.whyChooseSection__title {
+  color: #212529;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.whyChooseSection__list {
+  padding-left: 1.5rem;
+}
+
+.whyChooseSection__list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------
+    FAQ + AMBITIONS
+---------------------------------- */
+.ambitionsFaq__container {
+  padding: 5rem 1rem;
+  padding-top: 3rem;
+}
+
+.ambitionsFaq__separator {
+  opacity: 0.25;
+}
+
+.ambitionsFaq__ambitions {
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.ambitionsFaq__title {
+  color: #212529;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.ambitionsFaq__text {
+  color: #6c757d;
+}
+
+.ambitionsFaq__faqTitle {
+  color: #212529;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.ambitionsFaq__accordionItem {
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.ambitionsFaq__accordionHeader {
+  margin-bottom: 0;
+}
+
+.ambitionsFaq__accordionButton {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-weight: 600;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: all 0.15s ease-in-out;
+}
+
+.ambitionsFaq__accordionButton:hover {
+  background-color: #e2e6ea;
+}
+
+.ambitionsFaq__accordionButton:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #0c63e4;
+}
+
+.ambitionsFaq__accordionButton::after {
+  float: right;
+  content: " ";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ambitionsFaq__accordionButton:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+
+.ambitionsFaq__accordionBody {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: none;
+}
+
+.ambitionsFaq__list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.ambitionsFaq__listItem {
+  margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------
+    RESPONSIVE
+---------------------------------- */
+@media (max-width: 768px) {
+  .heroSection__component,
+  .contactSection__row,
+  .whyChooseSection__row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whyChooseSection__col--content {
+    order: 2;
+  }
+
+  .whyChooseSection__col--img {
+    order: 1;
+  }
+}
