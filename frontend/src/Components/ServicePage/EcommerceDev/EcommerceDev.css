@@ -12,7 +12,7 @@
 }
 
 /* ✅ Hero Section */
-.hero-section {
+.ecommerce-hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,23 +22,22 @@
   flex-wrap: wrap;
 }
 
-/* ✅ Left */
-.hero-left {
+.ecommerce-hero-left {
   flex: 1;
-  max-width: 600px;
+  max-width: 602px;
 }
 
-.hero-left h2 {
+.ecommerce-hero-left h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.hero-left p {
+.ecommerce-hero-left p {
   margin-bottom: 20px;
 }
 
-.btn-primary {
+.ecommerce-btn-primary {
   background: #ff4747;
   color: #fff;
   padding: 12px 20px;
@@ -47,72 +46,62 @@
   cursor: pointer;
 }
 
-/* ✅ Right */
-.hero-right img {
+.ecommerce-hero-right img {
   max-width: 550px;
   width: 100%;
 }
 
 /* ✅ Responsive */
 @media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;   /* 👈 image नीचे चला जाएगा */
-    text-align: center;       /* 👈 text center हो जाएगा */
+  .ecommerce-hero {
+    flex-direction: column;
+    text-align: center;
     padding: 40px 20px;
   }
 
-  .hero-left {
+  .ecommerce-hero-left {
     max-width: 100%;
     margin-bottom: 25px;
   }
 
-  .hero-left h2 {
-    font-size: 1.6rem;  /* छोटे screen पर थोड़ा छोटा font */
+  .ecommerce-hero-left h2 {
+    font-size: 1.6rem;
   }
 
-  .hero-right img {
-    max-width: 350px;  /* image को छोटा कर दिया */
+  .ecommerce-hero-right img {
+    max-width: 350px;
   }
+
+  .ecommerce-payment-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
 
 @media (max-width: 576px) {
-  .hero-left h2 {
-    font-size: 1.4rem;  /* mobile पर और छोटा font */
+  .ecommerce-hero-left h2 {
+    font-size: 1.4rem;
   }
 
-  .btn-primary {
-    padding: 10px 16px; /* button थोड़ा compact */
+  .ecommerce-btn-primary {
+    padding: 10px 16px;
     font-size: 0.9rem;
   }
 
-  .hero-right img {
+  .ecommerce-hero-right img {
     max-width: 260px;
   }
-}
 
+  .ecommerce-payment-card {
+    display: flex;
+    flex-direction: column;
+  }
 
-.serve-icons {
-  margin-top: 20px;
-}
-
-.serve-icons h4 {
-  margin-bottom: 10px;
-}
-
-.serve-icons .icons img {
-  max-width: 250px;
-}
-
-/* ✅ Breadcrumb */
-.breadcrumb {
-  background: #f7f7f7;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  color: #333;
 }
 
 /* ✅ Service Section */
-.service-section {
+.ecommerce-service {
   width: 80%;
   padding: 40px;
   text-align: center;
@@ -122,138 +111,35 @@
   margin: auto;
 }
 
-.service-section h3 {
+.ecommerce-service h3 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 /* ✅ Features */
-.features-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #5c2bb8;
-  color: #fff;
-  padding: 50px;
-  flex-wrap: wrap;
-}
-
-.features-left {
-  flex: 1;
-  max-width: 500px;
-}
-
-.features-left ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-.features-left ul li {
-  margin-bottom: 8px;
-}
-
-.btn-primary {
-  background: #ff4747;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 69px;
-  cursor: pointer;
-}
-
-
-
-.features-right img {
-  margin-top: 100px;
-  max-width: 720px;
-  width: 100px;
-  border-radius: 8px;
-}
-
-/* ✅ Quality Section */
-.quality-section {
-  padding: 40px;
-  text-align: center;
-}
-
-/* ✅ Responsive */
-@media (max-width: 992px) {
-  .hero-section, .features-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-left h2 {
-    font-size: 1.6rem;
-  }
-
-  .features-left {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-  }
-
-  .features-right img {
-    max-width: 250px;
-  }
-}
-
-/* ✅ Quality Section */
-.quality-section {
-  background: #f9f9f9;
-  padding: 60px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.quality-text {
-  max-width: 800px;
-  color: #333;
-}
-
-.quality-text h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #5c2bb8; /* Purple highlight */
-}
-
-.quality-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-}
-/* ✅ Features Section */
-.features-section {
+.ecommerce-features {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: #5c2bb8; /* Purple जैसा image में */
+  background: #5c2bb8;
   color: #fff;
   padding: 60px 50px;
   flex-wrap: wrap;
 }
 
-/* ✅ Left Side */
-.features-left {
+.ecommerce-features-left {
   flex: 1;
   max-width: 650px;
 }
 
-.features-left h3 {
+.ecommerce-features-left h3 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-/* ✅ 2 Column List जैसा Screenshot */
-.features-left ul {
+.ecommerce-features-left ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px 40px;
@@ -262,44 +148,36 @@
   margin: 0;
 }
 
-.features-left ul li {
+.ecommerce-features-left ul li {
   font-size: 1rem;
   font-weight: 400;
 }
 
-/* ✅ Right Side */
-.features-right {
+.ecommerce-features-right {
   flex: 1;
   text-align: center;
 }
 
-/* ✅ Features Right Image */
-.features-right img {
-  max-width: 750%;
-  width: 100%;
-  height: auto;
+.ecommerce-features-right img {
+  max-width: 100%;
   border-radius: 8px;
   margin-top: 20px;
 }
 
-/* ✅ Tablet Responsive */
 @media (max-width: 992px) {
-  .features-right img {
+  .ecommerce-features-right img {
     max-width: 400px;
-    margin-top: 25px;
   }
 }
 
-/* ✅ Mobile Responsive */
 @media (max-width: 576px) {
-  .features-right img {
+  .ecommerce-features-right img {
     max-width: 280px;
-    margin-top: 20px;
   }
 }
 
 /* ✅ Streamline Section */
-.streamline-section {
+.ecommerce-streamline {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -308,14 +186,13 @@
   flex-wrap: wrap;
 }
 
-/* ✅ Left Side */
-.streamline-left {
+.ecommerce-streamline-left {
   flex: 1;
   max-width: 700px;
   padding-right: 30px;
 }
 
-.streamline-left h3 {
+.ecommerce-streamline-left h3 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -323,53 +200,48 @@
   margin-left: 100px;
 }
 
-.streamline-left p {
+.ecommerce-streamline-left p {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #333;
   margin-left: 100px;
 }
 
-/* ✅ Right Side */
-.streamline-right {
+.ecommerce-streamline-right {
   flex: 1;
   text-align: center;
-  
 }
 
-.streamline-right img {
+.ecommerce-streamline-right img {
   max-width: 500px;
   width: 100%;
 }
 
-/* ✅ Responsive */
-/* ✅ Responsive */
 @media (max-width: 992px) {
-  .streamline-section {
+  .ecommerce-streamline {
     flex-direction: column;
-    text-align: left;   /* 👈 पहले center था, अब left कर दिया */
+    text-align: left;
     padding: 40px 20px;
   }
 
-  .streamline-left {
+  .ecommerce-streamline-left {
     max-width: 100%;
     padding-right: 0;
     margin-bottom: 25px;
   }
 
-  .streamline-left h3,
-  .streamline-left p {
-    margin-left: 0;   /* 👈 mobile पर text को start से शुरू कराया */
+  .ecommerce-streamline-left h3,
+  .ecommerce-streamline-left p {
+    margin-left: 0;
   }
 
-  .streamline-right img {
+  .ecommerce-streamline-right img {
     max-width: 320px;
   }
 }
 
-
 /* ✅ Payment Section */
-.payment-section {
+.ecommerce-payment {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -378,47 +250,40 @@
   flex-wrap: wrap;
 }
 
-/* ✅ Left Side */
-.payment-left {
+.ecommerce-payment-left {
   flex: 1;
   text-align: center;
-  position: relative;
 }
 
-.payment-left img {
+.ecommerce-payment-left img {
   max-width: 500px;
   width: 100%;
 }
 
-
-
-
-/* ✅ Right Side */
-.payment-right {
+.ecommerce-payment-right {
   flex: 1;
   padding-left: 40px;
 }
 
-.payment-right h3 {
+.ecommerce-payment-right h3 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.payment-right p {
+.ecommerce-payment-right p {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 25px;
 }
 
-/* ✅ Grid for Payment Logos */
-.payment-grid {
+.ecommerce-payment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 20px;
 }
 
-.payment-card {
+.ecommerce-payment-card {
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
@@ -427,37 +292,36 @@
   transition: 0.3s;
 }
 
-.payment-card img {
+.ecommerce-payment-card img {
   max-width: 120px;
   margin-bottom: 8px;
 }
 
-.payment-card span {
+.ecommerce-payment-card span {
   display: block;
   font-size: 0.95rem;
   font-weight: 500;
   color: #222;
 }
 
-.payment-card:hover {
+.ecommerce-payment-card:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transform: translateY(-3px);
 }
 
-/* ✅ Responsive */
 @media (max-width: 992px) {
-  .payment-section {
+  .ecommerce-payment {
     flex-direction: column;
     text-align: center;
     padding: 40px 20px;
   }
 
-  .payment-right {
+  .ecommerce-payment-right {
     padding-left: 0;
     margin-top: 30px;
   }
 
-  .payment-grid {
+  .ecommerce-payment-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }

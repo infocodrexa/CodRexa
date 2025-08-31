@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./WordpressShopify.css";
 
 // ✅ Import Images
 import portfolioTop from "../../../assets/portfolioimgtop.jpg";
@@ -14,7 +14,6 @@ export default function WordPressPortfolioPage() {
   const breadcrumbData = [
     { id: "home", text: "Home", href: "/" },
     { id: "services", text: "Services", href: "/l" },
-    { id: "current", text: "Wordpress Website Designing", href: null },
   ];
 
   const portfolioData = {
@@ -95,117 +94,70 @@ export default function WordPressPortfolioPage() {
 
   return (
     <div>
-      {/* ✅ Responsive Hero Banner CSS */}
-      <style>{`
-        .portfolio-top {
-          margin-top: 80px; /* desktop */
-        }
-        @media (max-width: 992px) {
-          .portfolio-top {
-            margin-top: 100px; /* tablet */
-          }
-        }
-        @media (max-width: 576px) {
-          .portfolio-top {
-            margin-top: 120px; /* mobile */
-          }
-        }
-      `}</style>
-
-      {/* Hero Banner */}
-      <div className="portfolio-top">
+      {/* ✅ Hero Banner Section (Text hata diya hai) */}
+      <div className="portfolio-banner">
         <img
           src={portfolioTop}
           alt="Wordpress website design"
           title="Wordpress website design"
-          className="img-fluid w-100"
-          style={{ maxHeight: "450px", objectFit: "cover" }}
+          className="banner-img"
         />
       </div>
 
       {/* Breadcrumb */}
-      <nav aria-label="breadcrumb" className="bg-light py-2">
-        <div className="container">
-          <ol className="breadcrumb mb-0">
-            {breadcrumbData.map((item) => (
-              <li
-                key={item.id}
-                className={`breadcrumb-item ${
-                  !item.href ? "active fw-bold text-primary" : ""
-                }`}
-                aria-current={!item.href ? "page" : undefined}
-              >
-                {item.href ? (
-                  <a
-                    href={item.href}
-                    className="text-dark text-decoration-none"
-                  >
-                    {item.text}
-                  </a>
-                ) : (
-                  item.text
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
+      <nav className="breadcrumb-wrapper">
+        <ol className="breadcrumb-list">
+          {breadcrumbData.map((item) => (
+            <li key={item.id} className="breadcrumb-item">
+              {item.href ? (
+                <a href={item.href} className="breadcrumb-link">
+                  {item.text}
+                </a>
+              ) : (
+                item.text
+              )}
+            </li>
+          ))}
+        </ol>
       </nav>
 
-      {/* Portfolio Section */}
-      <section className="py-5 bg-light">
-        <div className="container text-center">
-          <span className="text-primary fw-bold text-uppercase">
-            {portfolioData.subtitle}
-          </span>
-          <h1 className="fw-bold mt-2">{portfolioData.title}</h1>
-          <p className="text-muted">{portfolioData.description}</p>
+      {/* Portfolio Content Section */}
+      <section className="portfolio-content">
+        <span className="portfolio-subtitle">{portfolioData.subtitle}</span>
+        <h2 className="portfolio-title">{portfolioData.title}</h2>
+        <p className="portfolio-description">{portfolioData.description}</p>
+      </section>
 
-          <div className="row mt-4 g-4">
-            {portfolioData.projects.map((project) => (
-              <div key={project.id} className="col-12 col-md-6 col-lg-4 d-flex">
-                <div className="card shadow-lg border-0 w-100 h-100">
-                  <a href={project.href} target="_blank" rel="noreferrer">
-                    <img
-                      src={project.image}
-                      alt={project.alt}
-                      title={project.title}
-                      className="card-img-top w-100"
-                      style={{
-                        height: "260px",
-                        objectFit: "cover",
-                        transition: "transform 0.4s ease",
-                      }}
-                      onMouseOver={(e) =>
-                        (e.currentTarget.style.transform = "scale(1.05)")
-                      }
-                      onMouseOut={(e) =>
-                        (e.currentTarget.style.transform = "scale(1)")
-                      }
-                    />
-                  </a>
-                  <div className="card-body text-start p-4 d-flex flex-column">
-                    <h5 className="card-title text-primary fw-bold text-uppercase fs-5">
-                      {project.category}
-                    </h5>
-                    <p className="card-text fw-semibold fs-6 flex-grow-1">
-                      {project.description}{" "}
-                      {project.hasSuperscript && (
-                        <sup className="small">®</sup>
-                      )}
-                    </p>
-                    <a
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn btn-primary btn-sm mt-2 align-self-start"
-                    >
-                      Visit Site
-                    </a>
-                  </div>
-                </div>
+      {/* Portfolio Projects */}
+      <section className="portfolio-projects">
+        <div className="projects-grid">
+          {portfolioData.projects.map((project) => (
+            <div key={project.id} className="project-card">
+              <a href={project.href} target="_blank" rel="noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  title={project.title}
+                  className="project-img"
+                />
+              </a>
+              <div className="project-info">
+                <h5 className="project-category">{project.category}</h5>
+                <p className="project-description">
+                  {project.description}
+                  {project.hasSuperscript && <sup className="sup">®</sup>}
+                </p>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-btn"
+                >
+                  Visit Site
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

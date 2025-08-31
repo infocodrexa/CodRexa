@@ -1,5 +1,4 @@
 .modern-container {
-  
   background-color: white;
   min-height: 100vh;
   display: flex;
@@ -7,11 +6,22 @@
   align-items: center;
 }
 
-.modern-heading {
-  font-size: 36px;
-  color: #2d3436;
-  /* margin-bottom: 20px; */
-  text-align: center;
+.modern-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  margin-top: 100px;
+}
+
+.modern-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ✅ full image no cut */
+  display: block;
+  border-radius: 0;
 }
 
 .modern-text {
@@ -20,24 +30,8 @@
   line-height: 1.6;
   text-align: center;
   max-width: 950px;
-}
-
-.modern-wrapper {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-section{
-  margin-top: 100px;
-}
-
-.modern-image {
-  width: 100vw;
-  height: auto;
-  object-fit: contain; /* ✅ full image no cut */
-  display: block;
-  border-radius: 0;
+  margin: 20px auto;
+  padding: 0 15px; /* ✅ thoda padding for small screens */
 }
 
 .modern-box {
@@ -45,8 +39,8 @@
   padding: 30px;
   border-radius: 15px;
   margin-top: 30px;
-  width: 100%;         /* ✅ pura screen le */
-  max-width: none;     /* ✅ limit hata do */
+  width: 100%;
+  max-width: none; /* ✅ limit hata di */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -54,9 +48,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 100%;         /* ✅ pura width cover kare */
+  width: 100%;
 }
-
 
 .modern-subHeading {
   font-size: 28px;
@@ -64,6 +57,7 @@
   color: #588dc1;
   text-align: center;
 }
+
 .service-card {
   background: #f9f9f9;
   padding: 20px;
@@ -95,4 +89,63 @@
   font-size: 15px;
   color: #555;
   line-height: 1.6;
+}
+
+/* ✅ Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .modern-text {
+    font-size: 20px;
+    max-width: 700px;
+  }
+  .modern-subHeading {
+    font-size: 24px;
+  }
+   .modern-image{
+    margin-top: 40px;
+   }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .hero-section {
+    margin-top: 60px;
+  }
+
+  .modern-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .modern-subHeading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card .icon {
+    font-size: 32px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+}
+/* Mobile fix: hero-section image niche aaye */
+@media (max-width: 600px) {
+  .hero-section {
+    margin-top: 100px;  /* ✅ navbar ke liye space */
+  }
+
+  .modern-image {
+    margin-top: 30px; /* ✅ image aur bhi clear ho jayegi */
+  }
 }

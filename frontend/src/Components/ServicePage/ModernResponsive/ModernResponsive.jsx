@@ -34,7 +34,7 @@ const services = [
 const ModernResponsive = () => {
   return (
     <div className="modern-container">
-      <h1 className="modern-heading">Modern Responsive Design</h1>
+      {/* <h1 className="modern-heading">Modern Responsive Design</h1> */}
       {/* <p className="modern-text">
         Build modern, mobile-friendly, and responsive websites that adapt to all
         devices. Our goal is to make sure your brand looks great everywhere.
