@@ -10,6 +10,7 @@ import { HeroSection } from '../Hero2/Hero2'
 import FeaturesSection from '../Hero2/FeaturesSection'
 import AboutSection from '../Hero2/AboutSection'
 import { ServicesSection } from '../Hero2/ServicesSection'
+import PersonalForm from '../../forms/PersonalForm'
 
 const Homepage = () => {
   return (
@@ -21,6 +22,7 @@ const Homepage = () => {
       <AboutSection/>
       <ServicesSection/>
       <WhyChooseUs/>
+      <PersonalForm />
       <OurServices/>
       <Ecommerce/>
       <IndustriesSection/>

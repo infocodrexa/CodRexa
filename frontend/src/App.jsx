@@ -23,7 +23,7 @@ import ModernResponsive from "./Components/ServicePage/ModernResponsive/ModernRe
 import EcommerceDev from "./Components/ServicePage/EcommerceDev/EcommerceDev";
 import WordpressShopify from "./Components/ServicePage/WordpressShopify/WordpressShopify";
 import Crm from "./Components/ServicePage/Crm/Crm";
-import WebDev from "./Components/ServicePage/WebDev/WebDev";
+// import WebDev from "./Components/ServicePage/WebDev/WebDev";
 import Ppc from "./Components/ServicePage/Ppc/Ppc";
 import FbTwitterAds from "./Components/ServicePage/FbTwitterAds/FbTwitterAds";
 import AdwordsExpress from "./Components/ServicePage/AdwordsExpress/AdwordsExpress";
@@ -45,6 +45,8 @@ import CONTACTUS from "./Components/CONTACT US/CONTACTUS.jsx";
 import AboutSection from "./Components/Home/Hero2/AboutSection.jsx";
 import { BusinessPricingSection } from "./Components/Package/BusinessPricing/BusinessPricing.jsx";
 import ENQUIRY from "./Components/ENQUIRY/ENQUIRY.jsx";
+import Services from "./Components/ServicePage/Service/Service";
+import FloatingIcons from "./FloatingIcons.jsx";
 
 function App() {
   return (
@@ -52,16 +54,7 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Homepage />
-              {/* <OrganizationForm /> */}
-              {/* <PersonalForm /> */}
-            </>
-          }
-        />
+        <Route  path="/"  element={ <Homepage /> } />
         <Route path="/premium" element={<Primium />} />
         <Route path="/basic" element={<Basic />} />
         <Route path="/Whyus" element={<Whyus />} />
@@ -73,14 +66,13 @@ function App() {
         <Route path="/basic" element={<Dashboard />} />
         <Route path="/premium" element={<Dashboard />} />
         <Route path="/enterprise" element={<BusinessPricingSection/>} />
-        <Route path="/portfolio" element={<Dashboard />} />
-        <Route path="/blog" element={<Dashboard />} />
         <Route path="/enquiry" element={<ENQUIRY/>} />
         <Route path="/contact" element={<CONTACTUS/>} />
         <Route path="/PersonalForm" element={<PersonalForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Services Routes */}
+        <Route path="/services" element={<Services />} />
         <Route path="/services/seo" element={<Seo />} />
         <Route path="/services/smo" element={<Smo />} />
         <Route path="/services/local-seo" element={<LocalSeo />} />
@@ -137,6 +129,7 @@ function App() {
         <Route path="/services/ssl" element={<Ssl />} />
         <Route path="*" element={<NotFound/>}/>
       </Routes>
+      <FloatingIcons/>
 
       <Footer />
     </>

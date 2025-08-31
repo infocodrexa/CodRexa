@@ -27,14 +27,14 @@ export function HeroSection() {
     ctaButtons: [
       {
         id: "pay-after",
-        text: "Pay After Website Up & Running",
-        href: "https://www.zauca.com/#pricing",
+        text: "Contact Us",
+        href: "/contact",
         type: "primary",
       },
       {
         id: "call-now",
         text: "Sales - Toll Free - Call Us Now",
-        href: "tel://18002129495",
+        href: "tel:+917300423846",
         type: "secondary",
       },
     ],

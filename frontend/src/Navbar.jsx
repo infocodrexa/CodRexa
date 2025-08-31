@@ -54,22 +54,50 @@ export default function Navbar() {
         </div>
         <div className="topbar-right">
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <FaFacebookF style={{backgroundColor: "#0d6efd", color: "white",width: "2rem",height: "1.5rem"}} />
+            <FaFacebookF
+              style={{
+                backgroundColor: "#0d6efd",
+                color: "white",
+                width: "2rem",
+                height: "1.5rem",
+              }}
+            />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <FaTwitter style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}}  />
+            <FaTwitter
+              style={{
+                backgroundColor: "#0e76a8",
+                color: "white",
+                width: "2rem",
+                height: "1.5rem",
+              }}
+            />
           </a>
           <a href="https://youtube.com" target="_blank" rel="noreferrer">
-            <FaYoutube  style={{backgroundColor: "#f00", color: "white",width: "2rem",height: "1.5rem"}} />
+            <FaYoutube
+              style={{
+                backgroundColor: "#f00",
+                color: "white",
+                width: "2rem",
+                height: "1.5rem",
+              }}
+            />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-            <FaLinkedinIn style={{backgroundColor: "#0e76a8", color: "white",width: "2rem",height: "1.5rem"}} />
+            <FaLinkedinIn
+              style={{
+                backgroundColor: "#0e76a8",
+                color: "white",
+                width: "2rem",
+                height: "1.5rem",
+              }}
+            />
           </a>
         </div>
       </div>
 
       {/* ===== Navbar ===== */}
-      <nav className="navbar">
+      <nav className="navbar1">
         <div className="navbar-left">
           <Link to="/" onClick={closeSidebar} className="brand-link">
             <div className="brand-wrapper">
@@ -101,9 +129,15 @@ export default function Navbar() {
             <button className="dropbtn">ABOUT ▾</button>
             {dropdownOpen === "about" && (
               <div className="dropdown-content">
-                <Link to="/Whyus" onClick={closeSidebar}>Why Us</Link>
-                <Link to="/team" onClick={closeSidebar}>Our Team</Link>
-                <Link to="/mission" onClick={closeSidebar}>About CodRex</Link>
+                <Link to="/Whyus" onClick={closeSidebar}>
+                  Why Us
+                </Link>
+                <Link to="/team" onClick={closeSidebar}>
+                  Our Team
+                </Link>
+                <Link to="/mission" onClick={closeSidebar}>
+                  About CodRex
+                </Link>
               </div>
             )}
           </div>
@@ -114,61 +148,138 @@ export default function Navbar() {
             onMouseEnter={() => toggleDropdown("services")}
             onMouseLeave={() => toggleDropdown(null)}
           >
-            <button className="dropbtn">SERVICES ▾</button>
+            <button className="dropbtn">
+              <Link
+                to="/services"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                SERVICES ▾
+              </Link>
+            </button>
             {dropdownOpen === "services" && (
               <div className="mega-dropdown">
                 {/* Column 1 */}
                 <div className="mega-column">
                   <h4>DIGITAL MARKETING SERVICES</h4>
-                  <Link to="/services/seo" onClick={closeSidebar}>SEO</Link>
-                  <Link to="/services/smo" onClick={closeSidebar}>Social Media Optimization</Link>
-                  <Link to="/services/local-seo" onClick={closeSidebar}>Local SEO Services</Link>
-                  <Link to="/services/content-marketing" onClick={closeSidebar}>Content Marketing</Link>
-                  <Link to="/services/orm" onClick={closeSidebar}>ORM</Link>
-                  <Link to="/services/link-building" onClick={closeSidebar}>Link Building</Link>
-                  <Link to="/services/website-optimization" onClick={closeSidebar}>Website Optimization</Link>
+                  <Link to="/services/seo" onClick={closeSidebar}>
+                    SEO
+                  </Link>
+                  <Link to="/services/smo" onClick={closeSidebar}>
+                    Social Media Optimization
+                  </Link>
+                  <Link to="/services/local-seo" onClick={closeSidebar}>
+                    Local SEO Services
+                  </Link>
+                  <Link to="/services/content-marketing" onClick={closeSidebar}>
+                    Content Marketing
+                  </Link>
+                  <Link to="/services/orm" onClick={closeSidebar}>
+                    ORM
+                  </Link>
+                  <Link to="/services/link-building" onClick={closeSidebar}>
+                    Link Building
+                  </Link>
+                  <Link
+                    to="/services/website-optimization"
+                    onClick={closeSidebar}
+                  >
+                    Website Optimization
+                  </Link>
+                  <br />
+                  <h4 style={{ marginTop: "12px" }}>MOBILE APPS</h4>
+                  <Link to="/services/android" onClick={closeSidebar}>
+                    Android
+                  </Link>
+                  <Link to="/services/ios" onClick={closeSidebar}>
+                    iOS
+                  </Link>
+                  <Link
+                    to="/services/app-store-optimization"
+                    onClick={closeSidebar}
+                  >
+                    App Store Optimization
+                  </Link>
                 </div>
 
                 {/* Column 2 */}
                 <div className="mega-column">
                   <h4>WEBSITE DESIGN & DEV</h4>
-                  <Link to="/services/modern-responsive" onClick={closeSidebar}>Modern & Responsive</Link>
-                  <Link to="/services/ecommerce-dev" onClick={closeSidebar}>E-Commerce</Link>
-                  <Link to="/services/wordpress-shopify" onClick={closeSidebar}>WordPress/Shopify</Link>
-                  <Link to="/services/crm" onClick={closeSidebar}>Custom CRM</Link>
-                  <Link to="/services/web-dev" onClick={closeSidebar}>Web Development</Link>
+                  <Link to="/services/modern-responsive" onClick={closeSidebar}>
+                    Modern & Responsive
+                  </Link>
+                  <Link to="/services/ecommerce-dev" onClick={closeSidebar}>
+                    E-Commerce
+                  </Link>
+                  <Link to="/services/wordpress-shopify" onClick={closeSidebar}>
+                    WordPress/Shopify
+                  </Link>
+                  <Link to="/services/crm" onClick={closeSidebar}>
+                    Custom CRM
+                  </Link>
+                  <Link to="/services/web-dev" onClick={closeSidebar}>
+                    Web Development
+                  </Link>
+                  <br />
+                  <h4 style={{ marginTop: "78px" }}>E-COMMERCE</h4>
+                  <Link
+                    to="/services/marketplace-listing"
+                    onClick={closeSidebar}
+                  >
+                    Marketplace Listing
+                  </Link>
+                  <Link to="/services/amazon-flipkart" onClick={closeSidebar}>
+                    Amazon/Flipkart
+                  </Link>
+                  <Link
+                    to="/services/affiliate-marketing"
+                    onClick={closeSidebar}
+                  >
+                    Affiliate Marketing
+                  </Link>
                 </div>
 
                 {/* Column 3 */}
                 <div className="mega-column">
                   <h4>PAID MARKETING</h4>
-                  <Link to="/services/ppc" onClick={closeSidebar}>PPC</Link>
-                  <Link to="/services/fb-twitter-ads" onClick={closeSidebar}>FB/Twitter Ads</Link>
-                  <Link to="/services/adwords-express" onClick={closeSidebar}>AdWords Express</Link>
-                  <Link to="/services/display-ads" onClick={closeSidebar}>Display/Search Ads</Link>
-                  <Link to="/services/shopping-ads" onClick={closeSidebar}>Shopping Ads</Link>
-                  <Link to="/services/lead-marketing" onClick={closeSidebar}>Lead Marketing</Link>
-                  <Link to="/services/youtube-promotion" onClick={closeSidebar}>YouTube Promotion</Link>
+                  <Link to="/services/ppc" onClick={closeSidebar}>
+                    PPC
+                  </Link>
+                  <Link to="/services/fb-twitter-ads" onClick={closeSidebar}>
+                    FB/Twitter Ads
+                  </Link>
+                  <Link to="/services/adwords-express" onClick={closeSidebar}>
+                    AdWords Express
+                  </Link>
+                  <Link to="/services/display-ads" onClick={closeSidebar}>
+                    Display/Search Ads
+                  </Link>
+                  <Link to="/services/shopping-ads" onClick={closeSidebar}>
+                    Shopping Ads
+                  </Link>
+                  <Link to="/services/lead-marketing" onClick={closeSidebar}>
+                    Lead Marketing
+                  </Link>
+                  <Link to="/services/youtube-promotion" onClick={closeSidebar}>
+                    YouTube Promotion
+                  </Link>
+                  <br />
+                  <h4 style={{ marginTop: "12px" }}>ADD ONS</h4>
+                  <Link to="/services/redesign" onClick={closeSidebar}>
+                    Website Redesign
+                  </Link>
+                  <Link to="/services/maintenance" onClick={closeSidebar}>
+                    Maintenance
+                  </Link>
+                  <Link to="/services/domain-hosting" onClick={closeSidebar}>
+                    Domain & Hosting
+                  </Link>
+                  <Link to="/services/ssl" onClick={closeSidebar}>
+                    SSL
+                  </Link>
                 </div>
 
                 {/* Column 4 */}
-                <div className="mega-column">
-                  <h4>MOBILE APPS</h4>
-                  <Link to="/services/android" onClick={closeSidebar}>Android</Link>
-                  <Link to="/services/ios" onClick={closeSidebar}>iOS</Link>
-                  <Link to="/services/app-store-optimization" onClick={closeSidebar}>App Store Optimization</Link>
-
-                  <h4 style={{ marginTop: "12px" }}>E-COMMERCE</h4>
-                  <Link to="/services/marketplace-listing" onClick={closeSidebar}>Marketplace Listing</Link>
-                  <Link to="/services/amazon-flipkart" onClick={closeSidebar}>Amazon/Flipkart</Link>
-                  <Link to="/services/affiliate-marketing" onClick={closeSidebar}>Affiliate Marketing</Link>
-
-                  <h4 style={{ marginTop: "12px" }}>ADD ONS</h4>
-                  <Link to="/services/redesign" onClick={closeSidebar}>Website Redesign</Link>
-                  <Link to="/services/maintenance" onClick={closeSidebar}>Maintenance</Link>
-                  <Link to="/services/domain-hosting" onClick={closeSidebar}>Domain & Hosting</Link>
-                  <Link to="/services/ssl" onClick={closeSidebar}>SSL</Link>
-                </div>
+                <div className="mega-column"></div>
               </div>
             )}
           </div>
@@ -182,19 +293,27 @@ export default function Navbar() {
             <button className="dropbtn">PACKAGES ▾</button>
             {dropdownOpen === "packages" && (
               <div className="dropdown-content">
-                <Link to="/basic" onClick={closeSidebar}>Basic Package</Link>
-                <Link to="/premium" onClick={closeSidebar}>Premium Package</Link>
-                <Link to="/enterprise" onClick={closeSidebar}>Enterprise Package</Link>
+                <Link to="/basic" onClick={closeSidebar}>
+                  Basic Package
+                </Link>
+                <Link to="/premium" onClick={closeSidebar}>
+                  Premium Package
+                </Link>
+                <Link to="/enterprise" onClick={closeSidebar}>
+                  Enterprise Package
+                </Link>
               </div>
             )}
           </div>
-
-          <Link to="/portfolio" onClick={closeSidebar}>PORTFOLIO</Link>
-          <Link to="/blog" onClick={closeSidebar}>BLOG</Link>
-          <Link to="/enquiry" onClick={closeSidebar}>ENQUIRY</Link>
-          <Link to="/contact" onClick={closeSidebar}>CONTACT US</Link>
+          <Link to="/enquiry" onClick={closeSidebar}>
+            ENQUIRY
+          </Link>
+          <Link to="/contact" onClick={closeSidebar}>
+            CONTACT US
+          </Link>
         </div>
       </nav>
+      <div className="gapp"></div>
 
       {/* ===== Mobile Sidebar ===== */}
       <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
@@ -224,9 +343,15 @@ export default function Navbar() {
             </button>
             {dropdownOpen === "about" && (
               <div className="mobile-mega">
-                <Link to="/Whyus" onClick={closeSidebar}>Why Us</Link>
-                <Link to="/team" onClick={closeSidebar}>Our Team</Link>
-                <Link to="/mission" onClick={closeSidebar}>About CodRex</Link>
+                <Link to="/Whyus" onClick={closeSidebar}>
+                  Why Us
+                </Link>
+                <Link to="/team" onClick={closeSidebar}>
+                  Our Team
+                </Link>
+                <Link to="/mission" onClick={closeSidebar}>
+                  About CodRex
+                </Link>
               </div>
             )}
           </div>
@@ -234,42 +359,64 @@ export default function Navbar() {
           <hr className="nav-divider" />
 
           {/* Mobile Accordion - Services */}
+          {/* <div className="mobile-dropdown">
+              <button
+                className="mobile-dropbtn"
+                onClick={() =>
+                  setDropdownOpen(dropdownOpen === "services" ? null : "services")
+                }
+              >
+                SERVICES ▾
+              </button>
+              {dropdownOpen === "services" && (
+                <div className="mobile-mega">
+                  <h4>DIGITAL MARKETING</h4>
+                  <Link to="/services/seo" onClick={closeSidebar}>SEO</Link>
+                  <Link to="/services/smo" onClick={closeSidebar}>SMO</Link>
+                  <Link to="/services/local-seo" onClick={closeSidebar}>Local SEO</Link>
+                  <Link to="/services/content-marketing" onClick={closeSidebar}>Content</Link>
+                  <Link to="/services/orm" onClick={closeSidebar}>ORM</Link>
+                  <Link to="/services/link-building" onClick={closeSidebar}>Link Building</Link>
+
+                  <h4>WEBSITE DESIGN</h4>
+                  <Link to="/services/modern-responsive" onClick={closeSidebar}>Modern & Responsive</Link>
+                  <Link to="/services/ecommerce-dev" onClick={closeSidebar}>E-Commerce</Link>
+                  <Link to="/services/wordpress-shopify" onClick={closeSidebar}>WordPress/Shopify</Link>
+                  <Link to="/crm" onClick={closeSidebar}>Custom CRM</Link>
+
+                  <h4>PAID MARKETING</h4>
+                  <Link to="/services/ppc" onClick={closeSidebar}>PPC</Link>
+                  <Link to="/services/fb-twitter-ads" onClick={closeSidebar}>FB/Twitter Ads</Link>
+                  <Link to="/services/adwords-express" onClick={closeSidebar}>AdWords Express</Link>
+
+                  <h4>MOBILE APPS</h4>
+                  <Link to="/services/android" onClick={closeSidebar}>Android</Link>
+                  <Link to="/services/ios" onClick={closeSidebar}>iOS</Link>
+                  <Link to="/services/app-store-optimization" onClick={closeSidebar}>App Store Optimization</Link>
+
+                  <h4>E-COMMERCE</h4>
+                  <Link to="/services/marketplace-listing" onClick={closeSidebar}>Marketplace Listing</Link>
+                  <Link to="/services/amazon-flipkart" onClick={closeSidebar}>Amazon/Flipkart</Link>
+                  <Link to="/services/affiliate-marketing" onClick={closeSidebar}>Affiliate Marketing</Link>
+
+                  <h4>ADD ONS</h4>
+                  <Link to="/services/redesign" onClick={closeSidebar}>Website Redesign</Link>
+                  <Link to="/services/maintenance" onClick={closeSidebar}>Maintenance</Link>
+                  <Link to="/services/domain-hosting" onClick={closeSidebar}>Domain & Hosting</Link>
+                  <Link to="/services/ssl" onClick={closeSidebar}>SSL</Link>
+                </div>
+              )}
+            </div> */}
           <div className="mobile-dropdown">
             <button
               className="mobile-dropbtn"
-              onClick={() =>
-                setDropdownOpen(dropdownOpen === "services" ? null : "services")
-              }
+              onClick={() => {
+                closeSidebar();
+                navigate("/services");
+              }}
             >
               SERVICES ▾
             </button>
-            {dropdownOpen === "services" && (
-              <div className="mobile-mega">
-                <h4>DIGITAL MARKETING</h4>
-                <Link to="/services/seo" onClick={closeSidebar}>SEO</Link>
-                <Link to="/services/smo" onClick={closeSidebar}>SMO</Link>
-                <Link to="/services/local-seo" onClick={closeSidebar}>Local SEO</Link>
-                <Link to="/services/content-marketing" onClick={closeSidebar}>Content</Link>
-                <Link to="/services/orm" onClick={closeSidebar}>ORM</Link>
-                <Link to="/services/link-building" onClick={closeSidebar}>Link Building</Link>
-
-                <h4>WEBSITE DESIGN</h4>
-                <Link to="/services/modern-responsive" onClick={closeSidebar}>Modern & Responsive</Link>
-                <Link to="/services/ecommerce-dev" onClick={closeSidebar}>E-Commerce</Link>
-                <Link to="/services/wordpress-shopify" onClick={closeSidebar}>WordPress/Shopify</Link>
-                <Link to="/crm" onClick={closeSidebar}>Custom CRM</Link>
-
-                <h4>PAID MARKETING</h4>
-                <Link to="/services/ppc" onClick={closeSidebar}>PPC</Link>
-                <Link to="/services/fb-twitter-ads" onClick={closeSidebar}>FB/Twitter Ads</Link>
-                <Link to="/services/adwords-express" onClick={closeSidebar}>AdWords Express</Link>
-
-                <h4>MOBILE APPS</h4>
-                <Link to="/services/android" onClick={closeSidebar}>Android</Link>
-                <Link to="/services/ios" onClick={closeSidebar}>iOS</Link>
-                <Link to="/services/app-store-optimization" onClick={closeSidebar}>App Store Optimization</Link>
-              </div>
-            )}
           </div>
 
           <hr className="nav-divider" />
@@ -286,17 +433,31 @@ export default function Navbar() {
             </button>
             {dropdownOpen === "packages" && (
               <div className="mobile-mega">
-                <Link to="/basic" onClick={closeSidebar}>Basic Package</Link>
-                <Link to="/premium" onClick={closeSidebar}>Premium Package</Link>
-                <Link to="/enterprise" onClick={closeSidebar}>Enterprise Package</Link>
+                <Link to="/basic" onClick={closeSidebar}>
+                  Basic Package
+                </Link>
+                <Link to="/premium" onClick={closeSidebar}>
+                  Premium Package
+                </Link>
+                <Link to="/enterprise" onClick={closeSidebar}>
+                  Enterprise Package
+                </Link>
               </div>
             )}
           </div>
 
-          <Link to="/portfolio" onClick={closeSidebar}>PORTFOLIO</Link>
-          <Link to="/blog" onClick={closeSidebar}>BLOG</Link>
-          <Link to="/enquiry" onClick={closeSidebar}>ENQUIRY</Link>
-          <Link to="/contact" onClick={closeSidebar}>CONTACT US</Link>
+          <Link to="/portfolio" onClick={closeSidebar}>
+            PORTFOLIO
+          </Link>
+          <Link to="/blog" onClick={closeSidebar}>
+            BLOG
+          </Link>
+          <Link to="/enquiry" onClick={closeSidebar}>
+            ENQUIRY
+          </Link>
+          <Link to="/contact" onClick={closeSidebar}>
+            CONTACT US
+          </Link>
         </div>
       </div>
     </>

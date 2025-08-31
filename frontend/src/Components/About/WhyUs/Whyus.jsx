@@ -2,8 +2,10 @@ import React from "react";
 import "./WhyUs.css";
 import img1 from "../../../assets/WhyUsImg.jpg"; // top banner
 import illustration from "../../../assets/whyus2.jpg"; // side illustration
+import { useNavigate } from "react-router-dom";
 
 const WhyUs = () => {
+  const negative = useNavigate();
   return (
     <section className="WhyUs__section">
       {/* Top Banner */}
@@ -51,7 +53,7 @@ const WhyUs = () => {
             web solutions.
           </p>
 
-          <button className="WhyUs__consult-btn">🎧 Talk to Consultant</button>
+          <button onClick={() => negative("/contact")} className="WhyUs__consult-btn">🎧 Talk to Consultant</button>
         </div>
       </div>
 

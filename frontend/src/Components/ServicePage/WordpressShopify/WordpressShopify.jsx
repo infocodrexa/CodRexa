@@ -11,13 +11,8 @@ import healingMind from "../../../assets/healingmind.jpg";
 import rootCure from "../../../assets/rootcure.jpg";
 
 export default function WordPressPortfolioPage() {
-  const breadcrumbData = [
-    { id: "home", text: "Home", href: "/" },
-    { id: "services", text: "Services", href: "/l" },
-  ];
 
   const portfolioData = {
-    subtitle: "Our Portfolio",
     title: "Custom WordPress Website Design & Development",
     description:
       "We craft powerful, user-friendly WordPress websites designed to elevate your business. From startups to enterprises in samastipur,Bihar, we create digital experiences that impress, engage, and convert visitors into customers.",
@@ -103,23 +98,6 @@ export default function WordPressPortfolioPage() {
           className="banner-img"
         />
       </div>
-
-      {/* Breadcrumb */}
-      <nav className="breadcrumb-wrapper">
-        <ol className="breadcrumb-list">
-          {breadcrumbData.map((item) => (
-            <li key={item.id} className="breadcrumb-item">
-              {item.href ? (
-                <a href={item.href} className="breadcrumb-link">
-                  {item.text}
-                </a>
-              ) : (
-                item.text
-              )}
-            </li>
-          ))}
-        </ol>
-      </nav>
 
       {/* Portfolio Content Section */}
       <section className="portfolio-content">

@@ -61,7 +61,7 @@
 }
 
 .cta-btns:hover {
-  background: #0e0d0d;
+  /* background: #0e0d0d; */
   border-radius: 50px 12px 50px 12px !important;
   transform: translateY(-3px);
 }

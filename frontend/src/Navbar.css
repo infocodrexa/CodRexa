@@ -7,6 +7,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -53,10 +54,8 @@ body {
 .topbar-right a:hover {
   color: #ff0000;
   transform: translateY(-5px) rotate(-10deg) scale(1.2);
-  text-shadow: 0 0 8px rgba(255,0,0,0.7), 0 0 12px rgba(255,0,0,0.5);
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7), 0 0 12px rgba(255, 0, 0, 0.5);
 }
-
-
 
 /* ===== Responsive Topbar ===== */
 @media (max-width: 768px) {
@@ -75,7 +74,7 @@ body {
   .topbar-left span:first-child {
     display: none;
   }
-  .hid{
+  .hid {
     display: none;
   }
 
@@ -87,10 +86,15 @@ body {
     font-size: 18px;
   }
 }
+@media (max-width: 410px) {
+  .topbar-right {
+    display: none;
+  }
+}
 
 /* ========== NAVBAR ========== */
-.navbar {
-  position: fixed;
+.navbar1 {
+  position: fixed !important;
   top: 36px; /* Topbar ke niche */
   left: 0;
   right: 0;
@@ -103,11 +107,15 @@ body {
   z-index: 1500;
   height: 65px;
 }
+.gapp {
+  padding-bottom: 65px;
+}
 
 /* Branding */
 .navbar-left {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .brand-link {
@@ -334,7 +342,7 @@ body {
   .hamburger {
     display: block;
   }
-  .navbar {
+  .navbar1 {
     padding: 12px 20px;
   }
 }
@@ -342,6 +350,12 @@ body {
 @media (max-width: 480px) {
   .tagline {
     font-size: 12px;
+  }
+}
+@media (max-width: 410px) {
+  .navbar1 {
+    position: fixed !important;
+    /* top: 0px;  */
   }
 }
 
@@ -362,7 +376,7 @@ body {
 }
 
 /* Mega Dropdown */
-.mega-dropdown {
+/* .mega-dropdown {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -377,8 +391,25 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   border-radius: 8px;
   z-index: 1000;
-}
+} */
 
+/* Mega Dropdown */
+.mega-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 20px; /* 🔹 padding kam kiya */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw; /* 🔹 width kam kiya */
+  max-width: 900px; /* 🔹 max-width kam kiya */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  z-index: 1000;
+}
 
 .mega-column {
   flex: 1;
@@ -434,7 +465,7 @@ body {
   padding: 12px;
   margin-top: 5px;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-mega h4 {
@@ -461,14 +492,14 @@ body {
 /* 🔹 Top-level nav items (Home, About, Services, Portfolio, Blog, Enquiry, Contact) */
 .nav-links-desktop > a,
 .nav-links-desktop > .dropdown > .dropbtn {
-  color: #0a2c56 !important;   /* Blue */
+  color: #0a2c56 !important; /* Blue */
   font-weight: 600;
 }
 
 /* 🔹 Mobile sidebar ke top items bhi blue */
 .mobile-menu > a,
 .mobile-dropdown-header {
-  color: #0a2c56 !important;   /* Blue */
+  color: #0a2c56 !important; /* Blue */
   font-weight: 600;
 }
 
@@ -477,7 +508,7 @@ body {
 .mega-column a,
 .mobile-mega a,
 .mobile-dropdown-content a {
-  color: #333 !important;      /* Black */
+  color: #333 !important; /* Black */
   font-weight: 500;
 }
 
@@ -486,7 +517,7 @@ body {
 .mega-column a:hover,
 .mobile-mega a:hover,
 .mobile-dropdown-content a:hover {
-  color: #e53935 !important;   /* Red on hover */
+  color: #e53935 !important; /* Red on hover */
 }
 /* Sidebar divider for mobile menu */
 

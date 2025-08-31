@@ -1,0 +1,96 @@
+/* 🔹 Common Button Style */
+.icon-button {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  animation: pulse-glow 1.2s infinite ease-in-out; /* glow effect */
+}
+
+/* Hover Effect */
+.icon-button:hover {
+  transform: scale(1.15);
+}
+
+/* Call Button */
+.icon-call {
+  background-color: #0f7df2;
+  margin-left: 60px; /* ✅ Desktop margin */
+}
+
+/* WhatsApp Button */
+.icon-whatsapp {
+  background-color: #0ef362;
+  font-size: 48px !important;
+  margin-right: 60px; /* ✅ Desktop margin */
+}
+
+/* 🔹 Glow Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* 🔹 Position Classes */
+.icon-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.icon-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* ✅ Responsive Fix */
+/* ✅ Tablet ke liye (768px se 1024px tak) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .icon-call {
+    margin-left: 30px;  /* Tablet par thoda margin */
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+    margin-left: 50px;
+  }
+  .icon-whatsapp {
+    margin-right: 30px; /* Tablet par thoda margin */
+    width: 65px;
+    height: 65px;
+    font-size: 42px !important;
+    margin-right: 50px;
+
+  }
+}
+
+/* ✅ Mobile ke liye (767px se chhota) */
+@media (max-width: 767px) {
+  .icon-call {
+    margin-left: 0;  /* Pure corner me chipak jayega */
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+  }
+  .icon-whatsapp {
+    margin-right: 0;
+    width: 55px;
+    height: 55px;
+    font-size: 35px !important;
+  }
+}

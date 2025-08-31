@@ -1,8 +1,10 @@
 import React from "react";
 import "./WhyChooseUs.css";
 import team from "../../../assets/what-we-do.png";
+import { useNavigate } from "react-router-dom";
 
 const WhyChooseUs = () => {
+   const navigate = useNavigate();
   return (
     <section className="why-section">
       <div className="why-container">
@@ -30,7 +32,7 @@ const WhyChooseUs = () => {
             <li>Known for reliable customer support and timely delivery.</li>
             <li>Complete e-commerce solutions for businesses in Samastipur and beyond.</li>
           </ul>
-          <button className="talk-btn">💬 Talk to Consultant</button>
+          <button onClick={() => navigate("/contact")} className="talk-btn">💬 Talk to Consultant</button>
         </div>
       </div>
     </section>

@@ -75,17 +75,27 @@
 }
 
 .ad-btn-primary {
-  background: #0ea5e9;
-  border-color: #0ea5e9;
+  background: #d50000;
+  border-color: #d50000;
+  border-radius: 12px 50px 12px 50px !important;
+
 }
 
 .ad-btn-primary:hover {
-  background: #0284c7;
-  border-color: #0284c7;
+  border-radius: 50px 12px 50px 12px !important;
+  transform: translateY(-3px);
+}
+
+.ad-btn-secondary {
+  /* border-color: rgba(255, 255, 255, 0.7); */
+    background: #d50000;
+  border-color: #d50000;
+  border-radius: 12px 50px 12px 50px !important;
 }
 
 .ad-btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50px 12px 50px 12px !important;
+  transform: translateY(-3px);
 }
 
 /* Bottom icon */

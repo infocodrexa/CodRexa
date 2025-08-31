@@ -1,6 +1,8 @@
 import "./OurServices.css";
+import { useNavigate } from "react-router-dom";
 
 export default function OurServices() {
+ const navigate = useNavigate();
   return (
     <section className="services-section">
       <div className="services-container">
@@ -27,7 +29,7 @@ export default function OurServices() {
             <a href="#">web development and digital marketing services.</a>
           </p>
 
-          <button className="cta-btns">🎧 Get A Free Quote</button>
+          <button onClick={() => navigate("/contact")} className="cta-btns">🎧 Get A Free Quote</button>
         </div>
 
         {/* Right Service Cards */}

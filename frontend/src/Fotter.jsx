@@ -23,8 +23,8 @@ const Footer = () => {
         <div className="footer-section ">
           <img onClick={() => navigate("/")} src={logo} alt="CODREXA" className="footer-logo" />
           <p>
-            A R Infotech is a reputed and well-established Website Development &
-            Design company in Jaipur, India...
+            CODREXA is a reputed and well-established Website Development &
+            Design company in Samastipur, India...
           </p>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61579396951220">
@@ -84,7 +84,6 @@ const Footer = () => {
           </p>
           <p>✉ infocodrexa@gmail.com</p>
           <p>📱 7300423846</p>
-          <p>☎ +91-0141-4920437</p>
 
           {/* User Icon with click event */}
           <p style={{ cursor: "pointer" }} onClick={() => setModalOpen(true)}>
