@@ -1,37 +1,46 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.banner {
-  height: 70vh;
-  margin-top: 100px;             
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
+.ism {
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.banner-imge {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;   
+  display: block;
+}
+
+@media (min-width: 1950px) {
+  .ism {
+  height: 90vh;
+  width: 100%;
   overflow: hidden;
 }
-@media(min-width:960px){
-  .banner{
-    height: 80vh;
-    object-fit: contain;
+
+  .banner-imge {
+    object-fit: cover; 
+    margin-top: 60px;
   }
 }
-@media(max-width:784px){
-  .banner{
+
+
+@media (max-width: 1367px) {
+  .ism {
+    height: auto;        
+  }
+  .banner-imge {
     height: auto;
-    object-fit: contain;
-  }
-}
-@media(min-width:1653px){
-  .banner{
-    height: 100vh;
-    object-fit: contain;
+    object-fit: contain; 
   }
 }
 
-
-/* Content Section */
+ 
 .content {
   max-width: 1100px;
   margin: 0 auto;
@@ -45,7 +54,7 @@
   margin-bottom: 20px;
 }
 .breadcrumb span {
-  color: #2563eb; /* blue */
+  color: #2563eb;
   font-weight: 600;
 }
 
@@ -71,7 +80,7 @@
 }
 
 .cta-btn {
-  background-color: #e11d48; /* red */
+  background-color: #e11d48;
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -83,7 +92,7 @@
 }
 
 .cta-btn:hover {
-  background-color: #be123c; /* darker red */
+  background-color: #be123c;
 }
 .section {
   width: 100%;
@@ -92,7 +101,7 @@
 }
 
 .section .inner {
-  max-width: 1100px;   /* content width control */
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
@@ -100,11 +109,13 @@
 .dark-section {
   background: #0f172a;
   color: #fff;
+  text-align: center;
 }
 
 .light-section {
   background: #fff;
   color: #0f172a;
+  text-align: center;
 }
 
 .section h2 {

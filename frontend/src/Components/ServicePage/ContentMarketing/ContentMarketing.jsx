@@ -10,15 +10,19 @@ import icon6 from "../../../assets/icon6.png";
 import ConsultantImg from "../../../assets/cal-img.png";
 import "./ContentMarketing.css";
 
+const handleCall = () => {
+  window.open("tel:+917300423846");
+};
+
 const ContentMarketing = () => {
   return (
     <>
       {/* Banner Image */}
-      <div className="banner">
+      <div className="dddd">
         <img
+          className="banner-imgg"
           src={Awerness}
           alt="Content Marketing Banner"
-          className="banner-img img-fluid"
         />
       </div>
 
@@ -43,9 +47,9 @@ const ContentMarketing = () => {
           {/* Left Section */}
           <div className="proposal-box">
             <h3>Get a free consultation for your project</h3>
-            <a href="http://localhost:5173/contact">
-              <button className="proposal-btn">Request Free Proposal</button>
-            </a>
+            <button onClick={handleCall} className="proposal-btn">
+              📞 Request Free Proposal
+            </button>
           </div>
 
           {/* Right Section */}
@@ -152,7 +156,8 @@ const ContentMarketing = () => {
       <section className="content-marketing-section">
         <div className="section-header">
           <h2>
-            Content Marketing Strategies for Brand Awareness and Business Growth!
+            Content Marketing Strategies for Brand Awareness and Business
+            Growth!
           </h2>
           <p>
             Whenever a new product or service is launched, initially people are
@@ -265,7 +270,9 @@ const ContentMarketing = () => {
         {/* Left Text */}
         <div className="benefits-text">
           <h2>Benefits of Content Marketing Service</h2>
-          <p>Here is a list of various benefits of content marketing services</p>
+          <p>
+            Here is a list of various benefits of content marketing services
+          </p>
         </div>
 
         {/* Card 1 */}
@@ -323,11 +330,9 @@ const ContentMarketing = () => {
             <h2>
               Want To Boost Your Business with Superior <br /> Content Marketing
             </h2>
-            <a href="http://localhost:5173/contact">
-              <button className="consultant-btn">
-                <i className="fa fa-whatsapp"> </i> Talk with Consultant
-              </button>
-            </a>
+            <button className="consultant-btn" onClick={handleCall}>
+              📞 Talk with Consultant
+            </button>
           </div>
         </div>
       </div>

@@ -1,11 +1,14 @@
 import Local from "../../../assets/LOCALL.png";
 import React from "react";
 import "./LocalSeo.css";
-import BackgroundImage from "../Background/BackgroundImage";
 
 const Content = () => {
   return (
     <>
+      <div className="ism">
+        <img className="banner-imge" src={Local} alt="Local SEO Banner" />
+      </div>
+
       <div className="content">
         <h1>
           Local Google Business Listing and Map Optimization Services in
@@ -14,7 +17,7 @@ const Content = () => {
 
         <p>
           Drive potential customers to your website with our result oriented{" "}
-          <span>Local SEO Services In Samastipur</span>. A R Infotech Local SEO
+          <span>Local SEO Services In Samastipur</span>CodRexa Local SEO
           Optimization Services are perfect for small businesses which are
           focused on optimizing their website for a Specific Region.
         </p>
@@ -27,9 +30,11 @@ const Content = () => {
         </p>
 
         <div className="btn-container">
-          <a href="http://localhost:5173/contact">
-            <button className="cta-btn">Get A Free Quote</button>
-          </a>{" "}
+          <button
+            className="cta-btn"
+            onClick={() => (window.location.href = "tel:+917300423846")}>
+            📞 Call Us Now
+          </button>
         </div>
       </div>
 
@@ -37,12 +42,12 @@ const Content = () => {
         <h2>We’re Specialized in Local Business and Map Listing</h2>
         <p>
           Looking to boost up your business in your targeted location? If yes,
-          you're in the right place. We’re one of India’s popular{" "}
+          you're in the right place. We’re one of India’s popular
           <span>Local SEO Service Providers</span> and offering our customer
           result oriented, white hat Local SEO Optimization Services.
         </p>
         <p>
-          Whatever your business niche, our{" "}
+          Whatever your business niche, our
           <span>Local SEO Services In Samastipur</span> are perfect for
           enhancing the reputation of any brand.
         </p>
@@ -112,7 +117,6 @@ const Content = () => {
 const LocalSeo = () => {
   return (
     <div>
-      <BackgroundImage src={Local} alt="image loading" />
       <Content />
     </div>
   );

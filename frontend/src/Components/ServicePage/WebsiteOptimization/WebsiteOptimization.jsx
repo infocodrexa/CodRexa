@@ -1,13 +1,12 @@
 import React from "react";
 import "./WebsiteOptimization.css";
 import WebsiteImg from "../../../assets/websiteOptmize.png";
-import BackgroundImage from "../Background/BackgroundImage";
 
 const WebsiteOptimization = () => {
   return (
     <>
-      <div>
-        <BackgroundImage src={WebsiteImg} alt="image loading" marginTop="0px" />
+      <div className="poo">
+        <img src={WebsiteImg} alt="image loading" className="img-fluid mt-5" />
       </div>
 
       <h1 className="optimization-title">
