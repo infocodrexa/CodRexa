@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
 import NavBar from "./Navbar";
@@ -49,6 +50,19 @@ import Services from "./Components/ServicePage/Service/Service";
 import FloatingIcons from "./FloatingIcons.jsx";
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const redirect = params.get("redirect");
+
+  if (redirect) {
+    navigate(redirect, { replace: true });
+  }
+}, [location, navigate]);
+
   return (
     <>
       <NavBar />
