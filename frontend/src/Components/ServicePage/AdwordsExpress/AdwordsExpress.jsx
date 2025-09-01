@@ -7,7 +7,7 @@ import BackgroundImage from "../Background/BackgroundImage";
 const AdwordsExpress = () => {
   return (
     <>
-     <BackgroundImage src={adword} alt="Codrexa Banner" type="1500x500" />
+     <BackgroundImage src={adword} alt="Codrexa Banner" type="1500x500"  marginTop="40px"/>
     <div className="adwords-container">
       <h1>Google Adwords Services - Search Ads, Shopping Ads, And Display Ads</h1>
       <p>

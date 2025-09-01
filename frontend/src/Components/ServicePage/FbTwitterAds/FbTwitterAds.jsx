@@ -59,11 +59,11 @@ const SocialMediaMarketing = () => {
         {/* <div className="SocialMediaMarketingbanner">
           <img src={img1} alt="Codrexa Banner" className="SocialMediaMarketingbanner-img" />
         </div> */}
-        <BackgroundImage src={img1} alt="Codrexa Banner" type="1500x500" />
+        <BackgroundImage src={img1} alt="Codrexa Banner" type="1500x500" marginTop="30px"/>
         <div className="smm-container">
           {/* Left Content */}
           <motion.div
-            className="smm-content"
+            className="smm-content  smm-contents"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -73,24 +73,24 @@ const SocialMediaMarketing = () => {
               Best Social Media Marketing Services Company <br /> in India
             </motion.h2>
             <motion.p variants={fadeUp}>
-              Through <strong>Social media marketing services</strong> you can
-              boost your company or organization’s online presence in a very
-              short duration. We provide a great opportunity for your business
+              Through <strong>Social media marketing services</strong>  <br />you can
+              boost your company  <br />or organization’s online presence in a very
+              short duration. <br /> We provide a great opportunity for your business
               to grow every day. So <strong>CodRexa</strong> is here to help you
-              launch your social media marketing campaign, converting your
+              launch your social media <br /> marketing campaign, converting your
               online audience into potential customers and turning them into
               real-time customers.
             </motion.p>
             <motion.p variants={fadeUp}>
               <strong>CodRexa</strong> is the leading social media marketing
-              services provider company in India. Social Media Paid Marketing is
-              the instant solution for promoting and getting quality leads
-              through social media platforms. Social media marketing will help
+              services provider company <br /> in India. Social Media Paid Marketing is
+              the instant solution <br /> for promoting and getting quality leads
+              through social media platforms. Social <br /> media marketing will help
               you achieve your guaranteed online marketing goals.
             </motion.p>
             <motion.p variants={fadeUp}>
-              If you are searching for quality social media marketing services
-              at an affordable cost, then you must check our social media{" "}
+              If you are searching for quality  <br /> social media marketing services 
+              at an affordable cost, then you must <br /> check our social media{" "}
               <strong>paid marketing services.</strong>
             </motion.p>
           </motion.div>
@@ -173,7 +173,7 @@ const SocialMediaMarketing = () => {
         <div className="smm-container">
           {/* Left Content */}
           <motion.div
-            className="smm-content"
+            className="smm-content smm-contents"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -222,11 +222,12 @@ const SocialMediaMarketing = () => {
             viewport={{ once: true }}
             variants={fadeRight}
           >
-            <img src={platformsImg} alt="Social Media Platforms" />
+            <img className="SocialMediaIMage" src={platformsImg} alt="Social Media Platforms" />
           </motion.div>
         </div>
       </section>
-      <section className="social-section">
+      
+      {/* <section className="social-section">
         <div className="container">
           <h2>
             Mostly Use <span>Social Media Marketing</span> Use on These
@@ -239,11 +240,11 @@ const SocialMediaMarketing = () => {
             business.
           </p>
 
-          <div className="content">
+          <div className="content fb-contents">
             <div className="left">
-              <img src={fbImage} alt="Facebook Marketing" />
+              <img className="SocialMediaIMage" src={fbImage} alt="Facebook Marketing" />
             </div>
-            <div className="right">
+            <div className="right fb-right SocialMediaIMage">
               <h3>Facebook Marketing</h3>
               <p>
                 Facebook is the world's largest social media platform. Facebook
@@ -297,18 +298,19 @@ const SocialMediaMarketing = () => {
             <strong>Professional Social Media Marketing Agency.</strong>
           </p>
         </div>
-      </section>
+      </section> */}
+
+
       <section className="insta-section">
         <div className="container">
           <h2 className="title">Want To Grow Your Business?</h2>
 
-          <div className="content">
-            {/* Left Side Image */}
+          {/* <div className="content fb-content">
+            
             <div className="left">
               <img src={instaImg} alt="Instagram Marketing" />
             </div>
 
-            {/* Right Side Content */}
             <div className="right">
               <h3>Instagram Marketing</h3>
               <p>
@@ -350,7 +352,7 @@ const SocialMediaMarketing = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom Content */}
           <div className="bottom">
@@ -409,7 +411,7 @@ const SocialMediaMarketing = () => {
           </div>
 
           {/* Right Content */}
-          <div className="y-content">
+          {/* <div className="y-content">
             <h2 className="y-title">YouTube Marketing</h2>
             <p className="y-text">
               Humans love to watch than reading, so it is the world's third most
@@ -443,11 +445,11 @@ const SocialMediaMarketing = () => {
             <p className="y-note">
               <em>Plus, we'll focus on your marketing objective as needed.</em>
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <section className="k-benefits">
+      {/* <section className="k-benefits  benifitsSection">
         <div className="k-container">
           <h2 className="k-title">
             Benefits of using CodRexa Social Media Marketing Services
@@ -456,6 +458,7 @@ const SocialMediaMarketing = () => {
           <ul className="k-list">
             <li>
               At CodRexa you can find experienced teams for different platforms
+              <br />
               like Facebook, Instagram, Twitter, Linkedin, Youtube, etc.
             </li>
             <li>
@@ -490,7 +493,7 @@ const SocialMediaMarketing = () => {
             increasing your Revenue, Profit and Branding.
           </p>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

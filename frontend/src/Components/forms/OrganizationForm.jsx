@@ -44,7 +44,7 @@ const OrganizationForm = () => {
       {/* Heading OUTSIDE the card */}
       <div className="org-form-heading">
         <h5 className="small-title">ENQUIRY</h5>
-        <h2 className="form-title">Enquiry Form</h2>
+        <h2 className="form-title">Organization Enquiry Form</h2>
         <p className="form-subtitle">
           Please fill the form. Our Marketing Executive will contact you soon.
         </p>

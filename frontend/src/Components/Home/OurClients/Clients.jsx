@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Clients.css";
-import bardiya from "../../../assets/what-we-do.png";
+import bardiya from "../../../assets/99-Vihar-Logo.png";
+import bardiya1 from "../../../assets/rjd-logo.png";
 const Clients = () => {
+  const navigate = useNavigate();
   return (
     <section className="clients-section">
       <h4 className="clients-subtitle">OUR CLIENT</h4>
@@ -11,8 +14,10 @@ const Clients = () => {
       </p>
 
       <div className="clients-logos">
-        <img src={bardiya} alt="Bardiya Group" />
-        <img src={bardiya} alt="Empyreal Club" />
+        <a href="https://99vihar.in/"><img src={bardiya} alt="Bardiya Group" /></a>
+        
+        <a href="https://jawaharlalray.in/"> <img src={bardiya1} alt="Empyreal Club" /></a>
+        
       </div>
     </section>
   );

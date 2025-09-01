@@ -9,14 +9,14 @@ export default function AboutSection() {
       <div className="about-container">
         {/* Text Section */}
         <div className="about-text">
-          <h5>About CodRex</h5>
+          <h5>About CodRexa</h5>
           <h2>
             India’s No 1{" "}
             <span className="highlight">Website Design</span> Company
           </h2>
           <p className="sub-heading">Successfully Delivered 5800+ Websites</p>
           <p>
-            CodRex offers a wide range of website design services in India
+            CodRexa offers a wide range of website design services in India
             including business website designing, personal blogs, web portals,
             e-commerce websites, static and dynamic websites across all
             categories & sectors.

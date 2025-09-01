@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
 import NavBar from "./Navbar";
@@ -48,6 +49,7 @@ import { BusinessPricingSection } from "./Components/Package/BusinessPricing/Bus
 import ENQUIRY from "./Components/ENQUIRY/ENQUIRY.jsx";
 import Services from "./Components/ServicePage/Service/Service";
 import FloatingIcons from "./FloatingIcons.jsx";
+import { CgOverflow } from "react-icons/cg";
 
 function App() {
   const navigate = useNavigate();
@@ -74,11 +76,6 @@ function App() {
         <Route path="/Whyus" element={<Whyus />} />
         <Route path="/team" element={<TeamWork />} />
         <Route path="/mission" element={<AboutSection/>} />
-        <Route path="/web-design" element={<Dashboard />} />
-        <Route path="/web-dev" element={<Dashboard />} />
-        <Route path="/seo" element={<Dashboard />} />
-        <Route path="/basic" element={<Dashboard />} />
-        <Route path="/premium" element={<Dashboard />} />
         <Route path="/enterprise" element={<BusinessPricingSection/>} />
         <Route path="/enquiry" element={<ENQUIRY/>} />
         <Route path="/contact" element={<CONTACTUS/>} />
@@ -112,7 +109,7 @@ function App() {
         <Route path="/services/crm" element={<Crm />} />
         <Route path="/services/web-dev" element={ <Homepage/>} />
         <Route path="/services/ppc" element={<Ppc />} />
-        <Route path="/services/fb-twitter-ads" element={<FbTwitterAds />} />
+        <Route path="/services/fb-twitter-ads" element={<FbTwitterAds/>} />
         <Route path="/services/adwords-express" element={<AdwordsExpress />} />
         <Route path="/services/display-ads" element={<DisplayAds />} />
         <Route path="/services/shopping-ads" element={<ShoppingAds />} />

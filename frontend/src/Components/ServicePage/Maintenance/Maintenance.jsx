@@ -93,7 +93,7 @@ export default function Maintenance() {
       {/* ✅ Main Content */}
       <div className="maintenance__container">
         <h1 className="maintenance__title" data-aos="fade-up">
-          Website Maintenance Services in Jaipur | Website Redesign India
+          Website Maintenance Services in Samastipur | Website Redesign India
         </h1>
         <p className="maintenance__subtitle" data-aos="fade-up">
           Your website needs more care than your car! Our{" "}

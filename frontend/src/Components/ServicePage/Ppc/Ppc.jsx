@@ -9,7 +9,7 @@ const Ppc = () => {
       {/* <div className="Ppcbanner">
         <img src={Ppc1} alt="Codrexa Banner" className="Ppcbanner-img" />
       </div> */}
-      <BackgroundImage src={Ppc1} alt="Codrexa Banner" type="1500x500" />
+      <BackgroundImage src={Ppc1} alt="Codrexa Banner" type="1500x500"  marginTop="35px"/>
       <div className="ppc-container">
         <h1>Paid Marketing Service - PPC Management Agency</h1>
         <p>

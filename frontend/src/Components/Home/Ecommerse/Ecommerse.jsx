@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Ecommerce.css";
 import chatImg from "../../../assets/cta-image.webp";  // Chat image
 
 const Ecommerce = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="ecommerce-section">
       <div className="ecommerce-card">
@@ -30,7 +34,7 @@ const Ecommerce = () => {
             <p>
               We help startups and small businesses convert their ideas into profitable online solutions.
             </p>
-            <button className="chat-btn">Let's Chat Us</button>
+             <a onClick={() => navigate("")}  href="https://wa.me/917300423846?text=Hi%20Codrexa%20👋%20I%20am%20interested%20in%20your%20services.%20Please%20connect%20with%20me." ><button className="chat-btn Letbutton">Let's Chat Us </button></a>
           </div>
         </div>
       </div>

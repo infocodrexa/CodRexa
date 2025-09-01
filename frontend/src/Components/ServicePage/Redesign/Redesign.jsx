@@ -12,7 +12,7 @@ export default function Redesign() {
 
   const breadcrumbData = [
     { id: "home", label: "Home", href: "/" },
-    { id: "services", label: "Services", href: "/" },
+    { id: "services", label: "Services", href: "/Services" },
     { id: "current", label: "Website Maintenance" },
   ];
 
@@ -115,7 +115,7 @@ export default function Redesign() {
       {/* ✅ Main Content */}
       <div className="redesign__content">
         <h1 className="redesign__title" data-aos="fade-up">
-          Website Maintenance Services in Jaipur | Website Redesign India
+          Website Maintenance Services in Samastipur | Website Redesign India
         </h1>
         <p className="redesign__intro" data-aos="fade-up">
           Your website needs more care than your car! Our{" "}

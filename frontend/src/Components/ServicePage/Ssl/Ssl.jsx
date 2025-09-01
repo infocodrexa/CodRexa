@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 // ✅ React Icons
 import {
@@ -19,6 +20,9 @@ import Hosting from "../../../assets/ssl.png";
 import "./Ssl.css"; // ✅ custom CSS
 
 export default function Ssl() {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -146,7 +150,7 @@ export default function Ssl() {
 
               {/* Footer */}
               <div className="ssl__card-footer">
-                <a href="/feedback" className="ssl__btn">
+                <a onClick={() => navigate("/contact")} href="" className="ssl__btn">
                   Order Now
                 </a>
                 <p className="ssl__contact">📞 Call us : +91- 7300423846</p>

@@ -389,7 +389,7 @@ const faqData = [
   {
     id: "faq-7",
     question:
-      "7. Why choose A R Infotech for mobile application design & development?",
+      "7. Why choose CodRexa for mobile application design & development?",
     answer: [
       {
         type: "text",
@@ -551,7 +551,7 @@ const AmbitionsAndFAQ = () => (
 const AppStoreOptimization = () => {
   const heroData1 = { title: "Best Mobile App Development Company in Samastipur", description: "In today's digital world...", buttonText: "Get Started", buttonLink: "/contact", image: Mobile, reverse: false, bgColor: "#f9f9f9" };
   const heroData2 = { title: "Result-Oriented Mobile App Development Solutions", description: "At Codrexa, we empower businesses...", buttonText: "Learn More", buttonLink: "/services", image: appimg, reverse: true, bgColor: "#eef6ff" };
-  const heroData3 = { title: "Get More Business Opportunities", description: "Codrexa helps businesses unlock growth...", buttonText: "Explore Services", buttonLink: "/android-app", image: appimg2, reverse: false, bgColor: "#fff5f5" };
+  const heroData3 = { title: "Get More Business Opportunities", description: "Codrexa helps businesses unlock growth...", buttonText: "Explore Services", buttonLink: "/services", image: appimg2, reverse: false, bgColor: "#fff5f5" };
 
   return (
     <div>

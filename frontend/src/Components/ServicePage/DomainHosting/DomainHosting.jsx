@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,6 +18,9 @@ import {
 import BackgroundImage from "../Background/BackgroundImage";
 
 export default function DomainHosting() {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -148,7 +152,7 @@ export default function DomainHosting() {
 
               {/* Footer */}
               <div className="domain-hosting__card-footer">
-                <a href="/feedback" className="domain-hosting__btn">
+                <a onClick={() => navigate("/contact")} href="" className="domain-hosting__btn">
                   Order Now
                 </a>
                 <p className="domain-hosting__contact">

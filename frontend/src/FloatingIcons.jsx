@@ -15,7 +15,7 @@ export default function FloatingIcons() {
       {/* Right Bottom (WhatsApp Button) */}
       <div className="icon-right">
         <a
-          href="https://wa.me/+917300423846"
+          href="https://wa.me/917300423846?text=Hi%20Codrexa%20👋%20I%20am%20interested%20in%20your%20services.%20Please%20connect%20with%20me."
           target="_blank"
           rel="noopener noreferrer"
           className="icon-button icon-whatsapp"

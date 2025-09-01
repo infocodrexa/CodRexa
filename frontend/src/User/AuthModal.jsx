@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { loginUser } from "../services/api"; // registerUser remove kar diya
+import { loginUser } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import "./AuthModal.css";
 
@@ -23,7 +23,6 @@ const AuthModal = ({ closeModal }) => {
     setLoading(true);
 
     try {
-      // 👉 Login API call
       const res = await loginUser({
         email: formData.email,
         password: formData.password,
@@ -43,43 +42,49 @@ const AuthModal = ({ closeModal }) => {
   };
 
   return (
-    <div className="modal-background">
-      <div className="modal-content">
-        <button className="close-btn" onClick={closeModal}></button>
+    <div className="auth-modal__overlay" onClick={closeModal}>
+      <div className="auth-modal__content" onClick={(e) => e.stopPropagation()}>
+        <button className="auth-modal__close" onClick={closeModal}></button>
 
-        <h2 className="modal-title">Login</h2>
+        <h2 className="auth-modal__title"> Admin Login</h2>
 
-        {error && <p className="error-text">{error}</p>}
+        {error && <p className="auth-modal__error">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
+        <form onSubmit={handleSubmit} className="auth-modal__form">
+          <div className="auth-modal__group">
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder=" "
               value={formData.email}
               onChange={handleChange}
               required
+              className="auth-modal__input"
             />
+            <label className="auth-modal__label">Email</label>
           </div>
 
-          <div className="form-group">
+          <div className="auth-modal__group">
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder=" "
               value={formData.password}
               onChange={handleChange}
               required
+              className="auth-modal__input"
             />
+            <label className="auth-modal__label">Password</label>
           </div>
 
-          <button type="submit" className="submit-btn" disabled={loading}>
+          <button
+            type="submit"
+            className="auth-modal__btn"
+            disabled={loading}
+          >
             {loading ? "Please wait..." : "Login"}
           </button>
         </form>
-
-        {/* Sign Up toggle removed */}
       </div>
     </div>
   );

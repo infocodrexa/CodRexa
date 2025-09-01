@@ -564,7 +564,7 @@
 }
 
 .social-section .bullet {
-  list-style: circle;
+  /* list-style: circle; */
   margin-left: 20px;
 }
 
@@ -832,9 +832,19 @@
     flex-direction: column;
     text-align: center;
   }
+
   .y-content {
-    text-align: left;
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
   }
+
+  .y-content li {
+    list-style: none;
+  }
+
+
 }
 .k-benefits {
   background: #fff;
@@ -894,4 +904,73 @@
   .SocialMediaMarketingbanner {
     height: 190px;
   }
+  
+  .smm-contents{
+    text-align: center;
+  }
+
+  .fb-right{
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .y-content {
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .y-content li {
+    list-style: none;
+  }
+
+
+  .SocialMediaIMage{
+    display: none;
+  }
+
+  .content{
+    display: none;
+  }
 }
+
+
+/* Tablet view */
+
+/* @media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content .left,
+  .content .right {
+    max-width: 100%;
+  }
+
+  .content .right {
+    margin-top: 15px;
+  }
+} */
+
+/* Mobile view */
+/* @media (max-width: 576px) {
+  .content {
+    padding: 10px;
+  }
+
+  .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .content p,
+  .content ul {
+    font-size: 0.9rem;
+  }
+
+  .content ul li {
+    margin: 5px 0;
+  }
+} */
