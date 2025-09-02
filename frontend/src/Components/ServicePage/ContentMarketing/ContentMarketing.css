@@ -1,4 +1,4 @@
-* {
+*{
   margin: 0;
   padding: 0;
 }
@@ -445,7 +445,7 @@
 
 @media (max-width: 1024px) {
   .cards-container {
-    grid-template-columns: repeat(2, 1fr); /* tablet: 2 per row */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
@@ -455,7 +455,9 @@
   }
   .cards-container {
     grid-template-columns: 1fr;
-  } /* mobile: 1 per row */
+  } 
+  
+
   .icon-circle {
     margin-top: -37px;
     width: 72px;

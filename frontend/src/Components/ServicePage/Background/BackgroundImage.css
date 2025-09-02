@@ -59,7 +59,6 @@
   .banner-1500x500 img,
   .banner-2000x600 img {
     width: 100%;
-<<<<<<< HEAD
     height: auto;          
     object-fit: contain;   
   }
@@ -71,9 +70,6 @@
   .banner-1500x500 img,
   .banner-2000x600 img {
     height: auto;
-=======
-    height: auto;      /* cut na ho */
->>>>>>> origin/update_final_by_rupak
     object-fit: contain;
   }
 }

@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
-import React, { useEffect, useState } from "react";
 import PersonalForm from "./Components/forms/PersonalForm";
 import Footer from "./fotter";
 import NavBar from "./Navbar";
@@ -52,18 +50,6 @@ import FloatingIcons from "./FloatingIcons.jsx";
 import { CgOverflow } from "react-icons/cg";
 
 function App() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-
-  useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const redirect = params.get("redirect");
-
-  if (redirect) {
-    navigate(redirect, { replace: true });
-  }
-}, [location, navigate]);
 
   return (
     <>
