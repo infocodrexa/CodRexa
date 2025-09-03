@@ -125,6 +125,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     min-width: 300px;
+    margin-left: 25px;
   }
 }
 
@@ -177,12 +178,9 @@
     margin-bottom: 30px;
   }
   .home-right{
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
-    min-width: 200px;
-    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .card h3 {

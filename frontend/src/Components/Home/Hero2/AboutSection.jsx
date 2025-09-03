@@ -14,7 +14,7 @@ export default function AboutSection() {
             India’s No 1{" "}
             <span className="highlight">Website Design</span> Company
           </h2>
-          <p className="sub-heading">Successfully Delivered 5800+ Websites</p>
+          <p className="sub-heading">Successfully Delivered 50+ Websites</p>
           <p>
             CodRexa offers a wide range of website design services in India
             including business website designing, personal blogs, web portals,

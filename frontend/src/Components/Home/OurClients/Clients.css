@@ -36,13 +36,14 @@
 
 .clients-logos img {
   max-width: 150px;
-  height: auto;
+  height: 150px;
   object-fit: contain;
   padding: 10px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+
 }
 
 .clients-logos img:hover {
